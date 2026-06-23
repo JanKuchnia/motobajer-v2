@@ -1,0 +1,121 @@
+---
+const steps = [
+  {
+    title: 'Umów wizytę',
+    description: 'Zadzwoń, napisz lub skorzystaj z formularza online — potwierdzimy termin w ciągu godziny.',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/>`,
+  },
+  {
+    title: 'Diagnostyka',
+    description: 'Mechanik ocenia stan pojazdu i przedstawia szczegółowy kosztorys — bez ukrytych opłat.',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"/>`,
+  },
+  {
+    title: 'Naprawa',
+    description: 'Realizujemy naprawę w uzgodnionym terminie, używając sprawdzonych części i narzędzi.',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l5.654-4.654m5.896-3.046.206-.2A9.5 9.5 0 0 0 7.5 3.5c-.977 0-1.915.145-2.796.413m5.716 9.257L7.5 7.5m6.136 5.67A9.458 9.458 0 0 1 7.5 14.5c-.977 0-1.915-.145-2.796-.413"/>`,
+  },
+  {
+    title: 'Odbiór',
+    description: 'Odbierasz sprawne auto z pełną dokumentacją serwisową i gwarancją na wykonaną pracę.',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>`,
+  },
+];
+---
+
+<section class="section-py bg-navy below-fold">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <!-- Heading -->
+    <div class="mb-12 md:mb-16">
+      <h2
+        class="reveal reveal-clip section-heading"
+        style="font-family: var(--font-display); color: #fff;"
+      >
+        Jak to działa?
+      </h2>
+      <p class="reveal mt-3 text-base max-w-lg" style="color: oklch(72% 0.04 265);">
+        Cztery kroki dzielą Cię od sprawnego samochodu.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
+
+      <!-- Connector line (desktop only) -->
+      <div
+        aria-hidden="true"
+        class="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-px"
+        style="background: linear-gradient(to right, oklch(100% 0 0 / 0), oklch(100% 0 0 / 0.18) 20%, oklch(100% 0 0 / 0.18) 80%, oklch(100% 0 0 / 0));"
+      ></div>
+
+      {steps.map((step, i) => (
+        <div class="reveal flex flex-col gap-4" data-stagger={i * 80}>
+          <!-- Icon circle -->
+          <div class="relative self-start lg:self-auto">
+            <div
+              class="w-16 h-16 rounded-full flex items-center justify-center"
+              style="background: oklch(100% 0 0 / 0.15); border: 1px solid oklch(100% 0 0 / 0.22);"
+            >
+              <svg
+                class="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                style="color: var(--color-accent);"
+                set:html={step.icon}
+              />
+            </div>
+            <!-- Step number badge -->
+            <span
+              class="absolute -top-1 -right-1 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold"
+              style="background: var(--color-accent); color: #fff; font-family: var(--font-display); line-height: 1;"
+              aria-hidden="true"
+            >
+              {i + 1}
+            </span>
+          </div>
+
+          <!-- Content -->
+          <div>
+            <h3
+              class="font-bold text-white mb-2"
+              style="font-family: var(--font-display); font-size: clamp(1.1rem, 2vw, 1.35rem); letter-spacing: 0.02em;"
+            >
+              {step.title}
+            </h3>
+            <p class="text-sm leading-relaxed" style="color: oklch(72% 0.04 265);">
+              {step.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <div class="reveal mt-12 pt-10 border-t flex flex-col sm:flex-row items-start sm:items-center gap-4"
+      style="border-color: oklch(100% 0 0 / 0.1);">
+      <a
+        href="/#rezerwacja"
+        class="inline-flex items-center px-6 py-3 rounded-md text-sm font-semibold text-navy btn-lift"
+        style="background: #fff;"
+        onmouseover="this.style.background='oklch(96% 0.01 265)'"
+        onmouseout="this.style.background='#fff'"
+      >
+        Zarezerwuj wizytę →
+      </a>
+      <a
+        href="tel:+48609845865"
+        class="text-sm font-semibold transition-colors"
+        style="color: oklch(72% 0.04 265);"
+        onmouseover="this.style.color='#fff'"
+        onmouseout="this.style.color='oklch(72% 0.04 265)'"
+      >
+        lub zadzwoń: 609 845 865
+      </a>
+    </div>
+
+  </div>
+</section>

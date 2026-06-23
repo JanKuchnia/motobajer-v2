@@ -1,0 +1,167 @@
+- generic [active] [ref=e1]:
+  - link "Przejdź do treści" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Nawigacja główna" [ref=e3]:
+    - generic [ref=e4]:
+      - link "MOTOBAJER" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: MOTOBAJER
+      - generic [ref=e8]:
+        - link "O nas" [ref=e9] [cursor=pointer]:
+          - /url: /#o-nas
+        - link "Usługi" [ref=e10] [cursor=pointer]:
+          - /url: /#uslugi
+        - link "Części" [ref=e11] [cursor=pointer]:
+          - /url: /czesci
+        - link "Opinie" [ref=e12] [cursor=pointer]:
+          - /url: /#opinie
+        - link "FAQ" [ref=e13] [cursor=pointer]:
+          - /url: /faq
+        - link "Kontakt" [ref=e14] [cursor=pointer]:
+          - /url: /kontakt
+        - link "Zadzwoń" [ref=e15] [cursor=pointer]:
+          - /url: tel:+48609845865
+  - main [ref=e16]:
+    - generic [ref=e18]:
+      - navigation "Breadcrumb" [ref=e19]:
+        - list [ref=e20]:
+          - listitem [ref=e21]:
+            - link "Strona główna" [ref=e22] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e23]:
+            - img [ref=e24]
+          - listitem [ref=e26]: FAQ
+      - heading "Najczęstsze pytania" [level=1] [ref=e27]
+      - paragraph [ref=e28]:
+        - text: "Nie znalazłeś odpowiedzi? Zadzwoń:"
+        - link "609 845 865" [ref=e29] [cursor=pointer]:
+          - /url: tel:+48609845865
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - heading "Rezerwacja i wizyty" [level=2] [ref=e32]
+        - generic [ref=e33]:
+          - group [ref=e34]:
+            - generic "Czy mogę przyjechać bez wcześniejszej rezerwacji?" [ref=e35] [cursor=pointer]:
+              - generic [ref=e36]: Czy mogę przyjechać bez wcześniejszej rezerwacji?
+              - img [ref=e38]
+          - group [ref=e40]:
+            - generic "Jak długo czeka się na naprawę?" [ref=e41] [cursor=pointer]:
+              - generic [ref=e42]: Jak długo czeka się na naprawę?
+              - img [ref=e44]
+          - group [ref=e46]:
+            - generic "Czy mogę zostawić samochód i odebrać go później?" [ref=e47] [cursor=pointer]:
+              - generic [ref=e48]: Czy mogę zostawić samochód i odebrać go później?
+              - img [ref=e50]
+      - generic [ref=e52]:
+        - heading "Kosztorys i płatność" [level=2] [ref=e53]
+        - generic [ref=e54]:
+          - group [ref=e55]:
+            - generic "Czy wycena jest bezpłatna?" [ref=e56] [cursor=pointer]:
+              - generic [ref=e57]: Czy wycena jest bezpłatna?
+              - img [ref=e59]
+          - group [ref=e61]:
+            - generic "Czy mogę zapłacić kartą?" [ref=e62] [cursor=pointer]:
+              - generic [ref=e63]: Czy mogę zapłacić kartą?
+              - img [ref=e65]
+          - group [ref=e67]:
+            - generic "Czy naprawa jest wyceniana z góry?" [ref=e68] [cursor=pointer]:
+              - generic [ref=e69]: Czy naprawa jest wyceniana z góry?
+              - img [ref=e71]
+      - generic [ref=e73]:
+        - heading "Części i jakość" [level=2] [ref=e74]
+        - generic [ref=e75]:
+          - group [ref=e76]:
+            - generic "Jakich części używacie do napraw?" [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]: Jakich części używacie do napraw?
+              - img [ref=e80]
+          - group [ref=e82]:
+            - generic "Czy udzielacie gwarancji na naprawy?" [ref=e83] [cursor=pointer]:
+              - generic [ref=e84]: Czy udzielacie gwarancji na naprawy?
+              - img [ref=e86]
+      - generic [ref=e88]:
+        - heading "O warsztacie" [level=2] [ref=e89]
+        - generic [ref=e90]:
+          - group [ref=e91]:
+            - generic "Co oznacza certyfikat EuroWarsztat?" [ref=e92] [cursor=pointer]:
+              - generic [ref=e93]: Co oznacza certyfikat EuroWarsztat?
+              - img [ref=e95]
+          - group [ref=e97]:
+            - generic "Ile lat działa warsztat Motobajer?" [ref=e98] [cursor=pointer]:
+              - generic [ref=e99]: Ile lat działa warsztat Motobajer?
+              - img [ref=e101]
+          - group [ref=e103]:
+            - generic "Ile macie lokalizacji?" [ref=e104] [cursor=pointer]:
+              - generic [ref=e105]: Ile macie lokalizacji?
+              - img [ref=e107]
+      - generic [ref=e109]:
+        - heading "Sklep z częściami" [level=2] [ref=e110]
+        - generic [ref=e111]:
+          - group [ref=e112]:
+            - generic "Czy możecie zamówić część, której nie ma w sklepie?" [ref=e113] [cursor=pointer]:
+              - generic [ref=e114]: Czy możecie zamówić część, której nie ma w sklepie?
+              - img [ref=e116]
+          - group [ref=e118]:
+            - generic "Czy sprzedajecie części bez montażu?" [ref=e119] [cursor=pointer]:
+              - generic [ref=e120]: Czy sprzedajecie części bez montażu?
+              - img [ref=e122]
+      - generic [ref=e124]:
+        - heading "Konkretne usługi" [level=2] [ref=e125]
+        - generic [ref=e126]:
+          - group [ref=e127]:
+            - generic "Czy wykonujecie badania techniczne (przeglądy)?" [ref=e128] [cursor=pointer]:
+              - generic [ref=e129]: Czy wykonujecie badania techniczne (przeglądy)?
+              - img [ref=e131]
+          - group [ref=e133]:
+            - generic "Czy przyjmujecie samochody elektryczne i hybrydowe?" [ref=e134] [cursor=pointer]:
+              - generic [ref=e135]: Czy przyjmujecie samochody elektryczne i hybrydowe?
+              - img [ref=e137]
+      - generic [ref=e139]:
+        - heading "Masz inne pytanie?" [level=2] [ref=e140]
+        - paragraph [ref=e141]: Chętnie odpowiemy — zadzwoń lub zarezerwuj wizytę.
+        - generic [ref=e142]:
+          - 'link "Zadzwoń: 609 845 865" [ref=e143] [cursor=pointer]':
+            - /url: tel:+48609845865
+          - link "Zarezerwuj wizytę →" [ref=e144] [cursor=pointer]:
+            - /url: /#rezerwacja
+  - contentinfo [ref=e145]:
+    - generic [ref=e146]:
+      - generic [ref=e147]:
+        - generic [ref=e148]:
+          - paragraph [ref=e149]: MOTOBAJER
+          - paragraph [ref=e150]:
+            - text: Stanisław Bajer
+            - text: Autoryzowany serwis sieci EuroWarsztat
+            - text: Myślenice, od 2008 roku
+        - generic [ref=e151]:
+          - paragraph [ref=e152]: Nawigacja
+          - list [ref=e153]:
+            - listitem [ref=e154]:
+              - link "Usługi" [ref=e155] [cursor=pointer]:
+                - /url: "#uslugi"
+            - listitem [ref=e156]:
+              - link "Rezerwacja" [ref=e157] [cursor=pointer]:
+                - /url: "#rezerwacja"
+            - listitem [ref=e158]:
+              - link "Opinie" [ref=e159] [cursor=pointer]:
+                - /url: "#opinie"
+            - listitem [ref=e160]:
+              - link "Lokalizacje" [ref=e161] [cursor=pointer]:
+                - /url: "#lokalizacje"
+            - listitem [ref=e162]:
+              - link "Kontakt" [ref=e163] [cursor=pointer]:
+                - /url: "#kontakt"
+        - generic [ref=e164]:
+          - paragraph [ref=e165]: Kontakt
+          - list [ref=e166]:
+            - listitem [ref=e167]:
+              - link "609 845 865" [ref=e168] [cursor=pointer]:
+                - /url: tel:+48609845865
+            - listitem [ref=e169]:
+              - link "(12) 274 23 06" [ref=e170] [cursor=pointer]:
+                - /url: tel:+48122742306
+            - listitem [ref=e171]:
+              - link "motobajer@eurowarsztat.pl" [ref=e172] [cursor=pointer]:
+                - /url: mailto:motobajer@eurowarsztat.pl
+      - generic [ref=e173]:
+        - paragraph [ref=e174]: © 2026 MOTOBAJER Stanisław Bajer. Wszelkie prawa zastrzeżone.
+        - paragraph [ref=e175]: "NIP: 6811341146 · REGON: 120696804"

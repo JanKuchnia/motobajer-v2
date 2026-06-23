@@ -1,0 +1,487 @@
+- generic [active] [ref=e1]:
+  - link "Przejdź do treści" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Nawigacja główna" [ref=e3]:
+    - generic [ref=e4]:
+      - link "MOTOBAJER" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: MOTOBAJER
+      - button "Otwórz menu" [ref=e8]
+    - generic [ref=e12]:
+      - link "O nas" [ref=e13] [cursor=pointer]:
+        - /url: /#o-nas
+      - link "Usługi" [ref=e14] [cursor=pointer]:
+        - /url: /#uslugi
+      - link "Części" [ref=e15] [cursor=pointer]:
+        - /url: /czesci
+      - link "Opinie" [ref=e16] [cursor=pointer]:
+        - /url: /#opinie
+      - link "FAQ" [ref=e17] [cursor=pointer]:
+        - /url: /faq
+      - link "Kontakt" [ref=e18] [cursor=pointer]:
+        - /url: /kontakt
+      - 'link "Zadzwoń: 609 845 865" [ref=e19] [cursor=pointer]':
+        - /url: tel:+48609845865
+  - main [ref=e20]:
+    - generic [ref=e22]:
+      - navigation "Breadcrumb" [ref=e23]:
+        - list [ref=e24]:
+          - listitem [ref=e25]:
+            - link "Strona główna" [ref=e26] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e27]:
+            - img [ref=e28]
+          - listitem [ref=e30]: Części
+      - heading "Sklep z częściami" [level=1] [ref=e31]
+      - paragraph [ref=e32]: Sprzedajemy oryginalne i zamiennikowe części do samochodów osobowych i dostawczych. Współpracujemy z czołowymi producentami — dostępność i zamówienia na bieżąco.
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - img
+          - searchbox "Szukaj części" [ref=e36]
+        - group "Filtruj według kategorii" [ref=e37]:
+          - button "Wszystkie" [ref=e38]
+          - button "Oleje i filtry" [ref=e39]
+          - button "Hamulce" [ref=e40]
+          - button "Zawieszenie" [ref=e41]
+          - button "Elektryka" [ref=e42]
+          - button "Osprzęt silnika" [ref=e43]
+          - button "Akumulatory" [ref=e44]
+          - button "Układ chłodzenia" [ref=e45]
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - combobox "Filtruj według marki" [ref=e48]:
+              - option "Wszystkie marki" [selected]
+              - option "Bosch"
+              - option "Brembo"
+              - option "Castrol"
+              - option "Contitech"
+              - option "Elring"
+              - option "Febi"
+              - option "LUK"
+              - option "Mann+Hummel"
+              - option "Monroe"
+              - option "Motul"
+              - option "NGK"
+              - option "SKF"
+              - option "Sachs"
+              - option "TRW"
+              - option "Valeo"
+              - option "Varta"
+              - option "Wahler"
+            - img
+          - paragraph [ref=e49]:
+            - text: Wyświetlono
+            - strong [ref=e50]: "70"
+            - text: części
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - paragraph [ref=e54]: Olej silnikowy 5W-30 Longlife III 5L
+          - generic [ref=e55]:
+            - generic [ref=e56]: Castrol
+            - generic [ref=e57]: Oleje i filtry
+        - generic [ref=e58]:
+          - paragraph [ref=e60]: Olej silnikowy 5W-40 Edge 5L
+          - generic [ref=e61]:
+            - generic [ref=e62]: Castrol
+            - generic [ref=e63]: Oleje i filtry
+        - generic [ref=e64]:
+          - paragraph [ref=e66]: Olej silnikowy 0W-30 Evolution 5L
+          - generic [ref=e67]:
+            - generic [ref=e68]: Motul
+            - generic [ref=e69]: Oleje i filtry
+        - generic [ref=e70]:
+          - paragraph [ref=e72]: Olej silnikowy 5W-40 8100 X-cess 5L
+          - generic [ref=e73]:
+            - generic [ref=e74]: Motul
+            - generic [ref=e75]: Oleje i filtry
+        - generic [ref=e76]:
+          - paragraph [ref=e78]: Filtr oleju W 712/75
+          - generic [ref=e79]:
+            - generic [ref=e80]: Mann+Hummel
+            - generic [ref=e81]: Oleje i filtry
+        - generic [ref=e82]:
+          - paragraph [ref=e84]: Filtr oleju W 811/80
+          - generic [ref=e85]:
+            - generic [ref=e86]: Mann+Hummel
+            - generic [ref=e87]: Oleje i filtry
+        - generic [ref=e88]:
+          - paragraph [ref=e90]: Filtr powietrza C 30130
+          - generic [ref=e91]:
+            - generic [ref=e92]: Mann+Hummel
+            - generic [ref=e93]: Oleje i filtry
+        - generic [ref=e94]:
+          - paragraph [ref=e96]: Filtr powietrza C 35008
+          - generic [ref=e97]:
+            - generic [ref=e98]: Mann+Hummel
+            - generic [ref=e99]: Oleje i filtry
+        - generic [ref=e100]:
+          - paragraph [ref=e102]: Filtr kabinowy CU 2939
+          - generic [ref=e103]:
+            - generic [ref=e104]: Mann+Hummel
+            - generic [ref=e105]: Oleje i filtry
+        - generic [ref=e106]:
+          - paragraph [ref=e108]: Filtr kabinowy węglowy CUK 29005
+          - generic [ref=e109]:
+            - generic [ref=e110]: Mann+Hummel
+            - generic [ref=e111]: Oleje i filtry
+        - generic [ref=e112]:
+          - paragraph [ref=e114]: Filtr paliwa WK 939/2
+          - generic [ref=e115]:
+            - generic [ref=e116]: Mann+Hummel
+            - generic [ref=e117]: Oleje i filtry
+        - generic [ref=e118]:
+          - paragraph [ref=e120]: Olej przekładniowy 75W-90 GL-5 1L
+          - generic [ref=e121]:
+            - generic [ref=e122]: Motul
+            - generic [ref=e123]: Oleje i filtry
+        - generic [ref=e124]:
+          - paragraph [ref=e126]: Klocki hamulcowe przód BP2370
+          - generic [ref=e127]:
+            - generic [ref=e128]: TRW
+            - generic [ref=e129]: Hamulce
+        - generic [ref=e130]:
+          - paragraph [ref=e132]: Klocki hamulcowe przód GDB1673
+          - generic [ref=e133]:
+            - generic [ref=e134]: TRW
+            - generic [ref=e135]: Hamulce
+        - generic [ref=e136]:
+          - paragraph [ref=e138]: Klocki hamulcowe tył BP2398
+          - generic [ref=e139]:
+            - generic [ref=e140]: TRW
+            - generic [ref=e141]: Hamulce
+        - generic [ref=e142]:
+          - paragraph [ref=e144]: Tarcza hamulcowa przód DF4056
+          - generic [ref=e145]:
+            - generic [ref=e146]: TRW
+            - generic [ref=e147]: Hamulce
+        - generic [ref=e148]:
+          - paragraph [ref=e150]: Tarcza hamulcowa tył DF4060
+          - generic [ref=e151]:
+            - generic [ref=e152]: TRW
+            - generic [ref=e153]: Hamulce
+        - generic [ref=e154]:
+          - paragraph [ref=e156]: Klocki hamulcowe przód P 85 100
+          - generic [ref=e157]:
+            - generic [ref=e158]: Brembo
+            - generic [ref=e159]: Hamulce
+        - generic [ref=e160]:
+          - paragraph [ref=e162]: Tarcza hamulcowa wentylowana 09.A348.11
+          - generic [ref=e163]:
+            - generic [ref=e164]: Brembo
+            - generic [ref=e165]: Hamulce
+        - generic [ref=e166]:
+          - paragraph [ref=e168]: Płyn hamulcowy DOT 4 LV 500 ml
+          - generic [ref=e169]:
+            - generic [ref=e170]: Bosch
+            - generic [ref=e171]: Hamulce
+        - generic [ref=e172]:
+          - paragraph [ref=e174]: Przewód hamulcowy elastyczny PHH330
+          - generic [ref=e175]:
+            - generic [ref=e176]: TRW
+            - generic [ref=e177]: Hamulce
+        - generic [ref=e178]:
+          - paragraph [ref=e180]: Zacisk hamulcowy remanufaktured BHW391E
+          - generic [ref=e181]:
+            - generic [ref=e182]: TRW
+            - generic [ref=e183]: Hamulce
+        - generic [ref=e184]:
+          - paragraph [ref=e186]: Amortyzator przód SENSA-TRAC 339021
+          - generic [ref=e187]:
+            - generic [ref=e188]: Monroe
+            - generic [ref=e189]: Zawieszenie
+        - generic [ref=e190]:
+          - paragraph [ref=e192]: Amortyzator tył ORIGINAL 16805
+          - generic [ref=e193]:
+            - generic [ref=e194]: Monroe
+            - generic [ref=e195]: Zawieszenie
+        - generic [ref=e196]:
+          - paragraph [ref=e198]: Tuleja stabilizatora przednia
+          - generic [ref=e199]:
+            - generic [ref=e200]: Febi
+            - generic [ref=e201]: Zawieszenie
+        - generic [ref=e202]:
+          - paragraph [ref=e204]: Łącznik stabilizatora przód
+          - generic [ref=e205]:
+            - generic [ref=e206]: Febi
+            - generic [ref=e207]: Zawieszenie
+        - generic [ref=e208]:
+          - paragraph [ref=e210]: Sworzeń wahacza dolnego
+          - generic [ref=e211]:
+            - generic [ref=e212]: SKF
+            - generic [ref=e213]: Zawieszenie
+        - generic [ref=e214]:
+          - paragraph [ref=e216]: Łożysko koła przód VKBA 3651
+          - generic [ref=e217]:
+            - generic [ref=e218]: SKF
+            - generic [ref=e219]: Zawieszenie
+        - generic [ref=e220]:
+          - paragraph [ref=e222]: Łożysko koła tył VKBA 3580
+          - generic [ref=e223]:
+            - generic [ref=e224]: SKF
+            - generic [ref=e225]: Zawieszenie
+        - generic [ref=e226]:
+          - paragraph [ref=e228]: Zestaw naprawczy wahacza
+          - generic [ref=e229]:
+            - generic [ref=e230]: Febi
+            - generic [ref=e231]: Zawieszenie
+        - generic [ref=e232]:
+          - paragraph [ref=e234]: Drążek kierowniczy zewnętrzny
+          - generic [ref=e235]:
+            - generic [ref=e236]: TRW
+            - generic [ref=e237]: Zawieszenie
+        - generic [ref=e238]:
+          - paragraph [ref=e240]: Sprężyna zawieszenia przednia
+          - generic [ref=e241]:
+            - generic [ref=e242]: Sachs
+            - generic [ref=e243]: Zawieszenie
+        - generic [ref=e244]:
+          - paragraph [ref=e246]: Podpora amortyzatora z łożyskiem
+          - generic [ref=e247]:
+            - generic [ref=e248]: SKF
+            - generic [ref=e249]: Zawieszenie
+        - generic [ref=e250]:
+          - paragraph [ref=e252]: Świeca zapłonowa FR7DC+ (4 szt.)
+          - generic [ref=e253]:
+            - generic [ref=e254]: Bosch
+            - generic [ref=e255]: Elektryka
+        - generic [ref=e256]:
+          - paragraph [ref=e258]: Świeca zapłonowa iridium FR7KI332S
+          - generic [ref=e259]:
+            - generic [ref=e260]: Bosch
+            - generic [ref=e261]: Elektryka
+        - generic [ref=e262]:
+          - paragraph [ref=e264]: Świeca żarowa GSE 107
+          - generic [ref=e265]:
+            - generic [ref=e266]: Bosch
+            - generic [ref=e267]: Elektryka
+        - generic [ref=e268]:
+          - paragraph [ref=e270]: Świeca zapłonowa LFR5A-11 (4 szt.)
+          - generic [ref=e271]:
+            - generic [ref=e272]: NGK
+            - generic [ref=e273]: Elektryka
+        - generic [ref=e274]:
+          - paragraph [ref=e276]: Świeca zapłonowa iridium ILKAR7L11 (4 szt.)
+          - generic [ref=e277]:
+            - generic [ref=e278]: NGK
+            - generic [ref=e279]: Elektryka
+        - generic [ref=e280]:
+          - paragraph [ref=e282]: Cewka zapłonowa 0 986 221 023
+          - generic [ref=e283]:
+            - generic [ref=e284]: Bosch
+            - generic [ref=e285]: Elektryka
+        - generic [ref=e286]:
+          - paragraph [ref=e288]: Alternator remanufaktured 0 986 041 500
+          - generic [ref=e289]:
+            - generic [ref=e290]: Bosch
+            - generic [ref=e291]: Elektryka
+        - generic [ref=e292]:
+          - paragraph [ref=e294]: Rozrusznik remanufaktured 0 986 019 540
+          - generic [ref=e295]:
+            - generic [ref=e296]: Bosch
+            - generic [ref=e297]: Elektryka
+        - generic [ref=e298]:
+          - paragraph [ref=e300]: Czujnik tlenu (lambda) LSF 4.2
+          - generic [ref=e301]:
+            - generic [ref=e302]: Bosch
+            - generic [ref=e303]: Elektryka
+        - generic [ref=e304]:
+          - paragraph [ref=e306]: Czujnik ABS tylny VKPC 88620
+          - generic [ref=e307]:
+            - generic [ref=e308]: SKF
+            - generic [ref=e309]: Elektryka
+        - generic [ref=e310]:
+          - paragraph [ref=e312]: Pompka paliwa elektryczna 0 580 314 072
+          - generic [ref=e313]:
+            - generic [ref=e314]: Bosch
+            - generic [ref=e315]: Elektryka
+        - generic [ref=e316]:
+          - paragraph [ref=e318]: Pasek rozrządu 1987948519
+          - generic [ref=e319]:
+            - generic [ref=e320]: Bosch
+            - generic [ref=e321]: Osprzęt silnika
+        - generic [ref=e322]:
+          - paragraph [ref=e324]: Zestaw rozrządu z pompą wody
+          - generic [ref=e325]:
+            - generic [ref=e326]: SKF
+            - generic [ref=e327]: Osprzęt silnika
+        - generic [ref=e328]:
+          - paragraph [ref=e330]: Pasek klinowy wielorowkowy 6PK1548
+          - generic [ref=e331]:
+            - generic [ref=e332]: Contitech
+            - generic [ref=e333]: Osprzęt silnika
+        - generic [ref=e334]:
+          - paragraph [ref=e336]: Napinacz paska rozrządu
+          - generic [ref=e337]:
+            - generic [ref=e338]: Sachs
+            - generic [ref=e339]: Osprzęt silnika
+        - generic [ref=e340]:
+          - paragraph [ref=e342]: Napinacz paska wielorowkowego
+          - generic [ref=e343]:
+            - generic [ref=e344]: Bosch
+            - generic [ref=e345]: Osprzęt silnika
+        - generic [ref=e346]:
+          - paragraph [ref=e348]: Sprzęgło z kołem zamachowym (komplet)
+          - generic [ref=e349]:
+            - generic [ref=e350]: LUK
+            - generic [ref=e351]: Osprzęt silnika
+        - generic [ref=e352]:
+          - paragraph [ref=e354]: Dwumasowe koło zamachowe
+          - generic [ref=e355]:
+            - generic [ref=e356]: LUK
+            - generic [ref=e357]: Osprzęt silnika
+        - generic [ref=e358]:
+          - paragraph [ref=e360]: Tarcza sprzęgła 624 3107 00
+          - generic [ref=e361]:
+            - generic [ref=e362]: LUK
+            - generic [ref=e363]: Osprzęt silnika
+        - generic [ref=e364]:
+          - paragraph [ref=e366]: Uszczelka głowicy HG8027
+          - generic [ref=e367]:
+            - generic [ref=e368]: Elring
+            - generic [ref=e369]: Osprzęt silnika
+        - generic [ref=e370]:
+          - paragraph [ref=e372]: Uszczelka pokrywy zaworów
+          - generic [ref=e373]:
+            - generic [ref=e374]: Elring
+            - generic [ref=e375]: Osprzęt silnika
+        - generic [ref=e376]:
+          - paragraph [ref=e378]: Filtr paliwa benzynowy GF-399
+          - generic [ref=e379]:
+            - generic [ref=e380]: Bosch
+            - generic [ref=e381]: Osprzęt silnika
+        - generic [ref=e382]:
+          - paragraph [ref=e384]: Akumulator S4 005 60Ah 540A
+          - generic [ref=e385]:
+            - generic [ref=e386]: Bosch
+            - generic [ref=e387]: Akumulatory
+        - generic [ref=e388]:
+          - paragraph [ref=e390]: Akumulator S4 008 74Ah 680A
+          - generic [ref=e391]:
+            - generic [ref=e392]: Bosch
+            - generic [ref=e393]: Akumulatory
+        - generic [ref=e394]:
+          - paragraph [ref=e396]: Akumulator S5 008 77Ah 780A EFB
+          - generic [ref=e397]:
+            - generic [ref=e398]: Bosch
+            - generic [ref=e399]: Akumulatory
+        - generic [ref=e400]:
+          - paragraph [ref=e402]: Akumulator S5 A08 70Ah 760A AGM
+          - generic [ref=e403]:
+            - generic [ref=e404]: Bosch
+            - generic [ref=e405]: Akumulatory
+        - generic [ref=e406]:
+          - paragraph [ref=e408]: Akumulator Dynamic 60Ah 540A
+          - generic [ref=e409]:
+            - generic [ref=e410]: Valeo
+            - generic [ref=e411]: Akumulatory
+        - generic [ref=e412]:
+          - paragraph [ref=e414]: Akumulator Blue Dynamic E43 72Ah 680A
+          - generic [ref=e415]:
+            - generic [ref=e416]: Varta
+            - generic [ref=e417]: Akumulatory
+        - generic [ref=e418]:
+          - paragraph [ref=e420]: Pompa wody WP7210
+          - generic [ref=e421]:
+            - generic [ref=e422]: SKF
+            - generic [ref=e423]: Układ chłodzenia
+        - generic [ref=e424]:
+          - paragraph [ref=e426]: Pompa wody WP0198
+          - generic [ref=e427]:
+            - generic [ref=e428]: Valeo
+            - generic [ref=e429]: Układ chłodzenia
+        - generic [ref=e430]:
+          - paragraph [ref=e432]: Termostat 82°C
+          - generic [ref=e433]:
+            - generic [ref=e434]: Wahler
+            - generic [ref=e435]: Układ chłodzenia
+        - generic [ref=e436]:
+          - paragraph [ref=e438]: Wąż chłodnicy górny
+          - generic [ref=e439]:
+            - generic [ref=e440]: Febi
+            - generic [ref=e441]: Układ chłodzenia
+        - generic [ref=e442]:
+          - paragraph [ref=e444]: Wąż chłodnicy dolny
+          - generic [ref=e445]:
+            - generic [ref=e446]: Febi
+            - generic [ref=e447]: Układ chłodzenia
+        - generic [ref=e448]:
+          - paragraph [ref=e450]: Chłodnica silnika aluminiowa
+          - generic [ref=e451]:
+            - generic [ref=e452]: Valeo
+            - generic [ref=e453]: Układ chłodzenia
+        - generic [ref=e454]:
+          - paragraph [ref=e456]: Płyn chłodzący -35°C G12+ 1L
+          - generic [ref=e457]:
+            - generic [ref=e458]: Castrol
+            - generic [ref=e459]: Układ chłodzenia
+        - generic [ref=e460]:
+          - paragraph [ref=e462]: Korek zbiornika wyrównawczego
+          - generic [ref=e463]:
+            - generic [ref=e464]: Febi
+            - generic [ref=e465]: Układ chłodzenia
+        - generic [ref=e466]:
+          - paragraph [ref=e468]: Zbiornik wyrównawczy płynu chłodzącego
+          - generic [ref=e469]:
+            - generic [ref=e470]: Febi
+            - generic [ref=e471]: Układ chłodzenia
+      - generic [ref=e473]:
+        - generic [ref=e474]:
+          - paragraph [ref=e475]: Nie znalazłeś szukanej części?
+          - paragraph [ref=e476]: Możemy zamówić praktycznie każdą część — zazwyczaj w ciągu 24–48 godzin.
+        - generic [ref=e477]:
+          - link "Zadzwoń" [ref=e478] [cursor=pointer]:
+            - /url: tel:+48609845865
+          - link "Napisz do nas" [ref=e479] [cursor=pointer]:
+            - /url: /kontakt
+  - contentinfo [ref=e480]:
+    - generic [ref=e481]:
+      - generic [ref=e482]:
+        - generic [ref=e483]:
+          - paragraph [ref=e484]: MOTOBAJER
+          - paragraph [ref=e485]:
+            - text: Stanisław Bajer
+            - text: Autoryzowany serwis sieci EuroWarsztat
+            - text: Myślenice, od 2008 roku
+        - generic [ref=e486]:
+          - paragraph [ref=e487]: Nawigacja
+          - list [ref=e488]:
+            - listitem [ref=e489]:
+              - link "Usługi" [ref=e490] [cursor=pointer]:
+                - /url: "#uslugi"
+            - listitem [ref=e491]:
+              - link "Rezerwacja" [ref=e492] [cursor=pointer]:
+                - /url: "#rezerwacja"
+            - listitem [ref=e493]:
+              - link "Opinie" [ref=e494] [cursor=pointer]:
+                - /url: "#opinie"
+            - listitem [ref=e495]:
+              - link "Lokalizacje" [ref=e496] [cursor=pointer]:
+                - /url: "#lokalizacje"
+            - listitem [ref=e497]:
+              - link "Kontakt" [ref=e498] [cursor=pointer]:
+                - /url: "#kontakt"
+        - generic [ref=e499]:
+          - paragraph [ref=e500]: Kontakt
+          - list [ref=e501]:
+            - listitem [ref=e502]:
+              - link "609 845 865" [ref=e503] [cursor=pointer]:
+                - /url: tel:+48609845865
+            - listitem [ref=e504]:
+              - link "(12) 274 23 06" [ref=e505] [cursor=pointer]:
+                - /url: tel:+48122742306
+            - listitem [ref=e506]:
+              - link "motobajer@eurowarsztat.pl" [ref=e507] [cursor=pointer]:
+                - /url: mailto:motobajer@eurowarsztat.pl
+      - generic [ref=e508]:
+        - paragraph [ref=e509]: © 2026 MOTOBAJER Stanisław Bajer. Wszelkie prawa zastrzeżone.
+        - paragraph [ref=e510]: "NIP: 6811341146 · REGON: 120696804"
+  - navigation "Szybki kontakt" [ref=e511]:
+    - link "WhatsApp" [ref=e512] [cursor=pointer]:
+      - /url: https://wa.me/48609845865
+      - img [ref=e513]
+      - text: WhatsApp
+    - link "609 845 865" [ref=e516] [cursor=pointer]:
+      - /url: tel:+48609845865
+      - img [ref=e517]
+      - text: 609 845 865

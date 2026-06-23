@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import StickyCtaBar from '../components/StickyCtaBar.astro';
+import { faqs } from '../data/faqs';
+
+const grouped = faqs.reduce<Record<string, typeof faqs>>((acc, faq) => {
+  const cat = faq.category ?? 'Inne';
+  if (!acc[cat]) acc[cat] = [];
+  acc[cat].push(faq);
+  return acc;
+}, {});
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
+};
+---
+
+<BaseLayout
+  title="FAQ — Najczęstsze pytania | MOTOBAJER Myślenice"
+  description="Odpowiedzi na najczęstsze pytania dotyczące usług warsztatu MOTOBAJER w Myślenicach — rezerwacja, ceny, części, gwarancja i więcej."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+  <Nav />
+  <main id="main-content">
+
+    <!-- Hero strip -->
+    <div class="bg-navy pt-32 pb-14 px-4 sm:px-6">
+      <div class="max-w-3xl mx-auto">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+          <ol class="flex items-center gap-2 text-sm" style="color: oklch(65% 0.04 265);">
+            <li><a href="/" class="hover:text-white transition-colors">Strona główna</a></li>
+            <li aria-hidden="true">
+              <svg class="w-3.5 h-3.5 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+              </svg>
+            </li>
+            <li class="text-white font-medium" aria-current="page">FAQ</li>
+          </ol>
+        </nav>
+        <h1
+          class="font-bold text-white mb-3 leading-tight"
+          style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.8rem); letter-spacing: -0.02em;"
+        >
+          Najczęstsze pytania
+        </h1>
+        <p class="text-lg" style="color: oklch(72% 0.04 265);">
+          Nie znalazłeś odpowiedzi? Zadzwoń:{' '}
+          <a href="tel:+48609845865" class="text-white font-semibold hover:underline">609 845 865</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ content -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-14">
+      {Object.entries(grouped).map(([category, items]) => (
+        <section>
+          <h2
+            class="reveal font-bold text-ink mb-6"
+            style="font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.9rem);"
+          >
+            {category}
+          </h2>
+          <div class="reveal border-t" style="border-color: oklch(88% 0.01 265);">
+            {items.map((faq) => (
+              <details class="faq-item border-b" style="border-color: oklch(88% 0.01 265);">
+                <summary class="faq-summary flex items-center justify-between gap-4 py-5 cursor-pointer list-none">
+                  <span class="font-semibold text-base" style="color: var(--color-ink);">{faq.q}</span>
+                  <span
+                    class="faq-icon shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-150"
+                    style="background: var(--color-surface-1);"
+                    aria-hidden="true"
+                  >
+                    <svg class="faq-plus w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                    </svg>
+                    <svg class="faq-minus w-4 h-4 hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15"/>
+                    </svg>
+                  </span>
+                </summary>
+                <div class="faq-body pb-5 pr-12">
+                  <p class="text-base leading-relaxed" style="color: var(--color-ink-muted);">{faq.a}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <!-- Bottom CTA -->
+      <div class="reveal rounded-xl bg-navy p-8 text-center">
+        <h2
+          class="font-bold text-white mb-2"
+          style="font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.9rem);"
+        >
+          Masz inne pytanie?
+        </h2>
+        <p class="mb-6" style="color: oklch(72% 0.04 265);">
+          Chętnie odpowiemy — zadzwoń lub zarezerwuj wizytę.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="tel:+48609845865"
+            class="px-6 py-3 rounded-md font-semibold text-navy btn-lift"
+            style="background: #fff;"
+            onmouseover="this.style.background='oklch(96% 0.01 265)'"
+            onmouseout="this.style.background='#fff'"
+          >
+            Zadzwoń: 609 845 865
+          </a>
+          <a
+            href="/#rezerwacja"
+            class="px-6 py-3 rounded-md font-semibold text-white transition-colors"
+            style="background: var(--color-accent);"
+            onmouseover="this.style.background='var(--color-accent-hover)'"
+            onmouseout="this.style.background='var(--color-accent)'"
+          >
+            Zarezerwuj wizytę →
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <Footer />
+  <StickyCtaBar />
+</BaseLayout>
+
+<style>
+  .faq-summary::-webkit-details-marker { display: none; }
+  .faq-item[open] .faq-plus { display: none; }
+  .faq-item[open] .faq-minus { display: block; }
+  .faq-item[open] .faq-icon { background: var(--color-navy); color: #fff; }
+  .faq-item[open] .faq-icon svg { stroke: #fff; }
+  .faq-summary:hover span:first-child { color: var(--color-navy); }
+  .faq-summary:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 2px; border-radius: 4px; }
+  .faq-body {
+    animation: faqOpen 0.2s var(--ease-quart) forwards;
+  }
+  @keyframes faqOpen {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>

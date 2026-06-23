@@ -1,11 +1,19 @@
 ---
 const links = [
-  { href: '#o-nas', label: 'O nas' },
-  { href: '#uslugi', label: 'Usługi' },
-  { href: '#opinie', label: 'Opinie' },
-  { href: '#lokalizacje', label: 'Lokalizacje' },
-  { href: '#kontakt', label: 'Kontakt' },
+  { href: '/#o-nas', label: 'O nas' },
+  { href: '/#uslugi', label: 'Usługi' },
+  { href: '/czesci', label: 'Części' },
+  { href: '/#opinie', label: 'Opinie' },
+  { href: '/faq', label: 'FAQ' },
+  { href: '/kontakt', label: 'Kontakt' },
 ];
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+function isActive(href: string) {
+  const hrefPath = href.split('#')[0].replace(/\/$/, '');
+  if (!hrefPath) return false;
+  return path === hrefPath || path.startsWith(hrefPath + '/');
+}
 ---
 
 <nav
@@ -30,7 +38,8 @@ const links = [
       {links.map((link) => (
         <a
           href={link.href}
-          class="nav-link-slide text-sm font-medium text-white/80 hover:text-white transition-colors duration-150"
+          class={`nav-link-slide text-sm font-medium transition-colors duration-150 ${isActive(link.href) ? 'text-white' : 'text-white/70 hover:text-white'}`}
+          aria-current={isActive(link.href) ? 'page' : undefined}
         >
           {link.label}
         </a>
@@ -69,7 +78,8 @@ const links = [
       {links.map((link) => (
         <a
           href={link.href}
-          class="mobile-nav-link py-2.5 px-3 rounded-md text-white/80 hover:text-white hover:bg-white/10 font-medium transition-colors"
+          class={`mobile-nav-link py-2.5 px-3 rounded-md font-medium transition-colors ${isActive(link.href) ? 'text-white bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/10'}`}
+          aria-current={isActive(link.href) ? 'page' : undefined}
         >
           {link.label}
         </a>

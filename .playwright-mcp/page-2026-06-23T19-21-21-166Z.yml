@@ -1,0 +1,169 @@
+- generic [active] [ref=e1]:
+  - link "Przejdź do treści" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Nawigacja główna" [ref=e3]:
+    - generic [ref=e4]:
+      - link "MOTOBAJER" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: MOTOBAJER
+      - button "Otwórz menu" [ref=e8]
+    - generic [ref=e12]:
+      - link "O nas" [ref=e13] [cursor=pointer]:
+        - /url: /#o-nas
+      - link "Usługi" [ref=e14] [cursor=pointer]:
+        - /url: /#uslugi
+      - link "Części" [ref=e15] [cursor=pointer]:
+        - /url: /czesci
+      - link "Opinie" [ref=e16] [cursor=pointer]:
+        - /url: /#opinie
+      - link "FAQ" [ref=e17] [cursor=pointer]:
+        - /url: /faq
+      - link "Kontakt" [ref=e18] [cursor=pointer]:
+        - /url: /kontakt
+      - 'link "Zadzwoń: 609 845 865" [ref=e19] [cursor=pointer]':
+        - /url: tel:+48609845865
+  - main [ref=e20]:
+    - generic [ref=e22]:
+      - navigation "Breadcrumb" [ref=e23]:
+        - list [ref=e24]:
+          - listitem [ref=e25]:
+            - link "Strona główna" [ref=e26] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e27]:
+            - img [ref=e28]
+          - listitem [ref=e30]:
+            - link "Usługi" [ref=e31] [cursor=pointer]:
+              - /url: /#uslugi
+          - listitem [ref=e32]:
+            - img [ref=e33]
+          - listitem [ref=e35]: Mechanika ogólna
+      - generic [ref=e36]:
+        - img [ref=e38]
+        - heading "Mechanika ogólna" [level=1] [ref=e40]
+      - paragraph [ref=e41]: Naprawy silnika, wymiana rozrządów, sprzęgieł i elementów układu napędowego.
+    - generic [ref=e42]:
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - heading "O usłudze" [level=2] [ref=e45]
+          - paragraph [ref=e46]: Mechanika ogólna to fundament naszego warsztatu. Nasi mechanicy z ponad 18-letnim doświadczeniem przeprowadzają pełen zakres napraw — od wymiany rozrządu, przez naprawę układu napędowego, po generalne remonty silników. Pracujemy na częściach oryginalnych oraz sprawdzonych zamiennikach marek dostępnych w naszym sklepie. Każda naprawa jest dokumentowana i objęta gwarancją serwisową.
+        - generic [ref=e47]:
+          - heading "Co obejmuje usługa" [level=2] [ref=e48]
+          - list [ref=e49]:
+            - listitem [ref=e50]:
+              - img [ref=e52]
+              - generic [ref=e54]: Wymiana rozrządu i łańcucha rozrządu
+            - listitem [ref=e55]:
+              - img [ref=e57]
+              - generic [ref=e59]: Naprawa i regeneracja silnika
+            - listitem [ref=e60]:
+              - img [ref=e62]
+              - generic [ref=e64]: Wymiana sprzęgła i dwumasowego koła zamachowego
+            - listitem [ref=e65]:
+              - img [ref=e67]
+              - generic [ref=e69]: Serwis skrzyni biegów (manualna i automatyczna)
+            - listitem [ref=e70]:
+              - img [ref=e72]
+              - generic [ref=e74]: Wymiana oleju silnikowego i filtrów
+            - listitem [ref=e75]:
+              - img [ref=e77]
+              - generic [ref=e79]: Przeglądy okresowe zgodne z harmonogramem producenta
+            - listitem [ref=e80]:
+              - img [ref=e82]
+              - generic [ref=e84]: Wymiana uszczelnień i uszczelek
+        - generic [ref=e85]:
+          - heading "Pytania i odpowiedzi" [level=2] [ref=e86]
+          - generic [ref=e87]:
+            - group [ref=e88]:
+              - generic "Jak często powinienem wymieniać olej silnikowy?" [ref=e89] [cursor=pointer]:
+                - generic [ref=e90]: Jak często powinienem wymieniać olej silnikowy?
+                - img [ref=e92]
+            - group [ref=e94]:
+              - generic "Czy wymiana rozrządu jest konieczna?" [ref=e95] [cursor=pointer]:
+                - generic [ref=e96]: Czy wymiana rozrządu jest konieczna?
+                - img [ref=e98]
+            - group [ref=e100]:
+              - generic "Czy po naprawie silnika dostanę gwarancję?" [ref=e101] [cursor=pointer]:
+                - generic [ref=e102]: Czy po naprawie silnika dostanę gwarancję?
+                - img [ref=e104]
+      - complementary [ref=e106]:
+        - generic [ref=e107]:
+          - paragraph [ref=e108]: Czas realizacji
+          - generic [ref=e109]:
+            - img [ref=e110]
+            - paragraph [ref=e112]: Od 1 godziny (wymiana oleju) do kilku dni roboczych (remont silnika)
+        - generic [ref=e113]:
+          - heading "Gotowy na wizytę?" [level=3] [ref=e114]
+          - paragraph [ref=e115]: Umów się przez formularz lub zadzwoń bezpośrednio.
+          - link "Zarezerwuj wizytę →" [ref=e116] [cursor=pointer]:
+            - /url: /#rezerwacja
+          - 'link "Zadzwoń: 609 845 865" [ref=e117] [cursor=pointer]':
+            - /url: tel:+48609845865
+        - generic [ref=e118]:
+          - heading "Inne usługi" [level=3] [ref=e119]
+          - list [ref=e120]:
+            - listitem [ref=e121]:
+              - link "Diagnostyka komputerowa" [ref=e122] [cursor=pointer]:
+                - /url: /uslugi/diagnostyka-komputerowa
+            - listitem [ref=e123]:
+              - link "Hamulce i zawieszenie" [ref=e124] [cursor=pointer]:
+                - /url: /uslugi/hamulce-zawieszenie
+            - listitem [ref=e125]:
+              - link "Klimatyzacja" [ref=e126] [cursor=pointer]:
+                - /url: /uslugi/klimatyzacja
+            - listitem [ref=e127]:
+              - link "Elektryka pojazdowa" [ref=e128] [cursor=pointer]:
+                - /url: /uslugi/elektryka-pojazdowa
+            - listitem [ref=e129]:
+              - link "Wulkanizacja" [ref=e130] [cursor=pointer]:
+                - /url: /uslugi/wulkanizacja
+  - contentinfo [ref=e131]:
+    - generic [ref=e132]:
+      - generic [ref=e133]:
+        - generic [ref=e134]:
+          - paragraph [ref=e135]: MOTOBAJER
+          - paragraph [ref=e136]:
+            - text: Stanisław Bajer
+            - text: Autoryzowany serwis sieci EuroWarsztat
+            - text: Myślenice, od 2008 roku
+        - generic [ref=e137]:
+          - paragraph [ref=e138]: Nawigacja
+          - list [ref=e139]:
+            - listitem [ref=e140]:
+              - link "Usługi" [ref=e141] [cursor=pointer]:
+                - /url: "#uslugi"
+            - listitem [ref=e142]:
+              - link "Rezerwacja" [ref=e143] [cursor=pointer]:
+                - /url: "#rezerwacja"
+            - listitem [ref=e144]:
+              - link "Opinie" [ref=e145] [cursor=pointer]:
+                - /url: "#opinie"
+            - listitem [ref=e146]:
+              - link "Lokalizacje" [ref=e147] [cursor=pointer]:
+                - /url: "#lokalizacje"
+            - listitem [ref=e148]:
+              - link "Kontakt" [ref=e149] [cursor=pointer]:
+                - /url: "#kontakt"
+        - generic [ref=e150]:
+          - paragraph [ref=e151]: Kontakt
+          - list [ref=e152]:
+            - listitem [ref=e153]:
+              - link "609 845 865" [ref=e154] [cursor=pointer]:
+                - /url: tel:+48609845865
+            - listitem [ref=e155]:
+              - link "(12) 274 23 06" [ref=e156] [cursor=pointer]:
+                - /url: tel:+48122742306
+            - listitem [ref=e157]:
+              - link "motobajer@eurowarsztat.pl" [ref=e158] [cursor=pointer]:
+                - /url: mailto:motobajer@eurowarsztat.pl
+      - generic [ref=e159]:
+        - paragraph [ref=e160]: © 2026 MOTOBAJER Stanisław Bajer. Wszelkie prawa zastrzeżone.
+        - paragraph [ref=e161]: "NIP: 6811341146 · REGON: 120696804"
+  - navigation "Szybki kontakt" [ref=e162]:
+    - link "WhatsApp" [ref=e163] [cursor=pointer]:
+      - /url: https://wa.me/48609845865
+      - img [ref=e164]
+      - text: WhatsApp
+    - link "609 845 865" [ref=e167] [cursor=pointer]:
+      - /url: tel:+48609845865
+      - img [ref=e168]
+      - text: 609 845 865

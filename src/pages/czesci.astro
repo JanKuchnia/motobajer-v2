@@ -1,0 +1,283 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import StickyCtaBar from '../components/StickyCtaBar.astro';
+import { parts, categories } from '../data/parts';
+
+const brands = [...new Set(parts.map((p) => p.brand))].sort();
+---
+
+<BaseLayout
+  title="Sklep z częściami samochodowymi — MOTOBAJER Myślenice"
+  description="Sklep z oryginalnymi i zamiennikowymi częściami samochodowymi w Myślenicach. Bosch, Valeo, SKF, NGK, Mann+Hummel, Castrol, Brembo i wiele innych."
+>
+  <Nav />
+  <main id="main-content">
+
+    <!-- Hero strip -->
+    <div class="bg-navy pt-32 pb-14 px-4 sm:px-6">
+      <div class="max-w-6xl mx-auto">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+          <ol class="flex items-center gap-2 text-sm" style="color: oklch(65% 0.04 265);">
+            <li><a href="/" class="hover:text-white transition-colors">Strona główna</a></li>
+            <li aria-hidden="true">
+              <svg class="w-3.5 h-3.5 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+              </svg>
+            </li>
+            <li class="text-white font-medium" aria-current="page">Części</li>
+          </ol>
+        </nav>
+        <h1
+          class="font-bold text-white mb-3 leading-tight"
+          style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.8rem); letter-spacing: -0.02em;"
+        >
+          Sklep z częściami
+        </h1>
+        <p class="text-lg max-w-2xl" style="color: oklch(72% 0.04 265);">
+          Sprzedajemy oryginalne i zamiennikowe części do samochodów osobowych i dostawczych.
+          Współpracujemy z czołowymi producentami — dostępność i zamówienia na bieżąco.
+        </p>
+      </div>
+    </div>
+
+    <!-- Filters + grid -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+
+      <!-- Filters bar -->
+      <div class="mb-8 space-y-4">
+        <!-- Search -->
+        <div class="relative max-w-md">
+          <svg
+            class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none"
+            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            aria-hidden="true"
+            style="color: var(--color-ink-muted);"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/>
+          </svg>
+          <input
+            id="parts-search"
+            type="search"
+            placeholder="Szukaj części lub marki..."
+            class="w-full pl-10 pr-4 py-2.5 rounded-lg text-sm transition-all duration-150"
+            style="border: 1px solid oklch(84% 0.01 265); background: #fff; color: var(--color-ink); font-family: var(--font-body);"
+            aria-label="Szukaj części"
+          />
+        </div>
+
+        <!-- Category chips -->
+        <div class="flex flex-wrap gap-2" role="group" aria-label="Filtruj według kategorii">
+          <button
+            class="parts-cat-btn active px-4 py-2 rounded-full text-sm font-semibold transition-colors duration-150"
+            data-category="all"
+            style="background: var(--color-navy); color: #fff;"
+          >
+            Wszystkie
+          </button>
+          {categories.map((cat) => (
+            <button
+              class="parts-cat-btn px-4 py-2 rounded-full text-sm font-semibold transition-colors duration-150"
+              data-category={cat}
+              style="background: var(--color-surface-1); color: var(--color-ink-muted);"
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        <!-- Brand + count row -->
+        <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+          <div class="relative">
+            <select
+              id="parts-brand"
+              class="pl-3 pr-8 py-2 rounded-lg text-sm transition-all duration-150 appearance-none"
+              style="border: 1px solid oklch(84% 0.01 265); background: #fff; color: var(--color-ink); font-family: var(--font-body);"
+              aria-label="Filtruj według marki"
+            >
+              <option value="">Wszystkie marki</option>
+              {brands.map((brand) => (
+                <option value={brand}>{brand}</option>
+              ))}
+            </select>
+            <svg class="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" style="color: var(--color-ink-muted);">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+            </svg>
+          </div>
+          <p id="parts-count" class="text-sm" style="color: var(--color-ink-muted);">
+            Wyświetlono <strong id="parts-count-num">{parts.length}</strong> części
+          </p>
+        </div>
+      </div>
+
+      <!-- Parts grid -->
+      <div
+        id="parts-grid"
+        class="grid gap-3"
+        style="grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));"
+      >
+        {parts.map((part) => (
+          <div
+            class="part-card rounded-xl p-4 flex flex-col gap-2 transition-shadow duration-150"
+            data-category={part.category}
+            data-brand={part.brand.toLowerCase()}
+            data-name={part.name.toLowerCase()}
+            style="background: #fff; border: 1px solid oklch(91% 0.008 265); box-shadow: var(--shadow-card);"
+          >
+            <div class="flex items-start justify-between gap-2">
+              <p
+                class="text-sm font-semibold leading-snug"
+                style="color: var(--color-ink);"
+              >
+                {part.name}
+              </p>
+            </div>
+            <div class="flex items-center gap-2 mt-auto pt-1">
+              <span
+                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold"
+                style="background: var(--color-navy); color: #fff;"
+              >
+                {part.brand}
+              </span>
+              <span
+                class="text-xs"
+                style="color: var(--color-ink-muted);"
+              >
+                {part.category}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Empty state -->
+      <div id="parts-empty" class="hidden py-20 text-center">
+        <svg class="w-12 h-12 mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true" style="color: var(--color-ink-muted);">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/>
+        </svg>
+        <p class="font-semibold text-lg text-ink mb-1">Brak wyników</p>
+        <p class="text-sm" style="color: var(--color-ink-muted);">Spróbuj innych filtrów lub zresetuj wyszukiwanie.</p>
+      </div>
+
+      <!-- Fallback CTA -->
+      <div class="mt-12 pt-10 border-t" style="border-color: oklch(90% 0.008 265);">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <p class="font-semibold text-ink">Nie znalazłeś szukanej części?</p>
+            <p class="text-sm mt-0.5" style="color: var(--color-ink-muted);">
+              Możemy zamówić praktycznie każdą część — zazwyczaj w ciągu 24–48 godzin.
+            </p>
+          </div>
+          <div class="flex gap-3 shrink-0">
+            <a
+              href="tel:+48609845865"
+              class="px-5 py-2.5 rounded-md text-sm font-semibold text-white btn-lift"
+              style="background: var(--color-accent);"
+              onmouseover="this.style.background='var(--color-accent-hover)'"
+              onmouseout="this.style.background='var(--color-accent)'"
+            >
+              Zadzwoń
+            </a>
+            <a
+              href="/kontakt"
+              class="px-5 py-2.5 rounded-md text-sm font-semibold border transition-colors"
+              style="color: var(--color-navy); border-color: oklch(82% 0.05 265);"
+              onmouseover="this.style.background='var(--color-surface-1)'"
+              onmouseout="this.style.background=''"
+            >
+              Napisz do nas
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <Footer />
+  <StickyCtaBar />
+</BaseLayout>
+
+<style>
+  #parts-search:focus {
+    outline: none;
+    border-color: var(--color-navy);
+    box-shadow: 0 0 0 3px oklch(35% 0.14 265 / 0.12);
+  }
+  #parts-brand:focus {
+    outline: none;
+    border-color: var(--color-navy);
+    box-shadow: 0 0 0 3px oklch(35% 0.14 265 / 0.12);
+  }
+  .part-card:hover {
+    box-shadow: 0 4px 20px oklch(0% 0 0 / 0.1);
+  }
+</style>
+
+<script>
+  const searchInput = document.getElementById('parts-search') as HTMLInputElement | null;
+  const brandSelect = document.getElementById('parts-brand') as HTMLSelectElement | null;
+  const catButtons = document.querySelectorAll<HTMLButtonElement>('.parts-cat-btn');
+  const cards = document.querySelectorAll<HTMLElement>('.part-card');
+  const countEl = document.getElementById('parts-count-num');
+  const emptyEl = document.getElementById('parts-empty');
+
+  let activeCategory = 'all';
+  let activeBrand = '';
+  let searchQuery = '';
+
+  function applyFilters() {
+    let visible = 0;
+
+    cards.forEach((card) => {
+      const cat = card.dataset.category ?? '';
+      const brand = card.dataset.brand ?? '';
+      const name = card.dataset.name ?? '';
+
+      const matchCat = activeCategory === 'all' || cat === activeCategory;
+      const matchBrand = activeBrand === '' || brand === activeBrand.toLowerCase();
+      const matchSearch =
+        searchQuery === '' ||
+        name.includes(searchQuery) ||
+        brand.includes(searchQuery);
+
+      if (matchCat && matchBrand && matchSearch) {
+        card.classList.remove('hidden');
+        visible++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    if (countEl) countEl.textContent = String(visible);
+    if (emptyEl) emptyEl.classList.toggle('hidden', visible > 0);
+  }
+
+  catButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      activeCategory = btn.dataset.category ?? 'all';
+
+      catButtons.forEach((b) => {
+        b.style.background = 'var(--color-surface-1)';
+        b.style.color = 'var(--color-ink-muted)';
+        b.classList.remove('active');
+      });
+      btn.style.background = 'var(--color-navy)';
+      btn.style.color = '#fff';
+      btn.classList.add('active');
+
+      applyFilters();
+    });
+  });
+
+  brandSelect?.addEventListener('change', () => {
+    activeBrand = brandSelect.value;
+    applyFilters();
+  });
+
+  searchInput?.addEventListener('input', () => {
+    searchQuery = (searchInput.value ?? '').toLowerCase().trim();
+    applyFilters();
+  });
+</script>

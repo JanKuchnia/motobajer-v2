@@ -1,0 +1,496 @@
+- generic [active] [ref=e1]:
+  - link "Przejdź do treści" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Nawigacja główna" [ref=e3]:
+    - generic [ref=e4]:
+      - link "MOTOBAJER" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: MOTOBAJER
+      - generic [ref=e8]:
+        - link "O nas" [ref=e9] [cursor=pointer]:
+          - /url: /#o-nas
+        - link "Usługi" [ref=e10] [cursor=pointer]:
+          - /url: /#uslugi
+        - link "Części" [ref=e11] [cursor=pointer]:
+          - /url: /czesci
+        - link "Opinie" [ref=e12] [cursor=pointer]:
+          - /url: /#opinie
+        - link "FAQ" [ref=e13] [cursor=pointer]:
+          - /url: /faq
+        - link "Kontakt" [ref=e14] [cursor=pointer]:
+          - /url: /kontakt
+        - link "Zadzwoń" [ref=e15] [cursor=pointer]:
+          - /url: tel:+48609845865
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e21]:
+        - generic [ref=e23]: Sieć EuroWarsztat · Myślenice
+        - heading "Warsztat samochodowy w Myślenicach, któremu możesz zaufać" [level=1] [ref=e24]
+        - paragraph [ref=e25]: Pełen serwis mechaniczny, diagnostyka komputerowa i sklep z częściami. Dwa punkty w centrum Myślenic, działamy od 2008 roku.
+        - generic [ref=e26]:
+          - link "Zarezerwuj wizytę" [ref=e27] [cursor=pointer]:
+            - /url: "#rezerwacja"
+          - link "609 845 865" [ref=e28] [cursor=pointer]:
+            - /url: tel:+48609845865
+            - img [ref=e29]
+            - text: 609 845 865
+        - generic [ref=e31]:
+          - generic [ref=e32]: Myślenice od 2008
+          - generic [ref=e33]: ·
+          - generic [ref=e34]: Sieć EuroWarsztat
+          - generic [ref=e35]: ·
+          - generic [ref=e36]: Wszystkie opinie 5★
+          - generic [ref=e37]: ·
+          - generic [ref=e38]: Dwa punkty obsługi
+      - generic [ref=e39]:
+        - generic [ref=e40]: Przewiń
+        - img [ref=e41]
+    - generic [ref=e45]:
+      - generic [ref=e46]:
+        - heading "Warsztat z tradycją, obsługa bez kompromisów" [level=2] [ref=e47]
+        - generic [ref=e48]:
+          - paragraph [ref=e49]:
+            - text: MOTOBAJER to rodzinny serwis samochodowy prowadzony przez
+            - strong [ref=e50]: Stanisława Bajera
+            - text: od 2008 roku. Przez ponad 18 lat zbudowaliśmy reputację warsztatu, do którego klienci wracają — i polecają go innym.
+          - paragraph [ref=e51]: "Działamy w dwóch punktach w Myślenicach: centrum serwisowe przy ul. Drogowców 7 oraz sklep z częściami zamiennymi przy ul. Armii Krajowej 2. Dzięki temu obsługujemy kompleksowo — od naprawy po zakup części."
+          - paragraph [ref=e52]:
+            - text: Jako autoryzowany punkt sieci
+            - strong [ref=e53]: EuroWarsztat (Groupauto)
+            - text: mamy dostęp do zaawansowanego wsparcia technicznego, szkoleń i oryginalnych części w konkurencyjnych cenach.
+        - generic [ref=e54]:
+          - link "Nasze usługi" [ref=e55] [cursor=pointer]:
+            - /url: "#uslugi"
+          - link "Zadzwoń do nas" [ref=e56] [cursor=pointer]:
+            - /url: tel:+48609845865
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - paragraph [ref=e59]: 18lat
+          - paragraph [ref=e60]: doświadczenia
+        - generic [ref=e61]:
+          - paragraph [ref=e62]: 2punkty
+          - paragraph [ref=e63]: obsługi w Myślenicach
+        - generic [ref=e64]:
+          - paragraph [ref=e65]: 5.0★
+          - paragraph [ref=e66]: średnia ocen Google
+        - generic [ref=e67]:
+          - paragraph [ref=e68]: EuroWarsztat
+          - paragraph [ref=e69]: sieć Groupauto
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - heading "Jak to działa?" [level=2] [ref=e73]
+        - paragraph [ref=e74]: Cztery kroki dzielą Cię od sprawnego samochodu.
+      - generic [ref=e75]:
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - img [ref=e80]
+            - generic [ref=e82]: "1"
+          - generic [ref=e83]:
+            - paragraph [ref=e84]: "01"
+            - heading "Umów wizytę" [level=3] [ref=e85]
+            - paragraph [ref=e86]: Zadzwoń, napisz lub skorzystaj z formularza online — potwierdzimy termin w ciągu godziny.
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - img [ref=e90]
+            - generic [ref=e92]: "2"
+          - generic [ref=e93]:
+            - paragraph [ref=e94]: "02"
+            - heading "Diagnostyka" [level=3] [ref=e95]
+            - paragraph [ref=e96]: Mechanik ocenia stan pojazdu i przedstawia szczegółowy kosztorys — bez ukrytych opłat.
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - img [ref=e100]
+            - generic [ref=e102]: "3"
+          - generic [ref=e103]:
+            - paragraph [ref=e104]: "03"
+            - heading "Naprawa" [level=3] [ref=e105]
+            - paragraph [ref=e106]: Realizujemy naprawę w uzgodnionym terminie, używając sprawdzonych części i narzędzi.
+        - generic [ref=e107]:
+          - generic [ref=e108]:
+            - img [ref=e110]
+            - generic [ref=e112]: "4"
+          - generic [ref=e113]:
+            - paragraph [ref=e114]: "04"
+            - heading "Odbiór" [level=3] [ref=e115]
+            - paragraph [ref=e116]: Odbierasz sprawne auto z pełną dokumentacją serwisową i gwarancją na wykonaną pracę.
+      - generic [ref=e117]:
+        - link "Zarezerwuj wizytę →" [ref=e118] [cursor=pointer]:
+          - /url: /#rezerwacja
+        - 'link "lub zadzwoń: 609 845 865" [ref=e119] [cursor=pointer]':
+          - /url: tel:+48609845865
+    - generic [ref=e121]:
+      - generic [ref=e122]:
+        - heading "Co naprawiamy" [level=2] [ref=e123]
+        - paragraph [ref=e124]: Kompleksowa obsługa samochodów osobowych i dostawczych pod jednym dachem.
+      - generic [ref=e125]:
+        - generic [ref=e127]:
+          - generic [ref=e128]:
+            - img [ref=e130]
+            - heading "Mechanika ogólna" [level=3] [ref=e132]
+          - generic [ref=e133]:
+            - paragraph [ref=e134]: Naprawy silnika, wymiana rozrządów, sprzęgieł i elementów układu napędowego.
+            - link "Dowiedz się więcej →" [ref=e135] [cursor=pointer]:
+              - /url: /uslugi/mechanika-ogolna
+        - generic [ref=e137]:
+          - generic [ref=e138]:
+            - img [ref=e140]
+            - heading "Diagnostyka komputerowa" [level=3] [ref=e142]
+          - generic [ref=e143]:
+            - paragraph [ref=e144]: Odczyt i kasowanie błędów, adaptacje podzespołów, analiza parametrów pracy.
+            - link "Dowiedz się więcej →" [ref=e145] [cursor=pointer]:
+              - /url: /uslugi/diagnostyka-komputerowa
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - img [ref=e150]
+            - heading "Hamulce i zawieszenie" [level=3] [ref=e153]
+          - generic [ref=e154]:
+            - paragraph [ref=e155]: Wymiana klocków, tarcz i przewodów hamulcowych. Serwis amortyzatorów i geometria.
+            - link "Dowiedz się więcej →" [ref=e156] [cursor=pointer]:
+              - /url: /uslugi/hamulce-zawieszenie
+        - generic [ref=e158]:
+          - generic [ref=e159]:
+            - img [ref=e161]
+            - heading "Klimatyzacja" [level=3] [ref=e164]
+          - generic [ref=e165]:
+            - paragraph [ref=e166]: Napełnianie czynnikiem, sprawdzanie szczelności, odgrzybianie metodą ozonowania.
+            - link "Dowiedz się więcej →" [ref=e167] [cursor=pointer]:
+              - /url: /uslugi/klimatyzacja
+        - generic [ref=e169]:
+          - generic [ref=e170]:
+            - img [ref=e172]
+            - heading "Elektryka pojazdowa" [level=3] [ref=e174]
+          - generic [ref=e175]:
+            - paragraph [ref=e176]: Naprawa alternatorów, rozruszników oraz diagnostyka usterek elektrycznych.
+            - link "Dowiedz się więcej →" [ref=e177] [cursor=pointer]:
+              - /url: /uslugi/elektryka-pojazdowa
+        - generic [ref=e179]:
+          - generic [ref=e180]:
+            - img [ref=e182]
+            - heading "Wulkanizacja" [level=3] [ref=e186]
+          - generic [ref=e187]:
+            - paragraph [ref=e188]: Sezonowa wymiana opon, wyważanie kół, naprawa ogumienia i montaż.
+            - link "Dowiedz się więcej →" [ref=e189] [cursor=pointer]:
+              - /url: /uslugi/wulkanizacja
+      - generic [ref=e190]:
+        - paragraph [ref=e191]: Nie jesteś pewien, co Twój samochód potrzebuje?
+        - link "Zadzwoń, doradzimy bezpłatnie →" [ref=e192] [cursor=pointer]:
+          - /url: tel:+48609845865
+    - generic [ref=e194]:
+      - generic [ref=e195]:
+        - heading "Nasz warsztat" [level=2] [ref=e196]
+        - paragraph [ref=e197]: Nowoczesne wyposażenie i profesjonalne środowisko pracy.
+      - generic [ref=e198]:
+        - figure [ref=e199]:
+          - img "Warsztat MOTOBAJER — widok ogólny warsztatu" [ref=e200]
+        - figure [ref=e201]:
+          - img "Warsztat MOTOBAJER — stanowisko diagnostyczne" [ref=e202]
+        - figure [ref=e203]:
+          - img "Warsztat MOTOBAJER — podnośnik samochodowy" [ref=e204]
+        - figure [ref=e205]:
+          - img "Warsztat MOTOBAJER — sklep z częściami" [ref=e206]
+        - figure [ref=e207]:
+          - img "Warsztat MOTOBAJER — wymiana opon" [ref=e208]
+        - figure [ref=e209]:
+          - img "Warsztat MOTOBAJER — narzędzia mechaniczne" [ref=e210]
+        - figure [ref=e211]:
+          - img "Warsztat MOTOBAJER — obsługa klienta" [ref=e212]
+        - figure [ref=e213]:
+          - img "Warsztat MOTOBAJER — fasada budynku" [ref=e214]
+    - generic [ref=e216]:
+      - generic [ref=e217]:
+        - generic [ref=e218]:
+          - heading "Co mówią nasi klienci" [level=2] [ref=e219]
+          - paragraph [ref=e220]: Wszystkie opinie z Google — ocena 5 na 5 gwiazdek.
+        - generic [ref=e221]:
+          - generic [ref=e222]:
+            - img [ref=e223]
+            - img [ref=e225]
+            - img [ref=e227]
+            - img [ref=e229]
+            - img [ref=e231]
+          - generic [ref=e233]:
+            - paragraph [ref=e234]: "5.0"
+            - paragraph [ref=e235]: Google
+      - generic [ref=e236]:
+        - article [ref=e237]:
+          - 'generic "Ocena: 5 gwiazdek na 5" [ref=e238]':
+            - img [ref=e239]
+            - img [ref=e241]
+            - img [ref=e243]
+            - img [ref=e245]
+            - img [ref=e247]
+          - blockquote [ref=e249]: Gorąco polecam serwis Motobajer! Jestem bardzo zadowolony z usług, które otrzymałem. Obsługa była niezwykle profesjonalna i uprzejma.
+          - generic [ref=e250]:
+            - paragraph [ref=e251]: Mateusz Lenart
+            - time [ref=e252]: rok temu
+        - article [ref=e253]:
+          - 'generic "Ocena: 5 gwiazdek na 5" [ref=e254]':
+            - img [ref=e255]
+            - img [ref=e257]
+            - img [ref=e259]
+            - img [ref=e261]
+            - img [ref=e263]
+          - blockquote [ref=e265]: Bardzo miła obsługa i chętnie pomagają i udzielają informacji fachowcy, którzy znają się na rzeczy. Ceny mają przystępne — polecam ten sklep.
+          - generic [ref=e266]:
+            - paragraph [ref=e267]: Józek Żak
+            - time [ref=e268]: rok temu
+        - article [ref=e269]:
+          - 'generic "Ocena: 5 gwiazdek na 5" [ref=e270]':
+            - img [ref=e271]
+            - img [ref=e273]
+            - img [ref=e275]
+            - img [ref=e277]
+            - img [ref=e279]
+          - blockquote [ref=e281]: Polecam. Duży wybór, konkurencyjne ceny, fachowa obsługa i wspaniały warsztat samochodowy.
+          - generic [ref=e282]:
+            - paragraph [ref=e283]: MrWyntel
+            - time [ref=e284]: rok temu
+        - article [ref=e285]:
+          - 'generic "Ocena: 5 gwiazdek na 5" [ref=e286]':
+            - img [ref=e287]
+            - img [ref=e289]
+            - img [ref=e291]
+            - img [ref=e293]
+            - img [ref=e295]
+          - blockquote [ref=e297]: Profesjonalna obsługa, szeroki asortyment. Polecam.
+          - generic [ref=e298]:
+            - paragraph [ref=e299]: Kawa Inka
+            - time [ref=e300]: 2 lata temu
+        - article [ref=e301]:
+          - 'generic "Ocena: 5 gwiazdek na 5" [ref=e302]':
+            - img [ref=e303]
+            - img [ref=e305]
+            - img [ref=e307]
+            - img [ref=e309]
+            - img [ref=e311]
+          - blockquote [ref=e313]: Polecam fachowe doradztwo.
+          - generic [ref=e314]:
+            - paragraph [ref=e315]: MPL
+            - time [ref=e316]: rok temu
+        - article [ref=e317]:
+          - 'generic "Ocena: 5 gwiazdek na 5" [ref=e318]':
+            - img [ref=e319]
+            - img [ref=e321]
+            - img [ref=e323]
+            - img [ref=e325]
+            - img [ref=e327]
+          - blockquote [ref=e329]: Najlepsi.
+          - generic [ref=e330]:
+            - paragraph [ref=e331]: Małgorzata Dzidko
+            - time [ref=e332]: 7 miesięcy temu
+    - generic [ref=e334]:
+      - generic [ref=e335]:
+        - heading "Najczęstsze pytania" [level=2] [ref=e336]
+        - paragraph [ref=e337]:
+          - text: Nie znalazłeś odpowiedzi?
+          - link "Zadzwoń do nas." [ref=e338] [cursor=pointer]:
+            - /url: tel:+48609845865
+      - generic [ref=e339]:
+        - group [ref=e340]:
+          - generic "Czy mogę przyjechać bez wcześniejszej rezerwacji?" [ref=e341] [cursor=pointer]:
+            - generic [ref=e342]: Czy mogę przyjechać bez wcześniejszej rezerwacji?
+            - img [ref=e344]
+        - group [ref=e346]:
+          - generic "Jak długo czeka się na naprawę?" [ref=e347] [cursor=pointer]:
+            - generic [ref=e348]: Jak długo czeka się na naprawę?
+            - img [ref=e350]
+        - group [ref=e352]:
+          - generic "Czy mogę zostawić samochód i odebrać go później?" [ref=e353] [cursor=pointer]:
+            - generic [ref=e354]: Czy mogę zostawić samochód i odebrać go później?
+            - img [ref=e356]
+        - group [ref=e358]:
+          - generic "Czy wycena jest bezpłatna?" [ref=e359] [cursor=pointer]:
+            - generic [ref=e360]: Czy wycena jest bezpłatna?
+            - img [ref=e362]
+        - group [ref=e364]:
+          - generic "Czy mogę zapłacić kartą?" [ref=e365] [cursor=pointer]:
+            - generic [ref=e366]: Czy mogę zapłacić kartą?
+            - img [ref=e368]
+        - group [ref=e370]:
+          - generic "Czy naprawa jest wyceniana z góry?" [ref=e371] [cursor=pointer]:
+            - generic [ref=e372]: Czy naprawa jest wyceniana z góry?
+            - img [ref=e374]
+        - group [ref=e376]:
+          - generic "Jakich części używacie do napraw?" [ref=e377] [cursor=pointer]:
+            - generic [ref=e378]: Jakich części używacie do napraw?
+            - img [ref=e380]
+        - group [ref=e382]:
+          - generic "Czy udzielacie gwarancji na naprawy?" [ref=e383] [cursor=pointer]:
+            - generic [ref=e384]: Czy udzielacie gwarancji na naprawy?
+            - img [ref=e386]
+      - link "Zobacz wszystkie pytania i odpowiedzi" [ref=e389] [cursor=pointer]:
+        - /url: /faq
+        - text: Zobacz wszystkie pytania i odpowiedzi
+        - img [ref=e390]
+    - generic [ref=e393]:
+      - generic [ref=e394]:
+        - heading "Gdzie nas znajdziesz" [level=2] [ref=e395]
+        - paragraph [ref=e396]: "Dwa punkty obsługi w Myślenicach: warsztat i sklep z częściami."
+      - generic [ref=e397]:
+        - generic [ref=e398]:
+          - generic [ref=e399]:
+            - generic [ref=e400]:
+              - generic [ref=e401]:
+                - paragraph [ref=e402]: Centrum Serwisowe
+                - paragraph [ref=e403]: Warsztat & Adres Rejestrowy
+              - generic [ref=e404]: Główna siedziba
+            - generic [ref=e405]:
+              - img [ref=e406]
+              - generic [ref=e409]: ul. Drogowców 7, 32-400 Myślenice
+          - iframe [ref=e411]
+        - generic [ref=e412]:
+          - generic [ref=e413]:
+            - generic [ref=e414]:
+              - generic [ref=e415]:
+                - paragraph [ref=e416]: Sklep Auto-Części
+                - paragraph [ref=e417]: Sprzedaż detaliczna
+              - generic [ref=e418]: Centrum miasta
+            - generic [ref=e419]:
+              - img [ref=e420]
+              - generic [ref=e423]: ul. Armii Krajowej 2, 32-400 Myślenice
+          - iframe [ref=e425]
+    - generic [ref=e428]:
+      - generic [ref=e429]:
+        - heading "Zarezerwuj wizytę" [level=2] [ref=e430]
+        - paragraph [ref=e431]: Wypełnij formularz, a oddzwonimy w ciągu godziny, by potwierdzić termin.
+        - generic [ref=e432]:
+          - generic [ref=e433]:
+            - generic [ref=e434]:
+              - generic [ref=e435]: Imię i nazwisko *
+              - textbox "Imię i nazwisko *" [ref=e436]:
+                - /placeholder: Jan Kowalski
+            - generic [ref=e437]:
+              - generic [ref=e438]: Telefon *
+              - textbox "Telefon *" [ref=e439]:
+                - /placeholder: 500 100 200
+          - generic [ref=e440]:
+            - generic [ref=e441]: Adres e-mail
+            - textbox "Adres e-mail" [ref=e442]:
+              - /placeholder: jan@example.pl
+          - generic [ref=e443]:
+            - generic [ref=e444]: Rodzaj usługi *
+            - combobox "Rodzaj usługi *" [ref=e445]:
+              - option "Wybierz usługę..." [disabled] [selected]
+              - option "Mechanika ogólna"
+              - option "Diagnostyka komputerowa"
+              - option "Hamulce i zawieszenie"
+              - option "Klimatyzacja"
+              - option "Elektryka pojazdowa"
+              - option "Wulkanizacja"
+              - option "Inne"
+          - generic [ref=e446]:
+            - generic [ref=e447]:
+              - generic [ref=e448]: Preferowana data *
+              - textbox "Preferowana data *" [ref=e449]
+            - generic [ref=e450]:
+              - generic [ref=e451]: Preferowana godzina
+              - combobox "Preferowana godzina" [ref=e452]:
+                - option "Dowolna" [selected]
+                - option "08:00"
+                - option "08:30"
+                - option "09:00"
+                - option "09:30"
+                - option "10:00"
+                - option "10:30"
+                - option "11:00"
+                - option "11:30"
+                - option "12:00"
+                - option "12:30"
+                - option "13:00"
+                - option "13:30"
+                - option "14:00"
+                - option "14:30"
+                - option "15:00"
+                - option "15:30"
+                - option "16:00"
+          - generic [ref=e453]:
+            - generic [ref=e454]: Dodatkowe informacje
+            - textbox "Dodatkowe informacje" [ref=e455]:
+              - /placeholder: Opisz krótko problem lub marka/model pojazdu...
+          - button "Wyślij zapytanie →" [ref=e456]
+          - paragraph [ref=e457]: Pola oznaczone * są wymagane. Formularz otworzy program pocztowy z wypełnioną wiadomością. Odpowiadamy zwykle w ciągu 1 godziny.
+      - generic [ref=e458]:
+        - heading "Kontakt" [level=2] [ref=e459]
+        - generic [ref=e460]:
+          - heading "Godziny otwarcia" [level=3] [ref=e461]
+          - table "Godziny otwarcia serwisu" [ref=e462]:
+            - rowgroup [ref=e463]:
+              - row "Poniedziałek – Piątek 08:00 – 17:00" [ref=e464]:
+                - cell "Poniedziałek – Piątek" [ref=e465]
+                - cell "08:00 – 17:00" [ref=e466]
+              - row "Sobota 08:00 – 13:00" [ref=e467]:
+                - cell "Sobota" [ref=e468]
+                - cell "08:00 – 13:00" [ref=e469]
+              - row "Niedziela Zamknięte" [ref=e470]:
+                - cell "Niedziela" [ref=e471]
+                - cell "Zamknięte" [ref=e472]
+        - generic [ref=e473]:
+          - heading "Dane kontaktowe" [level=3] [ref=e474]
+          - list [ref=e475]:
+            - listitem [ref=e476]:
+              - img [ref=e478]
+              - generic [ref=e480]:
+                - paragraph [ref=e481]: Telefon
+                - link "609 845 865" [ref=e482] [cursor=pointer]:
+                  - /url: tel:+48609845865
+                - link "(12) 274 23 06" [ref=e483] [cursor=pointer]:
+                  - /url: tel:+48122742306
+            - listitem [ref=e484]:
+              - img [ref=e486]
+              - generic [ref=e488]:
+                - paragraph [ref=e489]: E-mail
+                - link "motobajer@eurowarsztat.pl" [ref=e490] [cursor=pointer]:
+                  - /url: mailto:motobajer@eurowarsztat.pl
+            - listitem [ref=e491]:
+              - img [ref=e493]
+              - generic [ref=e496]:
+                - paragraph [ref=e497]: Adresy
+                - paragraph [ref=e498]: "Warsztat: ul. Drogowców 7, 32-400 Myślenice"
+                - paragraph [ref=e499]: "Sklep: ul. Armii Krajowej 2, 32-400 Myślenice"
+            - listitem [ref=e500]:
+              - img [ref=e502]
+              - generic [ref=e504]:
+                - paragraph [ref=e505]: Sieć
+                - paragraph [ref=e506]: EuroWarsztat (Groupauto)
+  - contentinfo [ref=e507]:
+    - generic [ref=e508]:
+      - generic [ref=e509]:
+        - generic [ref=e510]:
+          - paragraph [ref=e511]: MOTOBAJER
+          - paragraph [ref=e512]:
+            - text: Stanisław Bajer
+            - text: Autoryzowany serwis sieci EuroWarsztat
+            - text: Myślenice, od 2008 roku
+        - generic [ref=e513]:
+          - paragraph [ref=e514]: Nawigacja
+          - list [ref=e515]:
+            - listitem [ref=e516]:
+              - link "Usługi" [ref=e517] [cursor=pointer]:
+                - /url: "#uslugi"
+            - listitem [ref=e518]:
+              - link "Rezerwacja" [ref=e519] [cursor=pointer]:
+                - /url: "#rezerwacja"
+            - listitem [ref=e520]:
+              - link "Opinie" [ref=e521] [cursor=pointer]:
+                - /url: "#opinie"
+            - listitem [ref=e522]:
+              - link "Lokalizacje" [ref=e523] [cursor=pointer]:
+                - /url: "#lokalizacje"
+            - listitem [ref=e524]:
+              - link "Kontakt" [ref=e525] [cursor=pointer]:
+                - /url: "#kontakt"
+        - generic [ref=e526]:
+          - paragraph [ref=e527]: Kontakt
+          - list [ref=e528]:
+            - listitem [ref=e529]:
+              - link "609 845 865" [ref=e530] [cursor=pointer]:
+                - /url: tel:+48609845865
+            - listitem [ref=e531]:
+              - link "(12) 274 23 06" [ref=e532] [cursor=pointer]:
+                - /url: tel:+48122742306
+            - listitem [ref=e533]:
+              - link "motobajer@eurowarsztat.pl" [ref=e534] [cursor=pointer]:
+                - /url: mailto:motobajer@eurowarsztat.pl
+      - generic [ref=e535]:
+        - paragraph [ref=e536]: © 2026 MOTOBAJER Stanisław Bajer. Wszelkie prawa zastrzeżone.
+        - paragraph [ref=e537]: "NIP: 6811341146 · REGON: 120696804"

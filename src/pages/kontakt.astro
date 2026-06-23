@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import StickyCtaBar from '../components/StickyCtaBar.astro';
+import ContactSection from '../components/ContactSection.astro';
+import LocationsSection from '../components/LocationsSection.astro';
+---
+
+<BaseLayout
+  title="Kontakt i rezerwacja wizyty — MOTOBAJER Myślenice"
+  description="Zarezerwuj wizytę w warsztacie MOTOBAJER w Myślenicach. Godziny otwarcia, adresy, telefon i formularz kontaktowy. Sieć EuroWarsztat."
+>
+  <Nav />
+  <main id="main-content">
+
+    <!-- Hero strip -->
+    <div class="bg-navy pt-32 pb-14 px-4 sm:px-6">
+      <div class="max-w-6xl mx-auto">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+          <ol class="flex items-center gap-2 text-sm" style="color: oklch(65% 0.04 265);">
+            <li><a href="/" class="hover:text-white transition-colors">Strona główna</a></li>
+            <li aria-hidden="true">
+              <svg class="w-3.5 h-3.5 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+              </svg>
+            </li>
+            <li class="text-white font-medium" aria-current="page">Kontakt</li>
+          </ol>
+        </nav>
+        <h1
+          class="font-bold text-white mb-3 leading-tight"
+          style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.8rem); letter-spacing: -0.02em;"
+        >
+          Kontakt i rezerwacja
+        </h1>
+        <p class="text-lg max-w-2xl" style="color: oklch(72% 0.04 265);">
+          Umów wizytę online lub zadzwoń bezpośrednio. Działamy w Myślenicach od ponad 18 lat.
+        </p>
+      </div>
+    </div>
+
+    <ContactSection />
+    <LocationsSection />
+
+  </main>
+  <Footer />
+  <StickyCtaBar />
+</BaseLayout>

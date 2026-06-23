@@ -3,13 +3,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import HeroSection from '../components/HeroSection.astro';
 import AboutSection from '../components/AboutSection.astro';
+import ProcessSection from '../components/ProcessSection.astro';
 import ServicesSection from '../components/ServicesSection.astro';
 import GallerySection from '../components/GallerySection.astro';
 import ReviewsSection from '../components/ReviewsSection.astro';
+import FaqSection from '../components/FaqSection.astro';
 import LocationsSection from '../components/LocationsSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 import Footer from '../components/Footer.astro';
 import StickyCtaBar from '../components/StickyCtaBar.astro';
+import { faqs } from '../data/faqs';
 ---
 
 <BaseLayout>
@@ -17,9 +20,11 @@ import StickyCtaBar from '../components/StickyCtaBar.astro';
   <main id="main-content">
     <HeroSection />
     <AboutSection />
+    <ProcessSection />
     <ServicesSection />
     <GallerySection />
     <ReviewsSection />
+    <FaqSection faqs={faqs} limit={8} showMoreLink={true} />
     <LocationsSection />
     <ContactSection />
   </main>
