@@ -1,0 +1,98 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'MOTOBAJER Myślenice — Warsztat samochodowy i sklep z częściami',
+  description = 'Profesjonalny serwis samochodowy w Myślenicach. Mechanika, diagnostyka, klimatyzacja, wulkanizacja. Sieć EuroWarsztat. Zadzwoń: 609 845 865.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://motobajer.pl/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:image" content="https://motobajer.pl/images/hero-bg.jpg" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="900" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Preload hero image for LCP -->
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero-bg.webp"
+      type="image/webp"
+      fetchpriority="high"
+      imagesrcset="/images/hero-bg-1024.webp 1024w, /images/hero-bg.webp 1920w"
+      imagesizes="100vw"
+    />
+
+    <!-- Fonts — async to remove render-blocking; metric-matched fallbacks hide FOUT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+  </head>
+  <body>
+    <a href="#main-content" class="skip-to-content">Przejdź do treści</a>
+    <slot />
+
+    <!-- Intersection Observer for reveal animations -->
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const el = entry.target as HTMLElement;
+              const stagger = parseInt(el.dataset.stagger ?? '0');
+              if (stagger > 0) el.style.transitionDelay = stagger + 'ms';
+              el.classList.add('visible');
+              observer.unobserve(el);
+              // Clear stagger delay after entrance so hover transitions fire instantly
+              if (stagger > 0) {
+                setTimeout(() => { el.style.transitionDelay = ''; }, 600 + stagger);
+              }
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

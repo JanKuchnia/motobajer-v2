@@ -1,0 +1,92 @@
+{
+  "/home/jankuchnia/Desktop/motobajer-v2/skills-lock.json": {
+    "mtime": 1782150147.817559,
+    "ast_hash": "1fdb54277684f41969c8d0aad8f2329f",
+    "semantic_hash": "1fdb54277684f41969c8d0aad8f2329f"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/.claude/settings.local.json": {
+    "mtime": 1782152975.907387,
+    "ast_hash": "40283046ed246045260afa8856d294a9",
+    "semantic_hash": "40283046ed246045260afa8856d294a9"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/.agents/skills/brandkit/SKILL.md": {
+    "mtime": 1782150147.6167116,
+    "ast_hash": "cd3701c774e9bd7ce4fc9078377d517f",
+    "semantic_hash": "cd3701c774e9bd7ce4fc9078377d517f"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/.agents/skills/industrial-brutalist-ui/SKILL.md": {
+    "mtime": 1782150147.6309395,
+    "ast_hash": "9e673477ecc2eaf4a230c8326cbc2f0d",
+    "semantic_hash": "9e673477ecc2eaf4a230c8326cbc2f0d"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/.agents/skills/gpt-taste/SKILL.md": {
+    "mtime": 1782150147.6460004,
+    "ast_hash": "0968d17fda872b36dc35e6bcc0c9af36",
+    "semantic_hash": "0968d17fda872b36dc35e6bcc0c9af36"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/.agents/skills/image-to-code/SKILL.md": {
+    "mtime": 1782150147.663781,
+    "ast_hash": "442613e4710f0005b94f1c4b1d3ac246",
+    "semantic_hash": "442613e4710f0005b94f1c4b1d3ac246"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/.agents/skills/imagegen-frontend-mobile/SKILL.md": {
+    "mtime": 1782150147.6810126,
+    "ast_hash": "4c84e37e50e610779a71e0fb0a198963",
+    "semantic_hash": "4c84e37e50e610779a71e0fb0a198963"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/.agents/skills/imagegen-frontend-web/SKILL.md": {
+    "mtime": 1782150147.6978924,
+    "ast_hash": "208c5866f7320c7f842283b312a00e17",
+    "semantic_hash": "208c5866f7320c7f842283b312a00e17"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/.agents/skills/minimalist-ui/SKILL.md": {
+    "mtime": 1782150147.7130759,
+    "ast_hash": "c7f814d7df4b1b0e3eebf706a6d74adf",
+    "semantic_hash": "c7f814d7df4b1b0e3eebf706a6d74adf"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/.agents/skills/full-output-enforcement/SKILL.md": {
+    "mtime": 1782150147.725026,
+    "ast_hash": "5ed528ceb72c5d089757ba70c5a434e8",
+    "semantic_hash": "5ed528ceb72c5d089757ba70c5a434e8"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/.agents/skills/redesign-existing-projects/SKILL.md": {
+    "mtime": 1782150147.7387629,
+    "ast_hash": "31d802d02ccb9f5da82d99156af36317",
+    "semantic_hash": "31d802d02ccb9f5da82d99156af36317"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/.agents/skills/high-end-visual-design/SKILL.md": {
+    "mtime": 1782150147.7527032,
+    "ast_hash": "269e37851b3a17693d8052f5f8002cfc",
+    "semantic_hash": "269e37851b3a17693d8052f5f8002cfc"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/.agents/skills/stitch-design-taste/DESIGN.md": {
+    "mtime": 1782150147.7676446,
+    "ast_hash": "ee7cc02dcc99eda38299a5a6f6727563",
+    "semantic_hash": "ee7cc02dcc99eda38299a5a6f6727563"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/.agents/skills/stitch-design-taste/SKILL.md": {
+    "mtime": 1782150147.7676687,
+    "ast_hash": "82dc71a62461f956b5666c1041efc886",
+    "semantic_hash": "82dc71a62461f956b5666c1041efc886"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/.agents/skills/design-taste-frontend/SKILL.md": {
+    "mtime": 1782150147.7883105,
+    "ast_hash": "6f73606d20cd948b471b1ce1767aab50",
+    "semantic_hash": "6f73606d20cd948b471b1ce1767aab50"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/.agents/skills/design-taste-frontend-v1/SKILL.md": {
+    "mtime": 1782150147.8032613,
+    "ast_hash": "d0ee97b35983cf5e786e5b65994a2ecb",
+    "semantic_hash": "d0ee97b35983cf5e786e5b65994a2ecb"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/docs/INFO.MD": {
+    "mtime": 1782150972.980381,
+    "ast_hash": "913da413621e70705097d96b800d98f6",
+    "semantic_hash": "913da413621e70705097d96b800d98f6"
+  },
+  "/home/jankuchnia/Desktop/motobajer-v2/docs/REVIEWS.MD": {
+    "mtime": 1782150972.980648,
+    "ast_hash": "953353f7e077f08a187f45b17c10ca67",
+    "semantic_hash": "953353f7e077f08a187f45b17c10ca67"
+  }
+}

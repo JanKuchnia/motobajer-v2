@@ -1,0 +1,120 @@
+---
+const stats = [
+  { value: '18', unit: 'lat', label: 'doświadczenia' },
+  { value: '2', unit: 'punkty', label: 'obsługi w Myślenicach' },
+  { value: '5.0', unit: '★', label: 'średnia ocen Google' },
+  { value: 'Euro', unit: 'Warsztat', label: 'sieć Groupauto' },
+];
+---
+
+<section id="o-nas" class="section-py bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+
+      <!-- Left: text -->
+      <div>
+        <h2
+          class="reveal section-heading text-ink mb-6"
+          style="font-family: var(--font-display);"
+        >
+          Warsztat z tradycją, obsługa bez kompromisów
+        </h2>
+
+        <div class="reveal space-y-4 text-base leading-relaxed" style="color: var(--color-ink-muted);">
+          <p>
+            MOTOBAJER to rodzinny serwis samochodowy prowadzony przez
+            <strong style="color: var(--color-ink); font-weight: 600;">Stanisława Bajera</strong>
+            od 2008 roku. Przez ponad 18 lat zbudowaliśmy reputację warsztatu,
+            do którego klienci wracają — i polecają go innym.
+          </p>
+          <p>
+            Działamy w dwóch punktach w Myślenicach: centrum serwisowe
+            przy ul. Drogowców 7 oraz sklep z częściami zamiennymi przy ul. Armii
+            Krajowej 2. Dzięki temu obsługujemy kompleksowo — od naprawy
+            po zakup części.
+          </p>
+          <p>
+            Jako autoryzowany punkt sieci
+            <strong style="color: var(--color-ink); font-weight: 600;">EuroWarsztat (Groupauto)</strong>
+            mamy dostęp do zaawansowanego wsparcia technicznego, szkoleń
+            i oryginalnych części w konkurencyjnych cenach.
+          </p>
+        </div>
+
+        <div class="reveal mt-8 flex flex-wrap gap-3">
+          <a
+            href="#uslugi"
+            class="inline-flex items-center px-5 py-2.5 rounded-md text-sm font-semibold text-white bg-navy hover:bg-navy-light transition-colors"
+          >
+            Nasze usługi
+          </a>
+          <a
+            href="tel:+48609845865"
+            class="inline-flex items-center px-5 py-2.5 rounded-md text-sm font-semibold border transition-colors"
+            style="color: var(--color-navy); border-color: oklch(82% 0.05 265);"
+            onmouseover="this.style.background='var(--color-surface-1)'"
+            onmouseout="this.style.background=''"
+          >
+            Zadzwoń do nas
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: stat display -->
+      <div id="stats-grid" class="reveal grid grid-cols-2 gap-x-6 gap-y-8 sm:gap-x-10 sm:gap-y-10">
+        {stats.map((stat, i) => (
+          <div style={`transition-delay: ${i * 60}ms;`}>
+            <p
+              class="font-bold leading-none"
+              style={`font-family: var(--font-display); font-size: ${stat.value.length > 3 ? 'clamp(2.2rem, 4.5vw, 3.5rem)' : 'clamp(3.2rem, 6.5vw, 5rem)'}; color: var(--color-navy);`}
+            >
+              <span
+                class="stat-number"
+                data-count-to={stat.value}
+              >{stat.value}</span><span
+                style="font-size: 0.4em; margin-left: 0.15em; color: var(--color-accent);"
+              >{stat.unit}</span>
+            </p>
+            <p class="text-sm mt-2" style="color: var(--color-ink-muted);">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduced) {
+    const grid = document.getElementById('stats-grid');
+    if (grid) {
+      const countObserver = new IntersectionObserver(
+        (entries) => {
+          if (!entries[0].isIntersecting) return;
+          countObserver.disconnect();
+          document.querySelectorAll<HTMLElement>('.stat-number').forEach((el) => {
+            const target = el.dataset.countTo ?? '';
+            const isDecimal = target.includes('.');
+            const num = parseFloat(target);
+            if (isNaN(num)) return;
+            const duration = 1100;
+            const t0 = performance.now();
+            function tick(now: number) {
+              const p = Math.min((now - t0) / duration, 1);
+              const eased = 1 - Math.pow(2, -10 * p);
+              el.textContent = isDecimal
+                ? (num * eased).toFixed(1)
+                : String(Math.round(num * eased));
+              if (p < 1) requestAnimationFrame(tick);
+              else el.textContent = isDecimal ? num.toFixed(1) : String(num);
+            }
+            requestAnimationFrame(tick);
+          });
+        },
+        { threshold: 0.6 }
+      );
+      countObserver.observe(grid);
+    }
+  }
+</script>

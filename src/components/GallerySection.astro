@@ -1,0 +1,66 @@
+---
+// Placeholder gallery items — replace src with real photos in public/images/gallery/
+const items = [
+  { alt: 'Warsztat MOTOBAJER — widok ogólny warsztatu', aspect: 'tall' },
+  { alt: 'Warsztat MOTOBAJER — stanowisko diagnostyczne', aspect: 'wide' },
+  { alt: 'Warsztat MOTOBAJER — podnośnik samochodowy', aspect: 'square' },
+  { alt: 'Warsztat MOTOBAJER — sklep z częściami', aspect: 'tall' },
+  { alt: 'Warsztat MOTOBAJER — wymiana opon', aspect: 'wide' },
+  { alt: 'Warsztat MOTOBAJER — narzędzia mechaniczne', aspect: 'square' },
+  { alt: 'Warsztat MOTOBAJER — obsługa klienta', aspect: 'wide' },
+  { alt: 'Warsztat MOTOBAJER — fasada budynku', aspect: 'square' },
+];
+
+const aspectHeights: Record<string, string> = {
+  tall: '280px',
+  wide: '180px',
+  square: '220px',
+};
+
+// Placeholder SVG as data URI
+function placeholder(index: number): string {
+  const colors = ['#c5cfe8', '#b8c5e0', '#ccd4eb', '#b0bfd9', '#c8d2ea', '#bac7de', '#d0d8ec', '#bec9e2'];
+  const bg = colors[index % colors.length];
+  return `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='${bg.replace('#','%23')}'/%3E%3Cpath d='M175 120 h50 v10 h-20 v50 h-10 v-50 h-20z' fill='%23fff' opacity='0.4'/%3E%3Ccircle cx='200' cy='150' r='35' fill='none' stroke='%23fff' stroke-width='2' opacity='0.3'/%3E%3C/svg%3E`;
+}
+---
+
+<section id="galeria" class="section-py below-fold bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="mb-10">
+      <h2 class="reveal reveal-clip section-heading text-ink" style="font-family: var(--font-display);">
+        Nasz warsztat
+      </h2>
+      <p class="reveal mt-2 text-sm" style="color: var(--color-ink-muted);">
+        Nowoczesne wyposażenie i profesjonalne środowisko pracy.
+      </p>
+    </div>
+
+    <!-- CSS columns masonry -->
+    <style>
+      @media (min-width: 640px) { .gallery-grid { columns: 3 !important; } }
+      @media (min-width: 1024px) { .gallery-grid { columns: 4 !important; } }
+    </style>
+
+    <div class="gallery-grid" style="columns: 2; column-gap: 1rem;">
+      {items.map((item, i) => (
+        <figure
+          class="gallery-item reveal mb-4 rounded-lg overflow-hidden break-inside-avoid"
+          data-stagger={i * 60}
+          style="display: inline-block; width: 100%;"
+        >
+          <img
+            src={placeholder(i)}
+            alt={item.alt}
+            loading="lazy"
+            class="w-full object-cover block"
+            style={`height: ${aspectHeights[item.aspect]};`}
+            width="400"
+            height={item.aspect === 'tall' ? '560' : item.aspect === 'wide' ? '360' : '440'}
+          />
+        </figure>
+      ))}
+    </div>
+
+  </div>
+</section>

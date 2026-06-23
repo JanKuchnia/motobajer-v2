@@ -1,0 +1,68 @@
+---
+import { reviews } from '../data/reviews';
+---
+
+<section id="opinie" class="section-py below-fold" style="background: var(--color-surface-2);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <!-- Heading -->
+    <div class="mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+      <div>
+        <h2 class="reveal reveal-clip section-heading text-ink" style="font-family: var(--font-display);">
+          Co mówią nasi klienci
+        </h2>
+        <p class="reveal mt-2 text-sm" style="color: var(--color-ink-muted);">
+          Wszystkie opinie z Google — ocena 5 na 5 gwiazdek.
+        </p>
+      </div>
+
+      <!-- Average score badge -->
+      <div class="reveal flex items-center gap-3 shrink-0">
+        <div class="flex">
+          {Array.from({ length: 5 }).map(() => (
+            <svg class="w-5 h-5 text-navy" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 0 0 .95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 0 0-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 0 0-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 0 0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0 0 .951-.69l1.07-3.292Z"/>
+            </svg>
+          ))}
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-ink" style="font-family: var(--font-display);">5.0</p>
+          <p class="text-xs" style="color: var(--color-ink-muted);">Google</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews grid -->
+    <div
+      class="grid gap-5"
+      style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));"
+    >
+      {reviews.map((review, i) => (
+        <article
+          class="reveal review-card bg-white rounded-xl p-6 flex flex-col"
+          data-stagger={i * 50}
+          style="box-shadow: var(--shadow-card);"
+        >
+          <!-- Stars -->
+          <div class="review-stars flex mb-3" aria-label={`Ocena: ${review.rating} gwiazdek na 5`}>
+            {Array.from({ length: review.rating }).map(() => (
+              <svg class="w-4 h-4 text-navy" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 0 0 .95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 0 0-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 0 0-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 0 0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0 0 .951-.69l1.07-3.292Z"/>
+              </svg>
+            ))}
+          </div>
+
+          <!-- Text -->
+          <blockquote class="flex-1 text-sm leading-relaxed mb-4" style="color: var(--color-ink); overflow: hidden; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical;">
+            {review.text}
+          </blockquote>
+
+          <!-- Footer -->
+          <footer class="flex items-center justify-between mt-auto pt-3 border-t" style="border-color: oklch(92% 0.005 265);">
+            <p class="text-sm font-semibold" style="color: var(--color-ink);">{review.author}</p>
+            <time class="text-xs" style="color: var(--color-ink-muted);">{review.date}</time>
+          </footer>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

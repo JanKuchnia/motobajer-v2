@@ -1,0 +1,214 @@
+---
+const timeSlots: string[] = [];
+for (let h = 8; h <= 16; h++) {
+  timeSlots.push(`${String(h).padStart(2, '0')}:00`);
+  if (h < 16) timeSlots.push(`${String(h).padStart(2, '0')}:30`);
+}
+
+const serviceOptions = [
+  'Mechanika ogólna',
+  'Diagnostyka komputerowa',
+  'Hamulce i zawieszenie',
+  'Klimatyzacja',
+  'Elektryka pojazdowa',
+  'Wulkanizacja',
+  'Inne',
+];
+---
+
+<section id="rezerwacja" class="section-py bg-navy">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid md:grid-cols-5 gap-12 items-start">
+      <!-- Left: intro text -->
+      <div class="md:col-span-2">
+        <h2
+          class="reveal reveal-clip section-heading text-white mb-4"
+          style="font-family: var(--font-display);"
+        >
+          Zarezerwuj wizytę online
+        </h2>
+        <p class="reveal text-base leading-relaxed mb-8" style="color: oklch(80% 0.03 265);">
+          Wypełnij formularz, a oddzwonimy w ciągu godziny, by potwierdzić termin.
+        </p>
+
+        <div class="reveal space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-0.5"
+              style="background: oklch(100% 0 0 / 0.1);">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-white">Pon – Pt: 08:00 – 17:00</p>
+              <p class="text-xs mt-0.5" style="color: oklch(65% 0.04 265);">Sobota: 08:00 – 13:00</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-0.5"
+              style="background: oklch(100% 0 0 / 0.1);">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/>
+              </svg>
+            </div>
+            <div>
+              <a href="tel:+48609845865" class="text-sm font-semibold text-white">609 845 865</a>
+              <p class="text-xs mt-0.5" style="color: oklch(65% 0.04 265);">(12) 274 23 06</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="md:col-span-3">
+        <!-- Success banner (hidden by default, shown via JS) -->
+        <div
+          id="booking-success"
+          class="hidden mb-6 px-5 py-4 rounded-lg text-sm font-medium"
+          style="background: oklch(100% 0 0 / 0.1); color: oklch(90% 0.05 145); border: 1px solid oklch(100% 0 0 / 0.15);"
+          role="alert"
+        >
+          Dziękujemy! Skontaktujemy się z Tobą wkrótce, by potwierdzić termin.
+        </div>
+
+        <!--
+          Booking form.
+          To enable Formspree:
+          1. Create an account at formspree.io
+          2. Get your form ID (e.g. "xpwzqnkr")
+          3. Replace the action URL with: https://formspree.io/f/{YOUR_FORM_ID}
+        -->
+        <form
+          id="booking-form"
+          action="mailto:motobajer@eurowarsztat.pl"
+          method="POST"
+          enctype="text/plain"
+          class="reveal space-y-5"
+          novalidate
+        >
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="field-label" for="name">Imię i nazwisko *</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                class="field-input"
+                placeholder="Jan Kowalski"
+                required
+                autocomplete="name"
+              />
+            </div>
+            <div>
+              <label class="field-label" for="phone">Telefon *</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                class="field-input"
+                placeholder="500 100 200"
+                required
+                autocomplete="tel"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="field-label" for="email">Adres e-mail</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="field-input"
+              placeholder="jan@example.pl"
+              autocomplete="email"
+            />
+          </div>
+
+          <div>
+            <label class="field-label" for="service">Rodzaj usługi *</label>
+            <select id="service" name="service" class="field-input" required>
+              <option value="" disabled selected>Wybierz usługę...</option>
+              {serviceOptions.map((opt) => (
+                <option value={opt}>{opt}</option>
+              ))}
+            </select>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="field-label" for="date">Preferowana data *</label>
+              <input
+                id="date"
+                name="date"
+                type="date"
+                class="field-input"
+                required
+              />
+            </div>
+            <div>
+              <label class="field-label" for="time">Preferowana godzina</label>
+              <select id="time" name="time" class="field-input">
+                <option value="">Dowolna</option>
+                {timeSlots.map((slot) => (
+                  <option value={slot}>{slot}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="field-label" for="notes">Dodatkowe informacje</label>
+            <textarea
+              id="notes"
+              name="notes"
+              class="field-input resize-none"
+              rows="3"
+              placeholder="Opisz krótko problem lub marka/model pojazdu..."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full py-3.5 rounded-md font-semibold text-navy btn-lift"
+            style="background: #fff; font-family: var(--font-body); font-size: 1rem;"
+            onmouseover="this.style.background='oklch(96% 0.01 265)'"
+            onmouseout="this.style.background='#fff'"
+          >
+            Wyślij zapytanie →
+          </button>
+
+          <p class="text-xs text-center" style="color: oklch(60% 0.03 265);">
+            Pola oznaczone * są wymagane. Odpowiadamy zwykle w ciągu 1 godziny w godzinach pracy.
+          </p>
+
+          <noscript>
+            <p class="text-sm text-center" style="color: oklch(75% 0.04 265);">
+              Aby zarezerwować wizytę, zadzwoń pod numer
+              <a href="tel:+48609845865" class="underline">609 845 865</a>.
+            </p>
+          </noscript>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Set date min to today
+  const dateInput = document.getElementById('date') as HTMLInputElement | null;
+  if (dateInput) {
+    dateInput.min = new Date().toISOString().split('T')[0];
+  }
+
+  // Show success banner if ?success=1 in URL (for Formspree redirect)
+  if (new URLSearchParams(window.location.search).get('success') === '1') {
+    const banner = document.getElementById('booking-success');
+    if (banner) {
+      banner.classList.remove('hidden');
+      banner.classList.add('booking-success-enter');
+    }
+    window.history.replaceState({}, '', window.location.pathname + '#rezerwacja');
+  }
+</script>

@@ -1,0 +1,2282 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "anti_slop_skill_cluster",
+        "label": "Anti-Slop Design Skills Cluster",
+        "nodes": [
+          "skills_design_taste_frontend_skill",
+          "skills_gpt_taste_skill",
+          "skills_high_end_visual_design_skill",
+          "skills_redesign_existing_projects_skill",
+          "skills_stitch_design_taste_skill",
+          "concept_anti_slop_design"
+        ],
+        "relation": "implement",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": ".agents/skills/design-taste-frontend/SKILL.md"
+      },
+      {
+        "id": "image_generation_skill_cluster",
+        "label": "Image Generation & Image-First Workflow Skills",
+        "nodes": [
+          "skills_imagegen_frontend_web_skill",
+          "skills_imagegen_frontend_mobile_skill",
+          "skills_image_to_code_skill",
+          "skills_brandkit_skill",
+          "concept_image_first_workflow",
+          "concept_section_per_image_rule"
+        ],
+        "relation": "implement",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": ".agents/skills/image-to-code/SKILL.md"
+      },
+      {
+        "id": "motobajer_business_cluster",
+        "label": "MOTOBAJER Business Entity Cluster",
+        "nodes": [
+          "motobajer_entity",
+          "motobajer_service_center",
+          "motobajer_parts_store",
+          "motobajer_eurowarsztat",
+          "motobajer_reviews"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "docs/INFO.MD"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "skills-lock.json",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L1",
+      "id": "skills_lock_json",
+      "community": 0,
+      "norm_label": "skills-lock.json"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L2",
+      "id": "motobajer_v2_skills_lock_version",
+      "community": 0,
+      "norm_label": "version"
+    },
+    {
+      "label": "skills",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L3",
+      "id": "motobajer_v2_skills_lock_skills",
+      "community": 1,
+      "norm_label": "skills"
+    },
+    {
+      "label": "brandkit",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L4",
+      "id": "motobajer_v2_skills_lock_skills_brandkit",
+      "community": 3,
+      "norm_label": "brandkit"
+    },
+    {
+      "label": "source",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L5",
+      "id": "motobajer_v2_skills_lock_brandkit_source",
+      "community": 3,
+      "norm_label": "source"
+    },
+    {
+      "label": "sourceType",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L6",
+      "id": "motobajer_v2_skills_lock_brandkit_sourcetype",
+      "community": 3,
+      "norm_label": "sourcetype"
+    },
+    {
+      "label": "skillPath",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L7",
+      "id": "motobajer_v2_skills_lock_brandkit_skillpath",
+      "community": 3,
+      "norm_label": "skillpath"
+    },
+    {
+      "label": "computedHash",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L8",
+      "id": "motobajer_v2_skills_lock_brandkit_computedhash",
+      "community": 3,
+      "norm_label": "computedhash"
+    },
+    {
+      "label": "design-taste-frontend",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L10",
+      "id": "motobajer_v2_skills_lock_skills_design_taste_frontend",
+      "community": 5,
+      "norm_label": "design-taste-frontend"
+    },
+    {
+      "label": "source",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L11",
+      "id": "motobajer_v2_skills_lock_design_taste_frontend_source",
+      "community": 5,
+      "norm_label": "source"
+    },
+    {
+      "label": "sourceType",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L12",
+      "id": "motobajer_v2_skills_lock_design_taste_frontend_sourcetype",
+      "community": 5,
+      "norm_label": "sourcetype"
+    },
+    {
+      "label": "skillPath",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L13",
+      "id": "motobajer_v2_skills_lock_design_taste_frontend_skillpath",
+      "community": 5,
+      "norm_label": "skillpath"
+    },
+    {
+      "label": "computedHash",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L14",
+      "id": "motobajer_v2_skills_lock_design_taste_frontend_computedhash",
+      "community": 5,
+      "norm_label": "computedhash"
+    },
+    {
+      "label": "design-taste-frontend-v1",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L16",
+      "id": "motobajer_v2_skills_lock_skills_design_taste_frontend_v1",
+      "community": 1,
+      "norm_label": "design-taste-frontend-v1"
+    },
+    {
+      "label": "source",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L17",
+      "id": "motobajer_v2_skills_lock_design_taste_frontend_v1_source",
+      "community": 1,
+      "norm_label": "source"
+    },
+    {
+      "label": "sourceType",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L18",
+      "id": "motobajer_v2_skills_lock_design_taste_frontend_v1_sourcetype",
+      "community": 1,
+      "norm_label": "sourcetype"
+    },
+    {
+      "label": "skillPath",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L19",
+      "id": "motobajer_v2_skills_lock_design_taste_frontend_v1_skillpath",
+      "community": 1,
+      "norm_label": "skillpath"
+    },
+    {
+      "label": "computedHash",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L20",
+      "id": "motobajer_v2_skills_lock_design_taste_frontend_v1_computedhash",
+      "community": 1,
+      "norm_label": "computedhash"
+    },
+    {
+      "label": "full-output-enforcement",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L22",
+      "id": "motobajer_v2_skills_lock_skills_full_output_enforcement",
+      "community": 1,
+      "norm_label": "full-output-enforcement"
+    },
+    {
+      "label": "source",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L23",
+      "id": "motobajer_v2_skills_lock_full_output_enforcement_source",
+      "community": 1,
+      "norm_label": "source"
+    },
+    {
+      "label": "sourceType",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L24",
+      "id": "motobajer_v2_skills_lock_full_output_enforcement_sourcetype",
+      "community": 1,
+      "norm_label": "sourcetype"
+    },
+    {
+      "label": "skillPath",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L25",
+      "id": "motobajer_v2_skills_lock_full_output_enforcement_skillpath",
+      "community": 1,
+      "norm_label": "skillpath"
+    },
+    {
+      "label": "computedHash",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L26",
+      "id": "motobajer_v2_skills_lock_full_output_enforcement_computedhash",
+      "community": 1,
+      "norm_label": "computedhash"
+    },
+    {
+      "label": "gpt-taste",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L28",
+      "id": "motobajer_v2_skills_lock_skills_gpt_taste",
+      "community": 6,
+      "norm_label": "gpt-taste"
+    },
+    {
+      "label": "source",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L29",
+      "id": "motobajer_v2_skills_lock_gpt_taste_source",
+      "community": 6,
+      "norm_label": "source"
+    },
+    {
+      "label": "sourceType",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L30",
+      "id": "motobajer_v2_skills_lock_gpt_taste_sourcetype",
+      "community": 6,
+      "norm_label": "sourcetype"
+    },
+    {
+      "label": "skillPath",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L31",
+      "id": "motobajer_v2_skills_lock_gpt_taste_skillpath",
+      "community": 6,
+      "norm_label": "skillpath"
+    },
+    {
+      "label": "computedHash",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L32",
+      "id": "motobajer_v2_skills_lock_gpt_taste_computedhash",
+      "community": 6,
+      "norm_label": "computedhash"
+    },
+    {
+      "label": "high-end-visual-design",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L34",
+      "id": "motobajer_v2_skills_lock_skills_high_end_visual_design",
+      "community": 7,
+      "norm_label": "high-end-visual-design"
+    },
+    {
+      "label": "source",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L35",
+      "id": "motobajer_v2_skills_lock_high_end_visual_design_source",
+      "community": 7,
+      "norm_label": "source"
+    },
+    {
+      "label": "sourceType",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L36",
+      "id": "motobajer_v2_skills_lock_high_end_visual_design_sourcetype",
+      "community": 7,
+      "norm_label": "sourcetype"
+    },
+    {
+      "label": "skillPath",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L37",
+      "id": "motobajer_v2_skills_lock_high_end_visual_design_skillpath",
+      "community": 7,
+      "norm_label": "skillpath"
+    },
+    {
+      "label": "computedHash",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L38",
+      "id": "motobajer_v2_skills_lock_high_end_visual_design_computedhash",
+      "community": 7,
+      "norm_label": "computedhash"
+    },
+    {
+      "label": "image-to-code",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L40",
+      "id": "motobajer_v2_skills_lock_skills_image_to_code",
+      "community": 8,
+      "norm_label": "image-to-code"
+    },
+    {
+      "label": "source",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L41",
+      "id": "motobajer_v2_skills_lock_image_to_code_source",
+      "community": 8,
+      "norm_label": "source"
+    },
+    {
+      "label": "sourceType",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L42",
+      "id": "motobajer_v2_skills_lock_image_to_code_sourcetype",
+      "community": 8,
+      "norm_label": "sourcetype"
+    },
+    {
+      "label": "skillPath",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L43",
+      "id": "motobajer_v2_skills_lock_image_to_code_skillpath",
+      "community": 8,
+      "norm_label": "skillpath"
+    },
+    {
+      "label": "computedHash",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L44",
+      "id": "motobajer_v2_skills_lock_image_to_code_computedhash",
+      "community": 8,
+      "norm_label": "computedhash"
+    },
+    {
+      "label": "imagegen-frontend-mobile",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L46",
+      "id": "motobajer_v2_skills_lock_skills_imagegen_frontend_mobile",
+      "community": 4,
+      "norm_label": "imagegen-frontend-mobile"
+    },
+    {
+      "label": "source",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L47",
+      "id": "motobajer_v2_skills_lock_imagegen_frontend_mobile_source",
+      "community": 4,
+      "norm_label": "source"
+    },
+    {
+      "label": "sourceType",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L48",
+      "id": "motobajer_v2_skills_lock_imagegen_frontend_mobile_sourcetype",
+      "community": 4,
+      "norm_label": "sourcetype"
+    },
+    {
+      "label": "skillPath",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L49",
+      "id": "motobajer_v2_skills_lock_imagegen_frontend_mobile_skillpath",
+      "community": 4,
+      "norm_label": "skillpath"
+    },
+    {
+      "label": "computedHash",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L50",
+      "id": "motobajer_v2_skills_lock_imagegen_frontend_mobile_computedhash",
+      "community": 4,
+      "norm_label": "computedhash"
+    },
+    {
+      "label": "imagegen-frontend-web",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L52",
+      "id": "motobajer_v2_skills_lock_skills_imagegen_frontend_web",
+      "community": 9,
+      "norm_label": "imagegen-frontend-web"
+    },
+    {
+      "label": "source",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L53",
+      "id": "motobajer_v2_skills_lock_imagegen_frontend_web_source",
+      "community": 9,
+      "norm_label": "source"
+    },
+    {
+      "label": "sourceType",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L54",
+      "id": "motobajer_v2_skills_lock_imagegen_frontend_web_sourcetype",
+      "community": 9,
+      "norm_label": "sourcetype"
+    },
+    {
+      "label": "skillPath",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L55",
+      "id": "motobajer_v2_skills_lock_imagegen_frontend_web_skillpath",
+      "community": 9,
+      "norm_label": "skillpath"
+    },
+    {
+      "label": "computedHash",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L56",
+      "id": "motobajer_v2_skills_lock_imagegen_frontend_web_computedhash",
+      "community": 9,
+      "norm_label": "computedhash"
+    },
+    {
+      "label": "industrial-brutalist-ui",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L58",
+      "id": "motobajer_v2_skills_lock_skills_industrial_brutalist_ui",
+      "community": 10,
+      "norm_label": "industrial-brutalist-ui"
+    },
+    {
+      "label": "source",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L59",
+      "id": "motobajer_v2_skills_lock_industrial_brutalist_ui_source",
+      "community": 10,
+      "norm_label": "source"
+    },
+    {
+      "label": "sourceType",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L60",
+      "id": "motobajer_v2_skills_lock_industrial_brutalist_ui_sourcetype",
+      "community": 10,
+      "norm_label": "sourcetype"
+    },
+    {
+      "label": "skillPath",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L61",
+      "id": "motobajer_v2_skills_lock_industrial_brutalist_ui_skillpath",
+      "community": 10,
+      "norm_label": "skillpath"
+    },
+    {
+      "label": "computedHash",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L62",
+      "id": "motobajer_v2_skills_lock_industrial_brutalist_ui_computedhash",
+      "community": 10,
+      "norm_label": "computedhash"
+    },
+    {
+      "label": "minimalist-ui",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L64",
+      "id": "motobajer_v2_skills_lock_skills_minimalist_ui",
+      "community": 11,
+      "norm_label": "minimalist-ui"
+    },
+    {
+      "label": "source",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L65",
+      "id": "motobajer_v2_skills_lock_minimalist_ui_source",
+      "community": 11,
+      "norm_label": "source"
+    },
+    {
+      "label": "sourceType",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L66",
+      "id": "motobajer_v2_skills_lock_minimalist_ui_sourcetype",
+      "community": 11,
+      "norm_label": "sourcetype"
+    },
+    {
+      "label": "skillPath",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L67",
+      "id": "motobajer_v2_skills_lock_minimalist_ui_skillpath",
+      "community": 11,
+      "norm_label": "skillpath"
+    },
+    {
+      "label": "computedHash",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L68",
+      "id": "motobajer_v2_skills_lock_minimalist_ui_computedhash",
+      "community": 11,
+      "norm_label": "computedhash"
+    },
+    {
+      "label": "redesign-existing-projects",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L70",
+      "id": "motobajer_v2_skills_lock_skills_redesign_existing_projects",
+      "community": 12,
+      "norm_label": "redesign-existing-projects"
+    },
+    {
+      "label": "source",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L71",
+      "id": "motobajer_v2_skills_lock_redesign_existing_projects_source",
+      "community": 12,
+      "norm_label": "source"
+    },
+    {
+      "label": "sourceType",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L72",
+      "id": "motobajer_v2_skills_lock_redesign_existing_projects_sourcetype",
+      "community": 12,
+      "norm_label": "sourcetype"
+    },
+    {
+      "label": "skillPath",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L73",
+      "id": "motobajer_v2_skills_lock_redesign_existing_projects_skillpath",
+      "community": 12,
+      "norm_label": "skillpath"
+    },
+    {
+      "label": "computedHash",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L74",
+      "id": "motobajer_v2_skills_lock_redesign_existing_projects_computedhash",
+      "community": 12,
+      "norm_label": "computedhash"
+    },
+    {
+      "label": "stitch-design-taste",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L76",
+      "id": "motobajer_v2_skills_lock_skills_stitch_design_taste",
+      "community": 13,
+      "norm_label": "stitch-design-taste"
+    },
+    {
+      "label": "source",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L77",
+      "id": "motobajer_v2_skills_lock_stitch_design_taste_source",
+      "community": 13,
+      "norm_label": "source"
+    },
+    {
+      "label": "sourceType",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L78",
+      "id": "motobajer_v2_skills_lock_stitch_design_taste_sourcetype",
+      "community": 13,
+      "norm_label": "sourcetype"
+    },
+    {
+      "label": "skillPath",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L79",
+      "id": "motobajer_v2_skills_lock_stitch_design_taste_skillpath",
+      "community": 13,
+      "norm_label": "skillpath"
+    },
+    {
+      "label": "computedHash",
+      "file_type": "code",
+      "source_file": "skills-lock.json",
+      "source_location": "L80",
+      "id": "motobajer_v2_skills_lock_stitch_design_taste_computedhash",
+      "community": 13,
+      "norm_label": "computedhash"
+    },
+    {
+      "label": "settings.local.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L1",
+      "id": "claude_settings_local_json",
+      "community": 14,
+      "norm_label": "settings.local.json"
+    },
+    {
+      "label": "permissions",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "id": "claude_settings_local_permissions",
+      "community": 14,
+      "norm_label": "permissions"
+    },
+    {
+      "label": "allow",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "id": "claude_settings_local_permissions_allow",
+      "community": 14,
+      "norm_label": "allow"
+    },
+    {
+      "label": "GitHub: Leonxlnx/taste-skill",
+      "file_type": "concept",
+      "source_file": "skills-lock.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_source_leonxlnx_taste_skill",
+      "community": 0,
+      "norm_label": "github: leonxlnx/taste-skill"
+    },
+    {
+      "label": "Skill: brandkit",
+      "file_type": "document",
+      "source_file": ".agents/skills/brandkit/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skills_brandkit_skill",
+      "community": 0,
+      "norm_label": "skill: brandkit"
+    },
+    {
+      "label": "Skill: industrial-brutalist-ui",
+      "file_type": "document",
+      "source_file": ".agents/skills/industrial-brutalist-ui/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skills_industrial_brutalist_ui_skill",
+      "community": 0,
+      "norm_label": "skill: industrial-brutalist-ui"
+    },
+    {
+      "label": "Skill: gpt-taste",
+      "file_type": "document",
+      "source_file": ".agents/skills/gpt-taste/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skills_gpt_taste_skill",
+      "community": 0,
+      "norm_label": "skill: gpt-taste"
+    },
+    {
+      "label": "Skill: image-to-code",
+      "file_type": "document",
+      "source_file": ".agents/skills/image-to-code/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skills_image_to_code_skill",
+      "community": 0,
+      "norm_label": "skill: image-to-code"
+    },
+    {
+      "label": "Skill: imagegen-frontend-mobile",
+      "file_type": "document",
+      "source_file": ".agents/skills/imagegen-frontend-mobile/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skills_imagegen_frontend_mobile_skill",
+      "community": 0,
+      "norm_label": "skill: imagegen-frontend-mobile"
+    },
+    {
+      "label": "Skill: imagegen-frontend-web",
+      "file_type": "document",
+      "source_file": ".agents/skills/imagegen-frontend-web/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skills_imagegen_frontend_web_skill",
+      "community": 0,
+      "norm_label": "skill: imagegen-frontend-web"
+    },
+    {
+      "label": "Skill: minimalist-ui",
+      "file_type": "document",
+      "source_file": ".agents/skills/minimalist-ui/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skills_minimalist_ui_skill",
+      "community": 0,
+      "norm_label": "skill: minimalist-ui"
+    },
+    {
+      "label": "Skill: full-output-enforcement",
+      "file_type": "document",
+      "source_file": ".agents/skills/full-output-enforcement/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skills_full_output_enforcement_skill",
+      "community": 0,
+      "norm_label": "skill: full-output-enforcement"
+    },
+    {
+      "label": "Skill: redesign-existing-projects",
+      "file_type": "document",
+      "source_file": ".agents/skills/redesign-existing-projects/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skills_redesign_existing_projects_skill",
+      "community": 0,
+      "norm_label": "skill: redesign-existing-projects"
+    },
+    {
+      "label": "Skill: high-end-visual-design",
+      "file_type": "document",
+      "source_file": ".agents/skills/high-end-visual-design/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skills_high_end_visual_design_skill",
+      "community": 0,
+      "norm_label": "skill: high-end-visual-design"
+    },
+    {
+      "label": "Stitch Design: DESIGN.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/stitch-design-taste/DESIGN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skills_stitch_design_taste_design",
+      "community": 0,
+      "norm_label": "stitch design: design.md"
+    },
+    {
+      "label": "Skill: stitch-design-taste",
+      "file_type": "document",
+      "source_file": ".agents/skills/stitch-design-taste/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skills_stitch_design_taste_skill",
+      "community": 0,
+      "norm_label": "skill: stitch-design-taste"
+    },
+    {
+      "label": "Skill: design-taste-frontend (v2)",
+      "file_type": "document",
+      "source_file": ".agents/skills/design-taste-frontend/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skills_design_taste_frontend_skill",
+      "community": 0,
+      "norm_label": "skill: design-taste-frontend (v2)"
+    },
+    {
+      "label": "Skill: design-taste-frontend-v1",
+      "file_type": "document",
+      "source_file": ".agents/skills/design-taste-frontend-v1/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skills_design_taste_frontend_v1_skill",
+      "community": 0,
+      "norm_label": "skill: design-taste-frontend-v1"
+    },
+    {
+      "label": "MOTOBAJER Business Info",
+      "file_type": "document",
+      "source_file": "docs/INFO.MD",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_info_md_motobajer",
+      "community": 2,
+      "norm_label": "motobajer business info"
+    },
+    {
+      "label": "MOTOBAJER Customer Reviews",
+      "file_type": "document",
+      "source_file": "docs/REVIEWS.MD",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_reviews_md_motobajer",
+      "community": 2,
+      "norm_label": "motobajer customer reviews"
+    },
+    {
+      "label": "Anti-AI-Slop Design Principle",
+      "file_type": "rationale",
+      "source_file": ".agents/skills/design-taste-frontend/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Shared directive across many skills to aggressively override LLM defaults: banned fonts (Inter), banned AI purple/blue gradients, no 3-equal-card layouts, no generic placeholder names, no em-dashes, no centered heroes at high variance. Motivated by production observation that LLMs collapse to statistical cliches.",
+      "id": "concept_anti_slop_design",
+      "community": 0,
+      "norm_label": "anti-ai-slop design principle"
+    },
+    {
+      "label": "Image-First Design Workflow",
+      "file_type": "rationale",
+      "source_file": ".agents/skills/image-to-code/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Mandatory workflow: generate design image(s) first, deeply analyze them, then implement frontend. Prevents generic coded reinterpretations by using generated images as the primary visual source of truth.",
+      "id": "concept_image_first_workflow",
+      "community": 0,
+      "norm_label": "image-first design workflow"
+    },
+    {
+      "label": "Design Variance Dial System",
+      "file_type": "concept",
+      "source_file": ".agents/skills/design-taste-frontend/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_design_variance_dial",
+      "community": 0,
+      "norm_label": "design variance dial system"
+    },
+    {
+      "label": "Spring Physics Motion Principle",
+      "file_type": "rationale",
+      "source_file": ".agents/skills/stitch-design-taste/DESIGN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Spring-based motion (stiffness:100, damping:20) mandated over linear easing across skills. Provides premium, weighty feel. Animate only transform and opacity for GPU safety.",
+      "id": "concept_spring_physics_motion",
+      "community": 0,
+      "norm_label": "spring physics motion principle"
+    },
+    {
+      "label": "One Section Per Image Rule",
+      "file_type": "rationale",
+      "source_file": ".agents/skills/imagegen-frontend-web/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "imagegen-frontend-web enforces exactly one horizontal image per section to avoid unreadable compressed multi-section boards. Overrides any model default that collapses to a single image.",
+      "id": "concept_section_per_image_rule",
+      "community": 0,
+      "norm_label": "one section per image rule"
+    },
+    {
+      "label": "MOTOBAJER Stanislaw Bajer",
+      "file_type": "concept",
+      "source_file": "docs/INFO.MD",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "motobajer_entity",
+      "community": 2,
+      "norm_label": "motobajer stanislaw bajer"
+    },
+    {
+      "label": "EuroWarsztat Network",
+      "file_type": "concept",
+      "source_file": "docs/INFO.MD",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "motobajer_eurowarsztat",
+      "community": 2,
+      "norm_label": "eurowarsztat network"
+    },
+    {
+      "label": "Motobajer Service Center (Drogowcow 7)",
+      "file_type": "concept",
+      "source_file": "docs/INFO.MD",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "motobajer_service_center",
+      "community": 2,
+      "norm_label": "motobajer service center (drogowcow 7)"
+    },
+    {
+      "label": "Motobajer Auto-Parts Store (Armii Krajowej 2)",
+      "file_type": "concept",
+      "source_file": "docs/INFO.MD",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "motobajer_parts_store",
+      "community": 2,
+      "norm_label": "motobajer auto-parts store (armii krajowej 2)"
+    },
+    {
+      "label": "Motobajer Customer Reviews (5-star)",
+      "file_type": "document",
+      "source_file": "docs/REVIEWS.MD",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "motobajer_reviews",
+      "community": 2,
+      "norm_label": "motobajer customer reviews (5-star)"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "motobajer_v2_skills_lock_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "motobajer_v2_skills_lock_skills",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skills-lock.json",
+      "source_location": "lines 5-81",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "github_source_leonxlnx_taste_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skills-lock.json",
+      "source_location": "line 4",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "skills_brandkit_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skills-lock.json",
+      "source_location": "line 10",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "skills_design_taste_frontend_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skills-lock.json",
+      "source_location": "line 17",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "skills_design_taste_frontend_v1_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skills-lock.json",
+      "source_location": "line 23",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "skills_full_output_enforcement_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skills-lock.json",
+      "source_location": "line 28",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "skills_gpt_taste_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skills-lock.json",
+      "source_location": "line 34",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "skills_high_end_visual_design_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skills-lock.json",
+      "source_location": "line 40",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "skills_image_to_code_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skills-lock.json",
+      "source_location": "line 46",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "skills_imagegen_frontend_mobile_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skills-lock.json",
+      "source_location": "line 52",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "skills_imagegen_frontend_web_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skills-lock.json",
+      "source_location": "line 58",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "skills_industrial_brutalist_ui_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skills-lock.json",
+      "source_location": "line 64",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "skills_minimalist_ui_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skills-lock.json",
+      "source_location": "line 70",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "skills_redesign_existing_projects_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skills-lock.json",
+      "source_location": "line 76",
+      "weight": 1.0,
+      "source": "skills_lock_json",
+      "target": "skills_stitch_design_taste_skill"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills",
+      "target": "motobajer_v2_skills_lock_skills_brandkit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills",
+      "target": "motobajer_v2_skills_lock_skills_design_taste_frontend",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills",
+      "target": "motobajer_v2_skills_lock_skills_design_taste_frontend_v1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills",
+      "target": "motobajer_v2_skills_lock_skills_full_output_enforcement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills",
+      "target": "motobajer_v2_skills_lock_skills_gpt_taste",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills",
+      "target": "motobajer_v2_skills_lock_skills_high_end_visual_design",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills",
+      "target": "motobajer_v2_skills_lock_skills_image_to_code",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills",
+      "target": "motobajer_v2_skills_lock_skills_imagegen_frontend_mobile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills",
+      "target": "motobajer_v2_skills_lock_skills_imagegen_frontend_web",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills",
+      "target": "motobajer_v2_skills_lock_skills_industrial_brutalist_ui",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills",
+      "target": "motobajer_v2_skills_lock_skills_minimalist_ui",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills",
+      "target": "motobajer_v2_skills_lock_skills_redesign_existing_projects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills",
+      "target": "motobajer_v2_skills_lock_skills_stitch_design_taste",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_brandkit",
+      "target": "motobajer_v2_skills_lock_brandkit_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_brandkit",
+      "target": "motobajer_v2_skills_lock_brandkit_sourcetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_brandkit",
+      "target": "motobajer_v2_skills_lock_brandkit_skillpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_brandkit",
+      "target": "motobajer_v2_skills_lock_brandkit_computedhash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_design_taste_frontend",
+      "target": "motobajer_v2_skills_lock_design_taste_frontend_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_design_taste_frontend",
+      "target": "motobajer_v2_skills_lock_design_taste_frontend_sourcetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_design_taste_frontend",
+      "target": "motobajer_v2_skills_lock_design_taste_frontend_skillpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_design_taste_frontend",
+      "target": "motobajer_v2_skills_lock_design_taste_frontend_computedhash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_design_taste_frontend_v1",
+      "target": "motobajer_v2_skills_lock_design_taste_frontend_v1_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_design_taste_frontend_v1",
+      "target": "motobajer_v2_skills_lock_design_taste_frontend_v1_sourcetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_design_taste_frontend_v1",
+      "target": "motobajer_v2_skills_lock_design_taste_frontend_v1_skillpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_design_taste_frontend_v1",
+      "target": "motobajer_v2_skills_lock_design_taste_frontend_v1_computedhash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_full_output_enforcement",
+      "target": "motobajer_v2_skills_lock_full_output_enforcement_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_full_output_enforcement",
+      "target": "motobajer_v2_skills_lock_full_output_enforcement_sourcetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_full_output_enforcement",
+      "target": "motobajer_v2_skills_lock_full_output_enforcement_skillpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_full_output_enforcement",
+      "target": "motobajer_v2_skills_lock_full_output_enforcement_computedhash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_gpt_taste",
+      "target": "motobajer_v2_skills_lock_gpt_taste_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_gpt_taste",
+      "target": "motobajer_v2_skills_lock_gpt_taste_sourcetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_gpt_taste",
+      "target": "motobajer_v2_skills_lock_gpt_taste_skillpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_gpt_taste",
+      "target": "motobajer_v2_skills_lock_gpt_taste_computedhash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_high_end_visual_design",
+      "target": "motobajer_v2_skills_lock_high_end_visual_design_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_high_end_visual_design",
+      "target": "motobajer_v2_skills_lock_high_end_visual_design_sourcetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_high_end_visual_design",
+      "target": "motobajer_v2_skills_lock_high_end_visual_design_skillpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_high_end_visual_design",
+      "target": "motobajer_v2_skills_lock_high_end_visual_design_computedhash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_image_to_code",
+      "target": "motobajer_v2_skills_lock_image_to_code_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_image_to_code",
+      "target": "motobajer_v2_skills_lock_image_to_code_sourcetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_image_to_code",
+      "target": "motobajer_v2_skills_lock_image_to_code_skillpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_image_to_code",
+      "target": "motobajer_v2_skills_lock_image_to_code_computedhash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_imagegen_frontend_mobile",
+      "target": "motobajer_v2_skills_lock_imagegen_frontend_mobile_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_imagegen_frontend_mobile",
+      "target": "motobajer_v2_skills_lock_imagegen_frontend_mobile_sourcetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_imagegen_frontend_mobile",
+      "target": "motobajer_v2_skills_lock_imagegen_frontend_mobile_skillpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_imagegen_frontend_mobile",
+      "target": "motobajer_v2_skills_lock_imagegen_frontend_mobile_computedhash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_imagegen_frontend_web",
+      "target": "motobajer_v2_skills_lock_imagegen_frontend_web_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_imagegen_frontend_web",
+      "target": "motobajer_v2_skills_lock_imagegen_frontend_web_sourcetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_imagegen_frontend_web",
+      "target": "motobajer_v2_skills_lock_imagegen_frontend_web_skillpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_imagegen_frontend_web",
+      "target": "motobajer_v2_skills_lock_imagegen_frontend_web_computedhash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_industrial_brutalist_ui",
+      "target": "motobajer_v2_skills_lock_industrial_brutalist_ui_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_industrial_brutalist_ui",
+      "target": "motobajer_v2_skills_lock_industrial_brutalist_ui_sourcetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_industrial_brutalist_ui",
+      "target": "motobajer_v2_skills_lock_industrial_brutalist_ui_skillpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_industrial_brutalist_ui",
+      "target": "motobajer_v2_skills_lock_industrial_brutalist_ui_computedhash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_minimalist_ui",
+      "target": "motobajer_v2_skills_lock_minimalist_ui_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_minimalist_ui",
+      "target": "motobajer_v2_skills_lock_minimalist_ui_sourcetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_minimalist_ui",
+      "target": "motobajer_v2_skills_lock_minimalist_ui_skillpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_minimalist_ui",
+      "target": "motobajer_v2_skills_lock_minimalist_ui_computedhash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_redesign_existing_projects",
+      "target": "motobajer_v2_skills_lock_redesign_existing_projects_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_redesign_existing_projects",
+      "target": "motobajer_v2_skills_lock_redesign_existing_projects_sourcetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_redesign_existing_projects",
+      "target": "motobajer_v2_skills_lock_redesign_existing_projects_skillpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_redesign_existing_projects",
+      "target": "motobajer_v2_skills_lock_redesign_existing_projects_computedhash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_stitch_design_taste",
+      "target": "motobajer_v2_skills_lock_stitch_design_taste_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_stitch_design_taste",
+      "target": "motobajer_v2_skills_lock_stitch_design_taste_sourcetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_stitch_design_taste",
+      "target": "motobajer_v2_skills_lock_stitch_design_taste_skillpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills-lock.json",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "motobajer_v2_skills_lock_skills_stitch_design_taste",
+      "target": "motobajer_v2_skills_lock_stitch_design_taste_computedhash",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "claude_settings_local_json",
+      "target": "claude_settings_local_permissions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.55,
+      "source_file": ".claude/settings.local.json",
+      "source_location": "playwright browser_navigate permission",
+      "weight": 0.5,
+      "source": "claude_settings_local_json",
+      "target": "skills_imagegen_frontend_web_skill"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "claude_settings_local_permissions",
+      "target": "claude_settings_local_permissions_allow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": ".agents/skills/brandkit/SKILL.md",
+      "source_location": null,
+      "weight": 0.65,
+      "source": "skills_brandkit_skill",
+      "target": "skills_imagegen_frontend_web_skill"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": ".agents/skills/minimalist-ui/SKILL.md",
+      "source_location": null,
+      "weight": 0.65,
+      "source": "skills_minimalist_ui_skill",
+      "target": "skills_industrial_brutalist_ui_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".agents/skills/gpt-taste/SKILL.md",
+      "source_location": "CORE DIRECTIVE",
+      "weight": 0.9,
+      "source": "concept_anti_slop_design",
+      "target": "skills_gpt_taste_skill"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": ".agents/skills/gpt-taste/SKILL.md",
+      "source_location": null,
+      "weight": 0.75,
+      "source": "skills_gpt_taste_skill",
+      "target": "skills_high_end_visual_design_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".agents/skills/image-to-code/SKILL.md",
+      "source_location": "Section 29 ANTI-AI-SLOP RULES",
+      "weight": 0.9,
+      "source": "concept_anti_slop_design",
+      "target": "skills_image_to_code_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/image-to-code/SKILL.md",
+      "source_location": "Section 2 MANDATORY IMAGE-FIRST RULE",
+      "weight": 1.0,
+      "source": "concept_image_first_workflow",
+      "target": "skills_image_to_code_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/image-to-code/SKILL.md",
+      "source_location": "Section 4 CODEX-SPECIFIC SECTION IMAGE RULE",
+      "weight": 1.0,
+      "source": "concept_section_per_image_rule",
+      "target": "skills_image_to_code_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".agents/skills/imagegen-frontend-mobile/SKILL.md",
+      "source_location": "Section 21 MOBILE ANTI-AI-TELLS RULE",
+      "weight": 0.9,
+      "source": "concept_anti_slop_design",
+      "target": "skills_imagegen_frontend_mobile_skill"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": ".agents/skills/imagegen-frontend-web/SKILL.md",
+      "source_location": null,
+      "weight": 0.75,
+      "source": "skills_imagegen_frontend_web_skill",
+      "target": "skills_imagegen_frontend_mobile_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".agents/skills/imagegen-frontend-web/SKILL.md",
+      "source_location": "Section 8 ANTI-AI-SLOP RULES",
+      "weight": 0.9,
+      "source": "concept_anti_slop_design",
+      "target": "skills_imagegen_frontend_web_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".agents/skills/imagegen-frontend-web/SKILL.md",
+      "source_location": "CORE DIRECTIVE",
+      "weight": 0.8,
+      "source": "concept_image_first_workflow",
+      "target": "skills_imagegen_frontend_web_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/imagegen-frontend-web/SKILL.md",
+      "source_location": "HARD OUTPUT RULE and Section 5",
+      "weight": 1.0,
+      "source": "concept_section_per_image_rule",
+      "target": "skills_imagegen_frontend_web_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".agents/skills/minimalist-ui/SKILL.md",
+      "source_location": "Section 2 Absolute Negative Constraints",
+      "weight": 0.8,
+      "source": "concept_anti_slop_design",
+      "target": "skills_minimalist_ui_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".agents/skills/redesign-existing-projects/SKILL.md",
+      "source_location": "Design Audit section",
+      "weight": 0.8,
+      "source": "concept_anti_slop_design",
+      "target": "skills_redesign_existing_projects_skill"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": ".agents/skills/redesign-existing-projects/SKILL.md",
+      "source_location": "Redesign Skill main body",
+      "weight": 0.75,
+      "source": "skills_redesign_existing_projects_skill",
+      "target": "skills_design_taste_frontend_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".agents/skills/high-end-visual-design/SKILL.md",
+      "source_location": "Section 2 ABSOLUTE ZERO DIRECTIVE",
+      "weight": 0.8,
+      "source": "concept_anti_slop_design",
+      "target": "skills_high_end_visual_design_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".agents/skills/high-end-visual-design/SKILL.md",
+      "source_location": "Section 5 MOTION CHOREOGRAPHY",
+      "weight": 0.8,
+      "source": "concept_spring_physics_motion",
+      "target": "skills_high_end_visual_design_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/stitch-design-taste/SKILL.md",
+      "source_location": "line 11",
+      "weight": 1.0,
+      "source": "skills_stitch_design_taste_skill",
+      "target": "skills_stitch_design_taste_design"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".agents/skills/stitch-design-taste/DESIGN.md",
+      "source_location": "Section 9 Anti-Patterns",
+      "weight": 0.8,
+      "source": "concept_anti_slop_design",
+      "target": "skills_stitch_design_taste_design"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/stitch-design-taste/DESIGN.md",
+      "source_location": "Configuration section",
+      "weight": 1.0,
+      "source": "concept_design_variance_dial",
+      "target": "skills_stitch_design_taste_design"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/stitch-design-taste/DESIGN.md",
+      "source_location": "Section 8 Motion & Interaction",
+      "weight": 1.0,
+      "source": "concept_spring_physics_motion",
+      "target": "skills_stitch_design_taste_design"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".agents/skills/stitch-design-taste/SKILL.md",
+      "source_location": "same color/typography/anti-pattern rules",
+      "weight": 0.85,
+      "source": "skills_stitch_design_taste_skill",
+      "target": "skills_design_taste_frontend_skill"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": ".agents/skills/design-taste-frontend-v1/SKILL.md",
+      "source_location": "frontmatter",
+      "weight": 0.95,
+      "source": "skills_design_taste_frontend_skill",
+      "target": "skills_design_taste_frontend_v1_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/design-taste-frontend/SKILL.md",
+      "source_location": "Section 9 AI Tells",
+      "weight": 1.0,
+      "source": "concept_anti_slop_design",
+      "target": "skills_design_taste_frontend_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/design-taste-frontend/SKILL.md",
+      "source_location": "Section 1 THREE DIALS",
+      "weight": 1.0,
+      "source": "concept_design_variance_dial",
+      "target": "skills_design_taste_frontend_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/design-taste-frontend/SKILL.md",
+      "source_location": "Section 5 Perpetual Micro-Interactions",
+      "weight": 1.0,
+      "source": "concept_spring_physics_motion",
+      "target": "skills_design_taste_frontend_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/design-taste-frontend-v1/SKILL.md",
+      "source_location": "Section 1 ACTIVE BASELINE CONFIGURATION",
+      "weight": 1.0,
+      "source": "concept_design_variance_dial",
+      "target": "skills_design_taste_frontend_v1_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/INFO.MD",
+      "source_location": "all",
+      "weight": 1.0,
+      "source": "docs_info_md_motobajer",
+      "target": "motobajer_entity"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/INFO.MD",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_info_md_motobajer",
+      "target": "docs_reviews_md_motobajer"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/REVIEWS.MD",
+      "source_location": "all",
+      "weight": 1.0,
+      "source": "docs_reviews_md_motobajer",
+      "target": "motobajer_entity"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/INFO.MD",
+      "source_location": "section 4",
+      "weight": 1.0,
+      "source": "motobajer_entity",
+      "target": "motobajer_eurowarsztat"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/INFO.MD",
+      "source_location": "section 3",
+      "weight": 1.0,
+      "source": "motobajer_entity",
+      "target": "motobajer_service_center"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/INFO.MD",
+      "source_location": "section 3",
+      "weight": 1.0,
+      "source": "motobajer_entity",
+      "target": "motobajer_parts_store"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/REVIEWS.MD",
+      "source_location": "all",
+      "weight": 1.0,
+      "source": "motobajer_reviews",
+      "target": "motobajer_entity"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "anti_slop_skill_cluster",
+      "label": "Anti-Slop Design Skills Cluster",
+      "nodes": [
+        "skills_design_taste_frontend_skill",
+        "skills_gpt_taste_skill",
+        "skills_high_end_visual_design_skill",
+        "skills_redesign_existing_projects_skill",
+        "skills_stitch_design_taste_skill",
+        "concept_anti_slop_design"
+      ],
+      "relation": "implement",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".agents/skills/design-taste-frontend/SKILL.md"
+    },
+    {
+      "id": "image_generation_skill_cluster",
+      "label": "Image Generation & Image-First Workflow Skills",
+      "nodes": [
+        "skills_imagegen_frontend_web_skill",
+        "skills_imagegen_frontend_mobile_skill",
+        "skills_image_to_code_skill",
+        "skills_brandkit_skill",
+        "concept_image_first_workflow",
+        "concept_section_per_image_rule"
+      ],
+      "relation": "implement",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".agents/skills/image-to-code/SKILL.md"
+    },
+    {
+      "id": "motobajer_business_cluster",
+      "label": "MOTOBAJER Business Entity Cluster",
+      "nodes": [
+        "motobajer_entity",
+        "motobajer_service_center",
+        "motobajer_parts_store",
+        "motobajer_eurowarsztat",
+        "motobajer_reviews"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/INFO.MD"
+    }
+  ]
+}

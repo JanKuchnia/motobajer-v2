@@ -1,0 +1,85 @@
+---
+const year = new Date().getFullYear();
+
+const links = [
+  { href: '#uslugi', label: 'Usługi' },
+  { href: '#rezerwacja', label: 'Rezerwacja' },
+  { href: '#opinie', label: 'Opinie' },
+  { href: '#lokalizacje', label: 'Lokalizacje' },
+  { href: '#kontakt', label: 'Kontakt' },
+];
+---
+
+<footer class="bg-navy-dark text-ink-on-navy">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+      <!-- Brand -->
+      <div>
+        <p
+          class="text-xl font-bold text-white mb-3"
+          style="font-family: var(--font-display); letter-spacing: 0.05em;"
+        >
+          MOTOBAJER
+        </p>
+        <p class="text-sm leading-relaxed" style="color: oklch(68% 0.04 265);">
+          Stanisław Bajer<br />
+          Autoryzowany serwis sieci EuroWarsztat<br />
+          Myślenice, od 2008 roku
+        </p>
+      </div>
+
+      <!-- Quick links -->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: oklch(55% 0.06 265);">
+          Nawigacja
+        </p>
+        <ul class="space-y-2">
+          {links.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="text-sm hover:text-white transition-colors"
+                style="color: oklch(68% 0.04 265);"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: oklch(55% 0.06 265);">
+          Kontakt
+        </p>
+        <ul class="space-y-2 text-sm" style="color: oklch(68% 0.04 265);">
+          <li>
+            <a href="tel:+48609845865" class="hover:text-white transition-colors">
+              609 845 865
+            </a>
+          </li>
+          <li>
+            <a href="tel:+48122742306" class="hover:text-white transition-colors">
+              (12) 274 23 06
+            </a>
+          </li>
+          <li>
+            <a href="mailto:motobajer@eurowarsztat.pl" class="hover:text-white transition-colors">
+              motobajer@eurowarsztat.pl
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div
+      class="pt-6 border-t flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-xs"
+      style="border-color: oklch(100% 0 0 / 0.08); color: oklch(45% 0.04 265);"
+    >
+      <p>© {year} MOTOBAJER Stanisław Bajer. Wszelkie prawa zastrzeżone.</p>
+      <p>NIP: 6811341146 · REGON: 120696804</p>
+    </div>
+  </div>
+</footer>
