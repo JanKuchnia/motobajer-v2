@@ -41,7 +41,7 @@ const displayed = limit ? faqs.slice(0, limit) : faqs;
 
           {showMoreLink && (
             <a
-              href="/faq"
+              href={`${import.meta.env.BASE_URL}faq`}
               class="inline-flex items-center gap-1.5 text-sm font-semibold transition-colors"
               style="color: var(--color-navy); width: fit-content;"
             >

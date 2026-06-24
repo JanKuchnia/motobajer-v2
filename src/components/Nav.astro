@@ -1,13 +1,14 @@
 ---
 import { Phone, Info, Wrench, Package, Star, HelpCircle, MapPin } from 'lucide-astro';
 
+const base = import.meta.env.BASE_URL;
 const links = [
-  { href: '/#o-nas', label: 'O nas', icon: Info },
-  { href: '/#uslugi', label: 'Usługi', icon: Wrench },
-  { href: '/czesci', label: 'Części', icon: Package },
-  { href: '/#opinie', label: 'Opinie', icon: Star },
-  { href: '/faq', label: 'FAQ', icon: HelpCircle },
-  { href: '/kontakt', label: 'Kontakt', icon: MapPin },
+  { href: `${base}#o-nas`, label: 'O nas', icon: Info },
+  { href: `${base}#uslugi`, label: 'Usługi', icon: Wrench },
+  { href: `${base}czesci`, label: 'Części', icon: Package },
+  { href: `${base}#opinie`, label: 'Opinie', icon: Star },
+  { href: `${base}faq`, label: 'FAQ', icon: HelpCircle },
+  { href: `${base}kontakt`, label: 'Kontakt', icon: MapPin },
 ];
 
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
@@ -25,7 +26,7 @@ function isActive(href: string) {
 >
   <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
     <!-- Logo -->
-    <a href="/" class="flex items-center gap-3 shrink-0">
+    <a href={base} class="flex items-center gap-3 shrink-0">
       <div aria-hidden="true" style="width: 4px; height: 1.6rem; background: var(--color-accent); border-radius: 1px; flex-shrink: 0;"></div>
       <span
         class="font-bold text-white"

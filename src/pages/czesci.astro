@@ -22,7 +22,7 @@ const brands = [...new Set(parts.map((p) => p.brand))].sort();
         <!-- Breadcrumb -->
         <nav aria-label="Breadcrumb" class="mb-6">
           <ol class="flex items-center gap-2 text-sm" style="color: oklch(65% 0.04 265);">
-            <li><a href="/" class="hover:text-white transition-colors">Strona główna</a></li>
+            <li><a href={import.meta.env.BASE_URL} class="hover:text-white transition-colors">Strona główna</a></li>
             <li aria-hidden="true"><ChevronRight class="w-3.5 h-3.5 inline" /></li>
             <li class="text-white font-medium" aria-current="page">Części</li>
           </ol>
@@ -179,7 +179,7 @@ const brands = [...new Set(parts.map((p) => p.brand))].sort();
               Zadzwoń
             </a>
             <a
-              href="/kontakt"
+              href={`${import.meta.env.BASE_URL}kontakt`}
               class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-semibold border transition-colors"
               style="color: var(--color-navy); border-color: oklch(82% 0.05 265);"
               onmouseover="this.style.background='var(--color-surface-1)'"

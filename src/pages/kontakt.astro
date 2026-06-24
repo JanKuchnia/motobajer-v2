@@ -20,7 +20,7 @@ import { ChevronRight, Phone, Calendar, Mail, MapPin, Clock } from 'lucide-astro
       <div class="max-w-6xl mx-auto">
         <nav aria-label="Breadcrumb" class="mb-6">
           <ol class="flex items-center gap-2 text-sm" style="color: oklch(65% 0.04 265);">
-            <li><a href="/" class="hover:text-white transition-colors">Strona główna</a></li>
+            <li><a href={import.meta.env.BASE_URL} class="hover:text-white transition-colors">Strona główna</a></li>
             <li aria-hidden="true"><ChevronRight class="w-3.5 h-3.5 inline" /></li>
             <li class="text-white font-medium" aria-current="page">Kontakt</li>
           </ol>

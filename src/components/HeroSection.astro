@@ -11,11 +11,11 @@ import { Calendar, Phone } from 'lucide-astro';
   <picture aria-hidden="true" class="absolute inset-0 block">
     <source
       type="image/webp"
-      srcset="/images/hero-bg-1024.webp 1024w, /images/hero-bg.webp 1920w"
+      srcset={`${import.meta.env.BASE_URL}images/hero-bg-1024.webp 1024w, ${import.meta.env.BASE_URL}images/hero-bg.webp 1920w`}
       sizes="100vw"
     />
     <img
-      src="/images/hero-bg.jpg"
+      src={`${import.meta.env.BASE_URL}images/hero-bg.jpg`}
       alt=""
       class="w-full h-full object-cover"
       style="object-position: center 40%;"

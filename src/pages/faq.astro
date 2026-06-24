@@ -40,7 +40,7 @@ const faqSchema = {
         <!-- Breadcrumb -->
         <nav aria-label="Breadcrumb" class="mb-6">
           <ol class="flex items-center gap-2 text-sm" style="color: oklch(65% 0.04 265);">
-            <li><a href="/" class="hover:text-white transition-colors">Strona główna</a></li>
+            <li><a href={import.meta.env.BASE_URL} class="hover:text-white transition-colors">Strona główna</a></li>
             <li aria-hidden="true"><ChevronRight class="w-3.5 h-3.5 inline" /></li>
             <li class="text-white font-medium" aria-current="page">FAQ</li>
           </ol>
@@ -118,7 +118,7 @@ const faqSchema = {
             Zadzwoń: 609 845 865
           </a>
           <a
-            href="/#rezerwacja"
+            href={`${import.meta.env.BASE_URL}#rezerwacja`}
             class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md font-semibold text-white transition-colors"
             style="background: var(--color-accent);"
             onmouseover="this.style.background='var(--color-accent-hover)'"
