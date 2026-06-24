@@ -1,13 +1,13 @@
 ---
-import { Phone, Mail } from 'lucide-astro';
+import { Phone, Mail, Wrench, CalendarDays, Star, MapPin } from 'lucide-astro';
 const year = new Date().getFullYear();
 
 const links = [
-  { href: '#uslugi', label: 'Usługi' },
-  { href: '#rezerwacja', label: 'Rezerwacja' },
-  { href: '#opinie', label: 'Opinie' },
-  { href: '#lokalizacje', label: 'Lokalizacje' },
-  { href: '#kontakt', label: 'Kontakt' },
+  { href: '#uslugi', label: 'Usługi', icon: Wrench },
+  { href: '#rezerwacja', label: 'Rezerwacja', icon: CalendarDays },
+  { href: '#opinie', label: 'Opinie', icon: Star },
+  { href: '#lokalizacje', label: 'Lokalizacje', icon: MapPin },
+  { href: '#kontakt', label: 'Kontakt', icon: Phone },
 ];
 ---
 
@@ -39,9 +39,10 @@ const links = [
             <li>
               <a
                 href={link.href}
-                class="text-sm hover:text-white transition-colors"
+                class="inline-flex items-center gap-1.5 text-sm hover:text-white transition-colors"
                 style="color: oklch(68% 0.04 265);"
               >
+                <link.icon class="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
                 {link.label}
               </a>
             </li>

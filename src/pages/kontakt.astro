@@ -3,9 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import StickyCtaBar from '../components/StickyCtaBar.astro';
-import ContactSection from '../components/ContactSection.astro';
+import BookingSection from '../components/BookingSection.astro';
 import LocationsSection from '../components/LocationsSection.astro';
-import { ChevronRight } from 'lucide-astro';
+import { ChevronRight, Phone, Calendar, Mail, MapPin, Clock } from 'lucide-astro';
 ---
 
 <BaseLayout
@@ -15,10 +15,9 @@ import { ChevronRight } from 'lucide-astro';
   <Nav />
   <main id="main-content">
 
-    <!-- Hero strip -->
-    <div class="bg-navy pt-32 pb-14 px-4 sm:px-6">
+    <!-- Hero -->
+    <div class="bg-navy pt-32 pb-16 px-4 sm:px-6">
       <div class="max-w-6xl mx-auto">
-        <!-- Breadcrumb -->
         <nav aria-label="Breadcrumb" class="mb-6">
           <ol class="flex items-center gap-2 text-sm" style="color: oklch(65% 0.04 265);">
             <li><a href="/" class="hover:text-white transition-colors">Strona główna</a></li>
@@ -27,18 +26,162 @@ import { ChevronRight } from 'lucide-astro';
           </ol>
         </nav>
         <h1
-          class="font-bold text-white mb-3 leading-tight"
-          style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.8rem); letter-spacing: -0.02em;"
+          class="font-bold text-white mb-4 leading-tight"
+          style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.8rem); letter-spacing: -0.02em; text-wrap: balance;"
         >
           Kontakt i rezerwacja
         </h1>
-        <p class="text-lg max-w-2xl" style="color: oklch(72% 0.04 265);">
-          Umów wizytę online lub zadzwoń bezpośrednio. Działamy w Myślenicach od ponad 18 lat.
+        <p class="text-lg mb-8 max-w-xl" style="color: oklch(72% 0.04 265);">
+          Zadzwoń lub wyślij formularz rezerwacji. Odpowiadamy w ciągu godziny w godzinach pracy.
         </p>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="tel:+48609845865"
+            class="btn-lift inline-flex items-center gap-2 px-5 py-3 rounded-md text-sm font-semibold text-white focus-ring-white"
+            style="background: var(--color-accent);"
+            onmouseover="this.style.background='var(--color-accent-hover)'"
+            onmouseout="this.style.background='var(--color-accent)'"
+          >
+            <Phone class="w-4 h-4 shrink-0" aria-hidden="true" />
+            Zadzwoń: 609 845 865
+          </a>
+          <a
+            href="#rezerwacja"
+            class="btn-lift inline-flex items-center gap-2 px-5 py-3 rounded-md text-sm font-semibold focus-ring-white"
+            style="background: oklch(100% 0 0 / 0.12); color: white; border: 1px solid oklch(100% 0 0 / 0.22);"
+          >
+            <Calendar class="w-4 h-4 shrink-0" aria-hidden="true" />
+            Formularz rezerwacji
+          </a>
+        </div>
       </div>
     </div>
 
-    <ContactSection />
+    <!-- Quick contact strip -->
+    <section aria-label="Dane kontaktowe" class="section-py bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid md:grid-cols-3 gap-10 lg:gap-16">
+
+          <!-- Phone & email -->
+          <div class="reveal">
+            <div class="flex items-center gap-2 mb-5">
+              <div
+                class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
+                style="background: var(--color-surface-1);"
+              >
+                <Phone class="w-4 h-4" style="color: var(--color-navy);" aria-hidden="true" />
+              </div>
+              <span class="text-sm font-semibold" style="color: var(--color-ink-muted);">Telefon</span>
+            </div>
+            <a
+              href="tel:+48609845865"
+              class="block font-bold leading-none mb-2 transition-colors"
+              style="font-family: var(--font-display); font-size: clamp(1.55rem, 3vw, 2rem); letter-spacing: -0.01em; color: var(--color-navy);"
+              onmouseover="this.style.color='var(--color-accent)'"
+              onmouseout="this.style.color='var(--color-navy)'"
+            >
+              609 845 865
+            </a>
+            <a
+              href="tel:+48122742306"
+              class="block text-base font-semibold transition-colors"
+              style="color: var(--color-ink-muted);"
+              onmouseover="this.style.color='var(--color-navy)'"
+              onmouseout="this.style.color='var(--color-ink-muted)'"
+            >
+              (12) 274 23 06
+            </a>
+            <a
+              href="mailto:motobajer@eurowarsztat.pl"
+              class="mt-5 flex items-center gap-1.5 text-sm font-medium transition-colors"
+              style="color: var(--color-ink-muted);"
+              onmouseover="this.style.color='var(--color-navy)'"
+              onmouseout="this.style.color='var(--color-ink-muted)'"
+            >
+              <Mail class="w-4 h-4 shrink-0" aria-hidden="true" />
+              motobajer@eurowarsztat.pl
+            </a>
+          </div>
+
+          <!-- Hours -->
+          <div class="reveal" style="transition-delay: 80ms;">
+            <div class="flex items-center gap-2 mb-5">
+              <div
+                class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
+                style="background: var(--color-surface-1);"
+              >
+                <Clock class="w-4 h-4" style="color: var(--color-navy);" aria-hidden="true" />
+              </div>
+              <span class="text-sm font-semibold" style="color: var(--color-ink-muted);">Godziny otwarcia</span>
+            </div>
+            <table class="w-full text-sm" aria-label="Godziny otwarcia serwisu">
+              <tbody>
+                <tr class="border-b" style="border-color: oklch(92% 0.005 265);">
+                  <td class="py-2.5 pr-4 font-medium" style="color: var(--color-ink);">Pon – Pt</td>
+                  <td class="py-2.5 text-right font-semibold" style="color: var(--color-navy);">08:00 – 17:00</td>
+                </tr>
+                <tr class="border-b" style="border-color: oklch(92% 0.005 265);">
+                  <td class="py-2.5 pr-4 font-medium" style="color: var(--color-ink);">Sobota</td>
+                  <td class="py-2.5 text-right font-semibold" style="color: var(--color-navy);">08:00 – 13:00</td>
+                </tr>
+                <tr>
+                  <td class="py-2.5 pr-4 font-medium" style="color: var(--color-ink);">Niedziela</td>
+                  <td class="py-2.5 text-right font-semibold" style="color: var(--color-ink-muted);">Zamknięte</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Addresses -->
+          <div class="reveal" style="transition-delay: 160ms;">
+            <div class="flex items-center gap-2 mb-5">
+              <div
+                class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
+                style="background: var(--color-surface-1);"
+              >
+                <MapPin class="w-4 h-4" style="color: var(--color-navy);" aria-hidden="true" />
+              </div>
+              <span class="text-sm font-semibold" style="color: var(--color-ink-muted);">Gdzie nas znajdziesz</span>
+            </div>
+            <div class="space-y-5 text-sm">
+              <div>
+                <p class="font-semibold mb-0.5" style="color: var(--color-ink);">Centrum Serwisowe (Warsztat)</p>
+                <p style="color: var(--color-ink-muted);">ul. Drogowców 7, 32-400 Myślenice</p>
+                <a
+                  href="https://maps.google.com/maps?q=Drogowców+7,+Myślenice"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs font-semibold mt-1 inline-block transition-colors"
+                  style="color: var(--color-accent);"
+                  onmouseover="this.style.color='var(--color-accent-hover)'"
+                  onmouseout="this.style.color='var(--color-accent)'"
+                >
+                  Otwórz w Google Maps →
+                </a>
+              </div>
+              <div>
+                <p class="font-semibold mb-0.5" style="color: var(--color-ink);">Sklep Auto-Części</p>
+                <p style="color: var(--color-ink-muted);">ul. Armii Krajowej 2, 32-400 Myślenice</p>
+                <a
+                  href="https://maps.google.com/maps?q=Armii+Krajowej+2,+Myślenice"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs font-semibold mt-1 inline-block transition-colors"
+                  style="color: var(--color-accent);"
+                  onmouseover="this.style.color='var(--color-accent-hover)'"
+                  onmouseout="this.style.color='var(--color-accent)'"
+                >
+                  Otwórz w Google Maps →
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <BookingSection />
     <LocationsSection />
 
   </main>

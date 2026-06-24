@@ -1,13 +1,13 @@
 ---
-import { Phone } from 'lucide-astro';
+import { Phone, Info, Wrench, Package, Star, HelpCircle, MapPin } from 'lucide-astro';
 
 const links = [
-  { href: '/#o-nas', label: 'O nas' },
-  { href: '/#uslugi', label: 'Usługi' },
-  { href: '/czesci', label: 'Części' },
-  { href: '/#opinie', label: 'Opinie' },
-  { href: '/faq', label: 'FAQ' },
-  { href: '/kontakt', label: 'Kontakt' },
+  { href: '/#o-nas', label: 'O nas', icon: Info },
+  { href: '/#uslugi', label: 'Usługi', icon: Wrench },
+  { href: '/czesci', label: 'Części', icon: Package },
+  { href: '/#opinie', label: 'Opinie', icon: Star },
+  { href: '/faq', label: 'FAQ', icon: HelpCircle },
+  { href: '/kontakt', label: 'Kontakt', icon: MapPin },
 ];
 
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
@@ -40,9 +40,10 @@ function isActive(href: string) {
       {links.map((link) => (
         <a
           href={link.href}
-          class={`nav-link-slide text-sm font-medium transition-colors duration-150 ${isActive(link.href) ? 'text-white' : 'text-white/70 hover:text-white'}`}
+          class={`nav-link-slide inline-flex items-center gap-1.5 text-sm font-medium transition-colors duration-150 ${isActive(link.href) ? 'text-white' : 'text-white/70 hover:text-white'}`}
           aria-current={isActive(link.href) ? 'page' : undefined}
         >
+          <link.icon class="w-4 h-4 shrink-0" aria-hidden="true" />
           {link.label}
         </a>
       ))}
@@ -81,9 +82,10 @@ function isActive(href: string) {
       {links.map((link) => (
         <a
           href={link.href}
-          class={`mobile-nav-link py-2.5 px-3 rounded-md font-medium transition-colors ${isActive(link.href) ? 'text-white bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/10'}`}
+          class={`mobile-nav-link inline-flex items-center gap-2.5 py-2.5 px-3 rounded-md font-medium transition-colors ${isActive(link.href) ? 'text-white bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/10'}`}
           aria-current={isActive(link.href) ? 'page' : undefined}
         >
+          <link.icon class="w-4 h-4 shrink-0" aria-hidden="true" />
           {link.label}
         </a>
       ))}
