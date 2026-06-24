@@ -354,3 +354,20 @@ body {
     animation: successSlideIn 0.45s var(--ease-expo) both;
   }
 }
+
+/* Hover utility classes — replaces inline onmouseover/onmouseout handlers */
+.hover-accent:not(:disabled):hover {
+  background: var(--color-accent-hover) !important;
+}
+.hover-surface:hover {
+  background: oklch(96% 0.01 265) !important;
+}
+.hover-surface-border:hover {
+  background: var(--color-surface-1) !important;
+}
+.hover-text-white:hover {
+  color: #fff !important;
+}
+.hover-text-navy-light:hover {
+  color: var(--color-navy-light) !important;
+}

@@ -65,10 +65,8 @@ import { Calendar, Phone } from 'lucide-astro';
       <div class="hero-fade-up flex flex-col sm:flex-row gap-3 mb-12" style="animation-delay: 0.44s;">
         <a
           href="#rezerwacja"
-          class="btn-lift inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md font-semibold text-white"
+          class="btn-lift inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md font-semibold text-white hover-accent"
           style="background: var(--color-accent); font-family: var(--font-body);"
-          onmouseover="this.style.background='var(--color-accent-hover)'"
-          onmouseout="this.style.background='var(--color-accent)'"
         >
           <Calendar class="w-5 h-5 shrink-0" aria-hidden="true" />
           Zarezerwuj wizytę
@@ -99,14 +97,4 @@ import { Calendar, Phone } from 'lucide-astro';
     </div>
   </div>
 
-  <!-- Scroll indicator -->
-  <div
-    aria-hidden="true"
-    class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
-  >
-    <span class="text-xs text-white tracking-widest uppercase opacity-40" style="font-size: 0.65rem;">Przewiń</span>
-    <svg class="w-4 h-4 text-white scroll-pulse" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-    </svg>
-  </div>
 </section>

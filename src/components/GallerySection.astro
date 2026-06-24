@@ -1,5 +1,7 @@
 ---
-// Placeholder gallery items — replace src with real photos in public/images/gallery/
+// Gallery items — add real photos to /public/images/gallery/ and restore the
+// masonry grid when photos are available. Each item needs a `src` field added:
+// { src: '/images/gallery/warsztat-01.jpg', alt: '...', aspect: 'tall' }
 const items = [
   { alt: 'Warsztat MOTOBAJER — widok ogólny warsztatu', aspect: 'tall' },
   { alt: 'Warsztat MOTOBAJER — stanowisko diagnostyczne', aspect: 'wide' },
@@ -10,19 +12,6 @@ const items = [
   { alt: 'Warsztat MOTOBAJER — obsługa klienta', aspect: 'wide' },
   { alt: 'Warsztat MOTOBAJER — fasada budynku', aspect: 'square' },
 ];
-
-const aspectHeights: Record<string, string> = {
-  tall: '280px',
-  wide: '180px',
-  square: '220px',
-};
-
-// Placeholder SVG as data URI
-function placeholder(index: number): string {
-  const colors = ['#c5cfe8', '#b8c5e0', '#ccd4eb', '#b0bfd9', '#c8d2ea', '#bac7de', '#d0d8ec', '#bec9e2'];
-  const bg = colors[index % colors.length];
-  return `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='${bg.replace('#','%23')}'/%3E%3Cpath d='M175 120 h50 v10 h-20 v50 h-10 v-50 h-20z' fill='%23fff' opacity='0.4'/%3E%3Ccircle cx='200' cy='150' r='35' fill='none' stroke='%23fff' stroke-width='2' opacity='0.3'/%3E%3C/svg%3E`;
-}
 ---
 
 <section id="galeria" class="section-py below-fold bg-white">
@@ -36,7 +25,37 @@ function placeholder(index: number): string {
       </p>
     </div>
 
-    <!-- CSS columns masonry -->
+    <!-- Editorial placeholder — remove this block and restore the masonry grid below when real photos arrive -->
+    <div
+      class="reveal rounded-xl overflow-hidden flex flex-col sm:flex-row items-center gap-8 px-8 py-12 sm:py-16"
+      style="background: var(--color-navy);"
+    >
+      <div class="shrink-0">
+        <svg class="w-16 h-16 opacity-40" fill="none" stroke="currentColor" stroke-width="1.25" viewBox="0 0 24 24" aria-hidden="true" style="color: #fff;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75 7.5 10.5l3 3 4.5-6 6 7.5M21 19.5H3a.75.75 0 0 1-.75-.75V5.25A.75.75 0 0 1 3 4.5h18a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75Z"/>
+        </svg>
+      </div>
+      <div class="text-center sm:text-left">
+        <p class="font-bold text-white mb-2" style="font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 2rem);">
+          Zdjęcia warsztatu wkrótce
+        </p>
+        <p class="text-sm mb-6" style="color: oklch(72% 0.04 265);">
+          Zapraszamy do odwiedzin — dwa punkty obsługi w centrum Myślenic.
+        </p>
+        <a
+          href="#lokalizacje"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-semibold btn-lift hover-accent"
+          style="background: var(--color-accent); color: #fff; font-family: var(--font-body);"
+        >
+          Zobacz jak do nas dojechać
+        </a>
+      </div>
+    </div>
+
+    <!--
+      Masonry grid — restore when real photos are available.
+      Place photos in /public/images/gallery/ and add src to each item above.
+
     <style>
       @media (min-width: 640px) { .gallery-grid { columns: 3 !important; } }
       @media (min-width: 1024px) { .gallery-grid { columns: 4 !important; } }
@@ -50,17 +69,18 @@ function placeholder(index: number): string {
           style="display: inline-block; width: 100%;"
         >
           <img
-            src={placeholder(i)}
+            src={item.src}
             alt={item.alt}
             loading="lazy"
             class="w-full object-cover block"
-            style={`height: ${aspectHeights[item.aspect]};`}
+            style="height: ..."
             width="400"
-            height={item.aspect === 'tall' ? '560' : item.aspect === 'wide' ? '360' : '440'}
+            height="300"
           />
         </figure>
       ))}
     </div>
+    -->
 
   </div>
 </section>

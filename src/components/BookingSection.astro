@@ -1,6 +1,11 @@
 ---
 import { Send } from 'lucide-astro';
 
+const FORMSPREE_ID = import.meta.env.PUBLIC_FORMSPREE_ID ?? '';
+const formAction = FORMSPREE_ID
+  ? `https://formspree.io/f/${FORMSPREE_ID}`
+  : 'mailto:motobajer@eurowarsztat.pl';
+
 const timeSlots: string[] = [];
 for (let h = 8; h <= 16; h++) {
   timeSlots.push(`${String(h).padStart(2, '0')}:00`);
@@ -83,12 +88,12 @@ const serviceOptions = [
         -->
         <form
           id="booking-form"
-          action="mailto:motobajer@eurowarsztat.pl"
+          action={formAction}
           method="POST"
-          enctype="text/plain"
           class="reveal space-y-5"
           novalidate
         >
+          <input type="hidden" name="_subject" value="Rezerwacja wizyty — MOTOBAJER" />
           <div class="grid sm:grid-cols-2 gap-5">
             <div>
               <label class="field-label" for="name">Imię i nazwisko *</label>
@@ -173,10 +178,8 @@ const serviceOptions = [
 
           <button
             type="submit"
-            class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-md font-semibold text-navy btn-lift"
+            class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-md font-semibold text-navy btn-lift hover-surface disabled:opacity-60 disabled:cursor-not-allowed"
             style="background: #fff; font-family: var(--font-body); font-size: 1rem;"
-            onmouseover="this.style.background='oklch(96% 0.01 265)'"
-            onmouseout="this.style.background='#fff'"
           >
             <Send class="w-4 h-4 shrink-0" aria-hidden="true" />
             Wyślij zapytanie
@@ -199,19 +202,42 @@ const serviceOptions = [
 </section>
 
 <script>
-  // Set date min to today
   const dateInput = document.getElementById('date') as HTMLInputElement | null;
   if (dateInput) {
     dateInput.min = new Date().toISOString().split('T')[0];
   }
 
-  // Show success banner if ?success=1 in URL (for Formspree redirect)
-  if (new URLSearchParams(window.location.search).get('success') === '1') {
-    const banner = document.getElementById('booking-success');
-    if (banner) {
-      banner.classList.remove('hidden');
-      banner.classList.add('booking-success-enter');
+  const form = document.getElementById('booking-form') as HTMLFormElement | null;
+  const submitBtn = form?.querySelector<HTMLButtonElement>('[type="submit"]');
+
+  form?.addEventListener('submit', async (e) => {
+    if (form.action.startsWith('mailto:')) return;
+    e.preventDefault();
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Wysyłanie…';
     }
-    window.history.replaceState({}, '', window.location.pathname + '#rezerwacja');
-  }
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        const banner = document.getElementById('booking-success');
+        banner?.classList.remove('hidden');
+        banner?.classList.add('booking-success-enter');
+        form.reset();
+      } else {
+        alert('Wystąpił błąd. Proszę zadzwoń: 609 845 865');
+      }
+    } catch {
+      alert('Brak połączenia. Proszę zadzwoń: 609 845 865');
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Wyślij zapytanie';
+      }
+    }
+  });
 </script>

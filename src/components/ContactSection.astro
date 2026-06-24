@@ -1,6 +1,11 @@
 ---
 import { Send } from 'lucide-astro';
 
+const FORMSPREE_ID = import.meta.env.PUBLIC_FORMSPREE_ID ?? '';
+const formAction = FORMSPREE_ID
+  ? `https://formspree.io/f/${FORMSPREE_ID}`
+  : 'mailto:motobajer@eurowarsztat.pl';
+
 const hours = [
   { day: 'Poniedziałek – Piątek', time: '08:00 – 17:00', open: true },
   { day: 'Sobota', time: '08:00 – 13:00', open: true },
@@ -42,7 +47,7 @@ const serviceOptions = [
 
         <!-- Success banner -->
         <div
-          id="booking-success"
+          id="contact-success"
           class="hidden mb-6 px-5 py-4 rounded-lg text-sm font-medium"
           style="background: oklch(95% 0.05 145); color: oklch(30% 0.1 145); border: 1px solid oklch(85% 0.08 145);"
           role="alert"
@@ -50,29 +55,14 @@ const serviceOptions = [
           Dziękujemy! Skontaktujemy się z Tobą wkrótce, by potwierdzić termin.
         </div>
 
-        <!--
-          To enable Formspree:
-          1. Sign up at formspree.io
-          2. Get your form ID (e.g. "xpwzqnkr")
-          3. Change action to: https://formspree.io/f/{YOUR_FORM_ID}
-        -->
-        <!--
-          Booking form.
-          To upgrade to Formspree (recommended for production):
-          1. Sign up at formspree.io
-          2. Get your form ID (e.g. "xpwzqnkr")
-          3. Change action to: https://formspree.io/f/{YOUR_FORM_ID}
-          4. Remove method="POST" enctype="text/plain" (Formspree handles this)
-          Currently submits via mailto: — opens the user's email client.
-        -->
         <form
-          id="booking-form"
-          action="mailto:motobajer@eurowarsztat.pl"
+          id="contact-form"
+          action={formAction}
           method="POST"
-          enctype="text/plain"
           class="reveal space-y-5"
           novalidate
         >
+          <input type="hidden" name="_subject" value="Rezerwacja wizyty — MOTOBAJER" />
           <div class="grid sm:grid-cols-2 gap-5">
             <div>
               <label class="lf-label" for="name">Imię i nazwisko *</label>
@@ -156,19 +146,17 @@ const serviceOptions = [
           </div>
 
           <button
-            id="booking-submit"
+            id="contact-submit"
             type="submit"
-            class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-md font-semibold text-white transition-colors duration-150 disabled:opacity-60 disabled:cursor-not-allowed focus-ring-white"
+            class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-md font-semibold text-white transition-colors duration-150 disabled:opacity-60 disabled:cursor-not-allowed focus-ring-white hover-accent"
             style="font-family: var(--font-body); font-size: 1rem; background: var(--color-accent);"
-            onmouseover="if(!this.disabled) this.style.background='var(--color-accent-hover)'"
-            onmouseout="this.style.background='var(--color-accent)'"
           >
             <Send class="w-4 h-4 shrink-0" aria-hidden="true" />
             Wyślij zapytanie
           </button>
 
           <p class="text-xs text-center" style="color: var(--color-ink-muted);">
-            Pola oznaczone * są wymagane. Formularz otworzy program pocztowy z wypełnioną wiadomością. Odpowiadamy zwykle w ciągu 1 godziny.
+            Pola oznaczone * są wymagane. Odpowiadamy w ciągu 1 godziny w godzinach pracy.
           </p>
 
           <noscript>
@@ -185,17 +173,17 @@ const serviceOptions = [
         <!-- Divider on mobile -->
         <hr class="lg:hidden mb-10" style="border-color: oklch(90% 0.005 265);" />
 
-        <h2
-          class="reveal section-heading text-ink mb-8"
-          style="font-family: var(--font-display);"
+        <h3
+          class="reveal text-ink mb-8"
+          style="font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; line-height: 1.1;"
         >
           Kontakt
-        </h2>
+        </h3>
 
         <!-- Hours -->
         <div class="reveal mb-8">
           <h3
-            class="text-xs font-semibold uppercase tracking-widest mb-4"
+            class="text-sm font-semibold mb-4"
             style="color: var(--color-ink-muted);"
           >
             Godziny otwarcia
@@ -220,7 +208,7 @@ const serviceOptions = [
         <!-- Contact details -->
         <div class="reveal" style="transition-delay: 80ms;">
           <h3
-            class="text-xs font-semibold uppercase tracking-widest mb-4"
+            class="text-sm font-semibold mb-4"
             style="color: var(--color-ink-muted);"
           >
             Dane kontaktowe
@@ -234,7 +222,7 @@ const serviceOptions = [
                 </svg>
               </div>
               <div>
-                <p class="text-xs font-semibold uppercase tracking-wide mb-1" style="color: var(--color-ink-muted);">Telefon</p>
+                <p class="text-xs font-semibold mb-1" style="color: var(--color-ink-muted);">Telefon</p>
                 <a href="tel:+48609845865" class="font-medium text-navy hover:text-navy-light transition-colors block">609 845 865</a>
                 <a href="tel:+48122742306" class="font-medium text-navy hover:text-navy-light transition-colors block mt-0.5">(12) 274 23 06</a>
               </div>
@@ -247,7 +235,7 @@ const serviceOptions = [
                 </svg>
               </div>
               <div>
-                <p class="text-xs font-semibold uppercase tracking-wide mb-1" style="color: var(--color-ink-muted);">E-mail</p>
+                <p class="text-xs font-semibold mb-1" style="color: var(--color-ink-muted);">E-mail</p>
                 <a href="mailto:motobajer@eurowarsztat.pl" class="font-medium text-navy hover:text-navy-light transition-colors">motobajer@eurowarsztat.pl</a>
               </div>
             </li>
@@ -260,7 +248,7 @@ const serviceOptions = [
                 </svg>
               </div>
               <div>
-                <p class="text-xs font-semibold uppercase tracking-wide mb-1" style="color: var(--color-ink-muted);">Adresy</p>
+                <p class="text-xs font-semibold mb-1" style="color: var(--color-ink-muted);">Adresy</p>
                 <p class="font-medium" style="color: var(--color-ink);">Warsztat: ul. Drogowców 7, 32-400 Myślenice</p>
                 <p class="font-medium mt-0.5" style="color: var(--color-ink);">Sklep: ul. Armii Krajowej 2, 32-400 Myślenice</p>
               </div>
@@ -273,7 +261,7 @@ const serviceOptions = [
                 </svg>
               </div>
               <div>
-                <p class="text-xs font-semibold uppercase tracking-wide mb-1" style="color: var(--color-ink-muted);">Sieć</p>
+                <p class="text-xs font-semibold mb-1" style="color: var(--color-ink-muted);">Sieć</p>
                 <p class="font-medium" style="color: var(--color-ink);">EuroWarsztat (Groupauto)</p>
               </div>
             </li>
@@ -339,73 +327,59 @@ const serviceOptions = [
 </style>
 
 <script>
-  // Set minimum date to today
   const dateInput = document.getElementById('date') as HTMLInputElement | null;
   if (dateInput) {
     dateInput.min = new Date().toISOString().split('T')[0];
   }
 
-  // Show success banner if ?success=1 (for Formspree redirect)
-  if (new URLSearchParams(window.location.search).get('success') === '1') {
-    const banner = document.getElementById('booking-success');
-    if (banner) banner.classList.remove('hidden');
-    window.history.replaceState({}, '', window.location.pathname + '#kontakt');
-  }
-
-  // Form validation
-  const form = document.getElementById('booking-form') as HTMLFormElement | null;
-  const submitBtn = document.getElementById('booking-submit') as HTMLButtonElement | null;
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const submitBtn = document.getElementById('contact-submit') as HTMLButtonElement | null;
 
   function showError(inputId: string, message: string) {
     const errorEl = document.getElementById(`${inputId}-error`);
-    const inputEl = document.getElementById(inputId);
+    const inputEl = form?.querySelector<HTMLElement>(`[name="${inputId}"]`);
     if (errorEl) { errorEl.textContent = message; errorEl.style.display = 'block'; }
     if (inputEl) inputEl.setAttribute('aria-invalid', 'true');
   }
 
   function clearError(inputId: string) {
     const errorEl = document.getElementById(`${inputId}-error`);
-    const inputEl = document.getElementById(inputId);
+    const inputEl = form?.querySelector<HTMLElement>(`[name="${inputId}"]`);
     if (errorEl) { errorEl.textContent = ''; errorEl.style.display = 'none'; }
     if (inputEl) inputEl.removeAttribute('aria-invalid');
   }
 
-  // Live clearing: remove error as user fixes the field
   ['name', 'phone', 'email', 'service', 'date'].forEach((id) => {
-    const el = document.getElementById(id);
+    const el = form?.querySelector(`[name="${id}"]`);
     el?.addEventListener('input', () => clearError(id));
     el?.addEventListener('change', () => clearError(id));
   });
 
-  form?.addEventListener('submit', (e) => {
+  form?.addEventListener('submit', async (e) => {
     let valid = true;
 
-    const name = (document.getElementById('name') as HTMLInputElement)?.value.trim();
-    const phone = (document.getElementById('phone') as HTMLInputElement)?.value.trim();
-    const email = (document.getElementById('email') as HTMLInputElement)?.value.trim();
-    const service = (document.getElementById('service') as HTMLSelectElement)?.value;
-    const date = (document.getElementById('date') as HTMLInputElement)?.value;
+    const name = (form.querySelector<HTMLInputElement>('[name="name"]'))?.value.trim();
+    const phone = (form.querySelector<HTMLInputElement>('[name="phone"]'))?.value.trim();
+    const email = (form.querySelector<HTMLInputElement>('[name="email"]'))?.value.trim();
+    const service = (form.querySelector<HTMLSelectElement>('[name="service"]'))?.value;
+    const date = (form.querySelector<HTMLInputElement>('[name="date"]'))?.value;
 
     if (!name || name.length < 2) {
       showError('name', 'Podaj imię i nazwisko (min. 2 znaki).');
       valid = false;
     }
-
     if (!phone) {
       showError('phone', 'Podaj numer telefonu.');
       valid = false;
     }
-
     if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       showError('email', 'Podaj poprawny adres e-mail.');
       valid = false;
     }
-
     if (!service) {
       showError('service', 'Wybierz rodzaj usługi.');
       valid = false;
     }
-
     if (!date) {
       showError('date', 'Wybierz preferowaną datę.');
       valid = false;
@@ -418,16 +392,43 @@ const serviceOptions = [
       return;
     }
 
-    // Disable button to prevent double-submit; mailto: opens async
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Otwieranie poczty…';
-      setTimeout(() => {
+    if (!form.action.startsWith('mailto:')) {
+      e.preventDefault();
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Wysyłanie…';
+      }
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        if (res.ok) {
+          const banner = document.getElementById('contact-success');
+          banner?.classList.remove('hidden');
+          banner?.classList.add('booking-success-enter');
+          form.reset();
+          banner?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          alert('Wystąpił błąd. Proszę zadzwoń: 609 845 865');
+        }
+      } catch {
+        alert('Brak połączenia. Proszę zadzwoń: 609 845 865');
+      } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Wyślij zapytanie →';
+          submitBtn.textContent = 'Wyślij zapytanie';
         }
-      }, 4000);
+      }
+    } else {
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Otwieranie poczty…';
+        setTimeout(() => {
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Wyślij zapytanie'; }
+        }, 4000);
+      }
     }
   });
 </script>
