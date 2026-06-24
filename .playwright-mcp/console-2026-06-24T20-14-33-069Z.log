@@ -3,3 +3,7 @@
 [   66806ms] [WARNING] The resource http://localhost:4321/images/hero-bg.webp was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:4321/kontakt:0
 [  134248ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:4321/@vite/client:1695
 [  134250ms] [ERROR] WebSocket connection to 'ws://localhost:4321/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:4321/@vite/client:1766
+[  506976ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:4321/@vite/client:1695
+[  506979ms] [ERROR] WebSocket connection to 'ws://localhost:4321/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:4321/@vite/client:1766
+[  508126ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/:0
+[  508208ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/favicon.ico:0
