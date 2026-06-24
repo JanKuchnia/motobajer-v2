@@ -119,9 +119,9 @@ function isActive(href: string) {
     hamburger.setAttribute('aria-expanded', String(open));
     if (open) {
       mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
-      ham1.style.transform = 'rotate(45deg) translate(4px, 4px)';
+      ham1.style.transform = 'translateY(8px) rotate(45deg)';
       ham2.style.opacity = '0';
-      ham3.style.transform = 'rotate(-45deg) translate(4px, -4px)';
+      ham3.style.transform = 'translateY(-8px) rotate(-45deg)';
     } else {
       mobileMenu.style.maxHeight = '0';
       ham1.style.transform = '';

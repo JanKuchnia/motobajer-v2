@@ -1,14 +1,61 @@
 ---
-// Placeholder gallery items — replace src with real photos in public/images/gallery/
 const items = [
-  { alt: 'Warsztat MOTOBAJER — widok ogólny warsztatu', aspect: 'tall' },
-  { alt: 'Warsztat MOTOBAJER — stanowisko diagnostyczne', aspect: 'wide' },
-  { alt: 'Warsztat MOTOBAJER — podnośnik samochodowy', aspect: 'square' },
-  { alt: 'Warsztat MOTOBAJER — sklep z częściami', aspect: 'tall' },
-  { alt: 'Warsztat MOTOBAJER — wymiana opon', aspect: 'wide' },
-  { alt: 'Warsztat MOTOBAJER — narzędzia mechaniczne', aspect: 'square' },
-  { alt: 'Warsztat MOTOBAJER — obsługa klienta', aspect: 'wide' },
-  { alt: 'Warsztat MOTOBAJER — fasada budynku', aspect: 'square' },
+  {
+    src: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=800&q=80',
+    alt: 'Warsztat MOTOBAJER — widok ogólny warsztatu',
+    aspect: 'tall',
+    width: 800,
+    height: 1067,
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=800&q=80',
+    alt: 'Warsztat MOTOBAJER — stanowisko diagnostyczne',
+    aspect: 'wide',
+    width: 800,
+    height: 534,
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80',
+    alt: 'Warsztat MOTOBAJER — podnośnik samochodowy',
+    aspect: 'square',
+    width: 800,
+    height: 800,
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1606577924006-27d39b132ae2?auto=format&fit=crop&w=800&q=80',
+    alt: 'Warsztat MOTOBAJER — sklep z częściami',
+    aspect: 'tall',
+    width: 800,
+    height: 1067,
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&q=80',
+    alt: 'Warsztat MOTOBAJER — wymiana opon',
+    aspect: 'wide',
+    width: 800,
+    height: 534,
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=800&q=80',
+    alt: 'Warsztat MOTOBAJER — narzędzia mechaniczne',
+    aspect: 'square',
+    width: 800,
+    height: 800,
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
+    alt: 'Warsztat MOTOBAJER — obsługa klienta',
+    aspect: 'wide',
+    width: 800,
+    height: 534,
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80',
+    alt: 'Warsztat MOTOBAJER — fasada budynku',
+    aspect: 'square',
+    width: 800,
+    height: 800,
+  },
 ];
 
 const aspectHeights: Record<string, string> = {
@@ -16,13 +63,6 @@ const aspectHeights: Record<string, string> = {
   wide: '180px',
   square: '220px',
 };
-
-// Placeholder SVG as data URI
-function placeholder(index: number): string {
-  const colors = ['#c5cfe8', '#b8c5e0', '#ccd4eb', '#b0bfd9', '#c8d2ea', '#bac7de', '#d0d8ec', '#bec9e2'];
-  const bg = colors[index % colors.length];
-  return `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='${bg.replace('#','%23')}'/%3E%3Cpath d='M175 120 h50 v10 h-20 v50 h-10 v-50 h-20z' fill='%23fff' opacity='0.4'/%3E%3Ccircle cx='200' cy='150' r='35' fill='none' stroke='%23fff' stroke-width='2' opacity='0.3'/%3E%3C/svg%3E`;
-}
 ---
 
 <section id="galeria" class="section-py below-fold bg-white">
@@ -36,7 +76,6 @@ function placeholder(index: number): string {
       </p>
     </div>
 
-    <!-- CSS columns masonry -->
     <style>
       @media (min-width: 640px) { .gallery-grid { columns: 3 !important; } }
       @media (min-width: 1024px) { .gallery-grid { columns: 4 !important; } }
@@ -50,13 +89,14 @@ function placeholder(index: number): string {
           style="display: inline-block; width: 100%;"
         >
           <img
-            src={placeholder(i)}
+            src={item.src}
             alt={item.alt}
             loading="lazy"
+            decoding="async"
             class="w-full object-cover block"
             style={`height: ${aspectHeights[item.aspect]};`}
-            width="400"
-            height={item.aspect === 'tall' ? '560' : item.aspect === 'wide' ? '360' : '440'}
+            width={item.width}
+            height={item.aspect === 'tall' ? 1067 : item.aspect === 'wide' ? 534 : 800}
           />
         </figure>
       ))}

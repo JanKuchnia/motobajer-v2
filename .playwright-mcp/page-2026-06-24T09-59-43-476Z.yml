@@ -1,0 +1,222 @@
+- generic [active] [ref=e1]:
+  - link "Przejdź do treści" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Nawigacja główna" [ref=e3]:
+    - generic [ref=e4]:
+      - link "MOTOBAJER" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: MOTOBAJER
+      - generic [ref=e8]:
+        - link "O nas" [ref=e9] [cursor=pointer]:
+          - /url: /#o-nas
+        - link "Usługi" [ref=e10] [cursor=pointer]:
+          - /url: /#uslugi
+        - link "Części" [ref=e11] [cursor=pointer]:
+          - /url: /czesci
+        - link "Opinie" [ref=e12] [cursor=pointer]:
+          - /url: /#opinie
+        - link "FAQ" [ref=e13] [cursor=pointer]:
+          - /url: /faq
+        - link "Kontakt" [ref=e14] [cursor=pointer]:
+          - /url: /kontakt
+        - link "Zadzwoń" [ref=e15] [cursor=pointer]:
+          - /url: tel:+48609845865
+          - img [ref=e16]
+          - text: Zadzwoń
+  - main [ref=e18]:
+    - generic [ref=e20]:
+      - navigation "Breadcrumb" [ref=e21]:
+        - list [ref=e22]:
+          - listitem [ref=e23]:
+            - link "Strona główna" [ref=e24] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e25]:
+            - img [ref=e26]
+          - listitem [ref=e28]: FAQ
+      - heading "Najczęstsze pytania" [level=1] [ref=e29]
+      - paragraph [ref=e30]:
+        - text: "Nie znalazłeś odpowiedzi? Zadzwoń:"
+        - link "609 845 865" [ref=e31] [cursor=pointer]:
+          - /url: tel:+48609845865
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - heading "Godziny i lokalizacja" [level=2] [ref=e34]
+        - generic [ref=e35]:
+          - group [ref=e36]:
+            - generic "Jakie są godziny otwarcia warsztatu?" [ref=e37] [cursor=pointer]:
+              - generic [ref=e38]: Jakie są godziny otwarcia warsztatu?
+              - img [ref=e40]
+          - group [ref=e42]:
+            - generic "Gdzie dokładnie jesteście?" [ref=e43] [cursor=pointer]:
+              - generic [ref=e44]: Gdzie dokładnie jesteście?
+              - img [ref=e46]
+          - group [ref=e48]:
+            - generic "Czy jest parking przy warsztacie?" [ref=e49] [cursor=pointer]:
+              - generic [ref=e50]: Czy jest parking przy warsztacie?
+              - img [ref=e52]
+      - generic [ref=e54]:
+        - heading "Rezerwacja i wizyty" [level=2] [ref=e55]
+        - generic [ref=e56]:
+          - group [ref=e57]:
+            - generic "Czy mogę przyjechać bez wcześniejszej rezerwacji?" [ref=e58] [cursor=pointer]:
+              - generic [ref=e59]: Czy mogę przyjechać bez wcześniejszej rezerwacji?
+              - img [ref=e61]
+          - group [ref=e63]:
+            - generic "Jak długo czeka się na naprawę?" [ref=e64] [cursor=pointer]:
+              - generic [ref=e65]: Jak długo czeka się na naprawę?
+              - img [ref=e67]
+          - group [ref=e69]:
+            - generic "Czy mogę zostawić samochód i odebrać go później?" [ref=e70] [cursor=pointer]:
+              - generic [ref=e71]: Czy mogę zostawić samochód i odebrać go później?
+              - img [ref=e73]
+          - group [ref=e75]:
+            - generic "Czy mogę poczekać na samochód na miejscu?" [ref=e76] [cursor=pointer]:
+              - generic [ref=e77]: Czy mogę poczekać na samochód na miejscu?
+              - img [ref=e79]
+      - generic [ref=e81]:
+        - heading "Kosztorys i płatność" [level=2] [ref=e82]
+        - generic [ref=e83]:
+          - group [ref=e84]:
+            - generic "Czy wycena jest bezpłatna?" [ref=e85] [cursor=pointer]:
+              - generic [ref=e86]: Czy wycena jest bezpłatna?
+              - img [ref=e88]
+          - group [ref=e90]:
+            - generic "Czy mogę zapłacić kartą?" [ref=e91] [cursor=pointer]:
+              - generic [ref=e92]: Czy mogę zapłacić kartą?
+              - img [ref=e94]
+          - group [ref=e96]:
+            - generic "Czy naprawa jest wyceniana z góry?" [ref=e97] [cursor=pointer]:
+              - generic [ref=e98]: Czy naprawa jest wyceniana z góry?
+              - img [ref=e100]
+          - group [ref=e102]:
+            - generic "Czy wystawiacie faktury na firmę?" [ref=e103] [cursor=pointer]:
+              - generic [ref=e104]: Czy wystawiacie faktury na firmę?
+              - img [ref=e106]
+      - generic [ref=e108]:
+        - heading "Części i jakość" [level=2] [ref=e109]
+        - generic [ref=e110]:
+          - group [ref=e111]:
+            - generic "Jakich części używacie do napraw?" [ref=e112] [cursor=pointer]:
+              - generic [ref=e113]: Jakich części używacie do napraw?
+              - img [ref=e115]
+          - group [ref=e117]:
+            - generic "Czy udzielacie gwarancji na naprawy?" [ref=e118] [cursor=pointer]:
+              - generic [ref=e119]: Czy udzielacie gwarancji na naprawy?
+              - img [ref=e121]
+          - group [ref=e123]:
+            - generic "Czy sprzedajecie oleje silnikowe i płyny samochodowe?" [ref=e124] [cursor=pointer]:
+              - generic [ref=e125]: Czy sprzedajecie oleje silnikowe i płyny samochodowe?
+              - img [ref=e127]
+      - generic [ref=e129]:
+        - heading "O warsztacie" [level=2] [ref=e130]
+        - generic [ref=e131]:
+          - group [ref=e132]:
+            - generic "Co oznacza certyfikat EuroWarsztat?" [ref=e133] [cursor=pointer]:
+              - generic [ref=e134]: Co oznacza certyfikat EuroWarsztat?
+              - img [ref=e136]
+          - group [ref=e138]:
+            - generic "Ile lat działa warsztat Motobajer?" [ref=e139] [cursor=pointer]:
+              - generic [ref=e140]: Ile lat działa warsztat Motobajer?
+              - img [ref=e142]
+          - group [ref=e144]:
+            - generic "Jakie marki samochodów naprawiacie?" [ref=e145] [cursor=pointer]:
+              - generic [ref=e146]: Jakie marki samochodów naprawiacie?
+              - img [ref=e148]
+      - generic [ref=e150]:
+        - heading "Sklep z częściami" [level=2] [ref=e151]
+        - generic [ref=e152]:
+          - group [ref=e153]:
+            - generic "Czy możecie zamówić część, której nie ma w sklepie?" [ref=e154] [cursor=pointer]:
+              - generic [ref=e155]: Czy możecie zamówić część, której nie ma w sklepie?
+              - img [ref=e157]
+          - group [ref=e159]:
+            - generic "Czy sprzedajecie części bez montażu?" [ref=e160] [cursor=pointer]:
+              - generic [ref=e161]: Czy sprzedajecie części bez montażu?
+              - img [ref=e163]
+          - group [ref=e165]:
+            - generic "Jak sprawdzić, czy dana część jest dostępna od ręki?" [ref=e166] [cursor=pointer]:
+              - generic [ref=e167]: Jak sprawdzić, czy dana część jest dostępna od ręki?
+              - img [ref=e169]
+      - generic [ref=e171]:
+        - heading "Konkretne usługi" [level=2] [ref=e172]
+        - generic [ref=e173]:
+          - group [ref=e174]:
+            - generic "Czy wykonujecie badania techniczne (przeglądy)?" [ref=e175] [cursor=pointer]:
+              - generic [ref=e176]: Czy wykonujecie badania techniczne (przeglądy)?
+              - img [ref=e178]
+          - group [ref=e180]:
+            - generic "Czy przyjmujecie samochody elektryczne i hybrydowe?" [ref=e181] [cursor=pointer]:
+              - generic [ref=e182]: Czy przyjmujecie samochody elektryczne i hybrydowe?
+              - img [ref=e184]
+          - group [ref=e186]:
+            - generic "Czy zajmujecie się klimatyzacją samochodową?" [ref=e187] [cursor=pointer]:
+              - generic [ref=e188]: Czy zajmujecie się klimatyzacją samochodową?
+              - img [ref=e190]
+          - group [ref=e192]:
+            - generic "Czy przechowujecie opony między sezonami?" [ref=e193] [cursor=pointer]:
+              - generic [ref=e194]: Czy przechowujecie opony między sezonami?
+              - img [ref=e196]
+          - group [ref=e198]:
+            - generic "Co zrobić w razie awarii auta po godzinach pracy?" [ref=e199] [cursor=pointer]:
+              - generic [ref=e200]: Co zrobić w razie awarii auta po godzinach pracy?
+              - img [ref=e202]
+      - generic [ref=e204]:
+        - heading "Masz inne pytanie?" [level=2] [ref=e205]
+        - paragraph [ref=e206]: Chętnie odpowiemy — zadzwoń lub zarezerwuj wizytę.
+        - generic [ref=e207]:
+          - 'link "Zadzwoń: 609 845 865" [ref=e208] [cursor=pointer]':
+            - /url: tel:+48609845865
+            - img [ref=e209]
+            - text: "Zadzwoń: 609 845 865"
+          - link "Zarezerwuj wizytę" [ref=e211] [cursor=pointer]:
+            - /url: /#rezerwacja
+            - img [ref=e212]
+            - text: Zarezerwuj wizytę
+  - contentinfo [ref=e214]:
+    - generic [ref=e215]:
+      - generic [ref=e216]:
+        - generic [ref=e217]:
+          - paragraph [ref=e218]: MOTOBAJER
+          - paragraph [ref=e219]:
+            - text: Stanisław Bajer
+            - text: Autoryzowany serwis sieci EuroWarsztat
+            - text: Myślenice, od 2008 roku
+        - generic [ref=e220]:
+          - heading "Nawigacja" [level=3] [ref=e221]
+          - list [ref=e222]:
+            - listitem [ref=e223]:
+              - link "Usługi" [ref=e224] [cursor=pointer]:
+                - /url: "#uslugi"
+            - listitem [ref=e225]:
+              - link "Rezerwacja" [ref=e226] [cursor=pointer]:
+                - /url: "#rezerwacja"
+            - listitem [ref=e227]:
+              - link "Opinie" [ref=e228] [cursor=pointer]:
+                - /url: "#opinie"
+            - listitem [ref=e229]:
+              - link "Lokalizacje" [ref=e230] [cursor=pointer]:
+                - /url: "#lokalizacje"
+            - listitem [ref=e231]:
+              - link "Kontakt" [ref=e232] [cursor=pointer]:
+                - /url: "#kontakt"
+        - generic [ref=e233]:
+          - heading "Kontakt" [level=3] [ref=e234]
+          - list [ref=e235]:
+            - listitem [ref=e236]:
+              - link "609 845 865" [ref=e237] [cursor=pointer]:
+                - /url: tel:+48609845865
+                - img [ref=e238]
+                - text: 609 845 865
+            - listitem [ref=e240]:
+              - link "(12) 274 23 06" [ref=e241] [cursor=pointer]:
+                - /url: tel:+48122742306
+                - img [ref=e242]
+                - text: (12) 274 23 06
+            - listitem [ref=e244]:
+              - link "motobajer@eurowarsztat.pl" [ref=e245] [cursor=pointer]:
+                - /url: mailto:motobajer@eurowarsztat.pl
+                - img [ref=e246]
+                - text: motobajer@eurowarsztat.pl
+      - generic [ref=e249]:
+        - paragraph [ref=e250]: © 2026 MOTOBAJER Stanisław Bajer. Wszelkie prawa zastrzeżone.
+        - paragraph [ref=e251]: "NIP: 6811341146 · REGON: 120696804"

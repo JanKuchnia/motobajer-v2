@@ -5,6 +5,22 @@ export interface Faq {
 }
 
 export const faqs: Faq[] = [
+  // Godziny i lokalizacja
+  {
+    category: 'Godziny i lokalizacja',
+    q: 'Jakie są godziny otwarcia warsztatu?',
+    a: 'Warsztat i sklep z częściami są otwarte od poniedziałku do piątku w godzinach 8:00–17:00 oraz w soboty 8:00–13:00. W niedzielę jesteśmy nieczynni.',
+  },
+  {
+    category: 'Godziny i lokalizacja',
+    q: 'Gdzie dokładnie jesteście?',
+    a: 'Działamy w dwóch punktach w Myślenicach. Centrum serwisowe mieści się przy ul. Drogowców 6, a sklep z częściami przy ul. Piłsudskiego 16. Obie lokalizacje znajdziesz na mapach w zakładce Kontakt.',
+  },
+  {
+    category: 'Godziny i lokalizacja',
+    q: 'Czy jest parking przy warsztacie?',
+    a: 'Tak, przy obu lokalizacjach jest bezpłatny parking dla klientów. Nie musisz martwić się o miejsce przy zostawieniu auta na naprawę.',
+  },
   // Rezerwacja i wizyty
   {
     category: 'Rezerwacja i wizyty',
@@ -20,6 +36,11 @@ export const faqs: Faq[] = [
     category: 'Rezerwacja i wizyty',
     q: 'Czy mogę zostawić samochód i odebrać go później?',
     a: 'Tak, to nasza standardowa usługa. Samochód możesz zostawić rano i odebrać po zakończeniu pracy. Poinformujemy Cię telefonicznie, gdy auto będzie gotowe.',
+  },
+  {
+    category: 'Rezerwacja i wizyty',
+    q: 'Czy mogę poczekać na samochód na miejscu?',
+    a: 'Oczywiście. Przy drobnych pracach, takich jak wymiana oleju czy diagnostyka, możesz poczekać w poczekalni. Przy dłuższych naprawach zalecamy pozostawienie auta i odbiór po zakończeniu prac.',
   },
   // Kosztorys i płatność
   {
@@ -37,6 +58,11 @@ export const faqs: Faq[] = [
     q: 'Czy naprawa jest wyceniana z góry?',
     a: 'Zawsze staramy się podać szacunkowy koszt przed przystąpieniem do pracy. Jeśli w trakcie naprawy okaże się, że zakres prac jest większy, skontaktujemy się przed podjęciem dodatkowych działań.',
   },
+  {
+    category: 'Kosztorys i płatność',
+    q: 'Czy wystawiacie faktury na firmę?',
+    a: 'Tak, wystawiamy faktury VAT zarówno dla osób prywatnych, jak i firm. Podaj NIP przy składaniu zlecenia, a fakturę wystawimy zgodnie z danymi firmy.',
+  },
   // Części i jakość
   {
     category: 'Części i jakość',
@@ -48,7 +74,12 @@ export const faqs: Faq[] = [
     q: 'Czy udzielacie gwarancji na naprawy?',
     a: 'Tak, udzielamy gwarancji serwisowej na wszystkie wykonane prace. Szczegółowe warunki zależą od zakresu naprawy i zastosowanych części — zapytaj mechanika przy odbiorze.',
   },
-  // EuroWarsztat
+  {
+    category: 'Części i jakość',
+    q: 'Czy sprzedajecie oleje silnikowe i płyny samochodowe?',
+    a: 'Tak, w sklepie z częściami mamy szeroki wybór olejów silnikowych, płynów do układu hamulcowego, płynów chłodniczych i innych materiałów eksploatacyjnych. Pomożemy dobrać odpowiedni produkt do Twojego auta.',
+  },
+  // O warsztacie
   {
     category: 'O warsztacie',
     q: 'Co oznacza certyfikat EuroWarsztat?',
@@ -61,8 +92,8 @@ export const faqs: Faq[] = [
   },
   {
     category: 'O warsztacie',
-    q: 'Ile macie lokalizacji?',
-    a: 'Działamy w dwóch punktach w Myślenicach — centrum serwisowe oraz sklep z częściami. Obie lokalizacje znajdziesz w zakładce Lokalizacje na naszej stronie.',
+    q: 'Jakie marki samochodów naprawiacie?',
+    a: 'Naprawiamy wszystkie popularne marki aut osobowych i dostawczych: Volkswagen, Audi, BMW, Mercedes, Toyota, Opel, Ford, Renault, Peugeot, Fiat i wiele innych. Dysponujemy diagnostyką obsługującą systemy OBD wszystkich producentów.',
   },
   // Sklep z częściami
   {
@@ -75,6 +106,11 @@ export const faqs: Faq[] = [
     q: 'Czy sprzedajecie części bez montażu?',
     a: 'Oczywiście. Nasz sklep z częściami obsługuje zarówno klientów, którzy chcą samodzielnie naprawić samochód, jak i inne warsztaty. Doradzamy w doborze właściwych części.',
   },
+  {
+    category: 'Sklep z częściami',
+    q: 'Jak sprawdzić, czy dana część jest dostępna od ręki?',
+    a: 'Zadzwoń lub napisz do nas przed przyjazdem — podaj markę, model, rok produkcji auta i numer VIN, a sprawdzimy dostępność na miejscu lub w hurtowni i podamy termin realizacji.',
+  },
   // Konkretne usługi
   {
     category: 'Konkretne usługi',
@@ -85,5 +121,20 @@ export const faqs: Faq[] = [
     category: 'Konkretne usługi',
     q: 'Czy przyjmujecie samochody elektryczne i hybrydowe?',
     a: 'Wykonujemy diagnostykę komputerową i naprawy mechaniczne pojazdów hybrydowych. Naprawy wysokonapięciowych układów HV wykonujemy po wcześniejszym uzgodnieniu — skontaktuj się z nami, aby omówić zakres prac.',
+  },
+  {
+    category: 'Konkretne usługi',
+    q: 'Czy zajmujecie się klimatyzacją samochodową?',
+    a: 'Tak. Wykonujemy serwis, napełnianie czynnikiem, czyszczenie i dezynfekcję układów klimatyzacji. Najlepszy termin to wiosna, zanim zacznie się sezon letni — wtedy terminy są krótsze.',
+  },
+  {
+    category: 'Konkretne usługi',
+    q: 'Czy przechowujecie opony między sezonami?',
+    a: 'Tak, oferujemy przechowanie opon między sezonami. Opony są składowane w odpowiednich warunkach, oznakowane i gotowe do montażu przy kolejnej wymianie. Zapytaj o szczegóły przy rezerwacji wymiany.',
+  },
+  {
+    category: 'Konkretne usługi',
+    q: 'Co zrobić w razie awarii auta po godzinach pracy?',
+    a: 'W przypadku awarii poza godzinami otwarcia zadzwoń na numer 609 845 865 — postaramy się doradzić telefonicznie. W poważniejszych sytuacjach polecamy wezwanie holownika i zostawienie auta przed warsztatem z informacją o usterce.',
   },
 ];

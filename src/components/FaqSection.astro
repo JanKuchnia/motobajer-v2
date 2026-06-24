@@ -12,97 +12,111 @@ const { faqs, limit, showMoreLink = false } = Astro.props;
 const displayed = limit ? faqs.slice(0, limit) : faqs;
 ---
 
-<section id="faq" class="section-py below-fold bg-white">
-  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+<section id="faq" class="section-py below-fold" style="background: var(--color-surface-1); scroll-margin-top: 5rem;">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
 
-    <!-- Heading -->
-    <div class="mb-10">
-      <h2
-        class="reveal reveal-clip section-heading text-ink"
-        style="font-family: var(--font-display);"
-      >
-        Najczęstsze pytania
-      </h2>
-      <p class="reveal mt-3 text-base" style="color: var(--color-ink-muted);">
-        Nie znalazłeś odpowiedzi?{' '}
-        <a
-          href="tel:+48609845865"
-          class="inline-flex items-center gap-1 font-semibold text-navy hover:text-navy-light transition-colors"
-        >
-          <Phone class="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
-          Zadzwoń do nas.
-        </a>
-      </p>
-    </div>
+    <div class="faq-grid">
 
-    <!-- Accordion -->
-    <div class="reveal border-t" style="border-color: oklch(88% 0.01 265);">
-      {displayed.map((faq, i) => (
-        <details
-          class="faq-item border-b group"
-          style={`border-color: oklch(88% 0.01 265); transition-delay: ${i * 40}ms;`}
+      <!-- Left: identity panel -->
+      <div class="faq-panel">
+        <h2
+          class="reveal reveal-clip section-heading text-ink"
+          style="font-family: var(--font-display); text-wrap: balance;"
         >
-          <summary class="faq-summary flex items-center justify-between gap-4 py-5 cursor-pointer list-none">
-            <span
-              class="font-semibold text-base leading-snug"
-              style="color: var(--color-ink); font-family: var(--font-body);"
+          Najczęstsze pytania
+        </h2>
+        <p class="reveal mt-4 text-base leading-relaxed" style="color: var(--color-ink-muted); max-width: 28ch;">
+          Pytania, które słyszymy od klientów od ponad 18 lat. Nie znalazłeś odpowiedzi?
+        </p>
+
+        <div class="reveal mt-8 flex flex-col gap-3">
+          <a
+            href="tel:+48609845865"
+            class="inline-flex items-center gap-2.5 px-5 py-3 rounded-md font-semibold text-white text-sm transition-colors btn-lift"
+            style="background: var(--color-navy); width: fit-content;"
+          >
+            <Phone class="w-4 h-4 shrink-0" aria-hidden="true" />
+            Zadzwoń: 609&nbsp;845&nbsp;865
+          </a>
+
+          {showMoreLink && (
+            <a
+              href="/faq"
+              class="inline-flex items-center gap-1.5 text-sm font-semibold transition-colors"
+              style="color: var(--color-navy); width: fit-content;"
             >
-              {faq.q}
-            </span>
-            <!-- Plus / minus icon -->
-            <span
-              class="faq-icon shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-150"
-              style="background: var(--color-surface-1);"
-              aria-hidden="true"
-            >
-              <svg class="faq-plus w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
-              </svg>
-              <svg class="faq-minus w-4 h-4 hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15"/>
-              </svg>
-            </span>
-          </summary>
-          <div class="faq-body pb-5 pr-12">
-            <p class="text-base leading-relaxed" style="color: var(--color-ink-muted);">
-              {faq.a}
-            </p>
-          </div>
-        </details>
-      ))}
-    </div>
-
-    {showMoreLink && (
-      <div class="reveal mt-8 text-center">
-        <a
-          href="/faq"
-          class="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:text-navy-light transition-colors"
-        >
-          Zobacz wszystkie pytania i odpowiedzi
-          <ArrowRight class="w-4 h-4 shrink-0" aria-hidden="true" />
-        </a>
+              Wszystkie pytania i odpowiedzi
+              <ArrowRight class="w-4 h-4 shrink-0" aria-hidden="true" />
+            </a>
+          )}
+        </div>
       </div>
-    )}
 
+      <!-- Right: accordion -->
+      <div class="faq-accordion">
+        <div class="reveal border-t" style="border-color: oklch(84% 0.01 265);">
+          {displayed.map((faq, i) => (
+            <details
+              class="faq-item border-b"
+              style={`border-color: oklch(84% 0.01 265); transition-delay: ${i * 35}ms;`}
+            >
+              <summary class="faq-summary flex items-center justify-between gap-4 py-5 cursor-pointer list-none">
+                <span
+                  class="font-semibold text-base leading-snug"
+                  style="color: var(--color-ink); font-family: var(--font-body);"
+                >
+                  {faq.q}
+                </span>
+                <span
+                  class="faq-icon shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-150"
+                  style="background: oklch(91% 0.01 265);"
+                  aria-hidden="true"
+                >
+                  <svg class="faq-plus w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                  </svg>
+                  <svg class="faq-minus w-4 h-4 hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15"/>
+                  </svg>
+                </span>
+              </summary>
+              <div class="faq-body pb-5 pr-12">
+                <p class="text-base leading-relaxed" style="color: var(--color-ink-muted);">
+                  {faq.a}
+                </p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
 <style>
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .faq-grid {
+      grid-template-columns: 22rem 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+  }
+
   .faq-summary::-webkit-details-marker { display: none; }
 
-  .faq-item[open] .faq-plus { display: none; }
+  .faq-item[open] .faq-plus  { display: none; }
   .faq-item[open] .faq-minus { display: block; }
-  .faq-item[open] .faq-icon {
-    background: var(--color-navy);
-    color: #fff;
-  }
-  .faq-item[open] .faq-icon svg {
-    stroke: #fff;
-  }
+  .faq-item[open] .faq-icon  { background: var(--color-navy); color: #fff; }
+  .faq-item[open] .faq-icon svg { stroke: #fff; }
 
-  .faq-summary:hover span:first-child {
-    color: var(--color-navy);
-  }
+  .faq-summary:hover span:first-child { color: var(--color-navy); }
   .faq-summary:focus-visible {
     outline: 2px solid var(--color-navy);
     outline-offset: 2px;
@@ -116,5 +130,9 @@ const displayed = limit ? faqs.slice(0, limit) : faqs;
   @keyframes faqOpen {
     from { opacity: 0; transform: translateY(-4px); }
     to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq-body { animation: none; }
   }
 </style>
