@@ -1,4 +1,6 @@
 ---
+import { Send } from 'lucide-astro';
+
 const hours = [
   { day: 'Poniedziałek – Piątek', time: '08:00 – 17:00', open: true },
   { day: 'Sobota', time: '08:00 – 13:00', open: true },
@@ -156,12 +158,13 @@ const serviceOptions = [
           <button
             id="booking-submit"
             type="submit"
-            class="w-full py-3.5 rounded-md font-semibold text-white transition-colors duration-150 disabled:opacity-60 disabled:cursor-not-allowed focus-ring-white"
+            class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-md font-semibold text-white transition-colors duration-150 disabled:opacity-60 disabled:cursor-not-allowed focus-ring-white"
             style="font-family: var(--font-body); font-size: 1rem; background: var(--color-accent);"
             onmouseover="if(!this.disabled) this.style.background='var(--color-accent-hover)'"
             onmouseout="this.style.background='var(--color-accent)'"
           >
-            Wyślij zapytanie →
+            <Send class="w-4 h-4 shrink-0" aria-hidden="true" />
+            Wyślij zapytanie
           </button>
 
           <p class="text-xs text-center" style="color: var(--color-ink-muted);">

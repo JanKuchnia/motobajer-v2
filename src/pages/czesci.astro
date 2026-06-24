@@ -4,6 +4,7 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import StickyCtaBar from '../components/StickyCtaBar.astro';
 import { parts, categories } from '../data/parts';
+import { ChevronRight, Phone, Mail } from 'lucide-astro';
 
 const brands = [...new Set(parts.map((p) => p.brand))].sort();
 ---
@@ -22,11 +23,7 @@ const brands = [...new Set(parts.map((p) => p.brand))].sort();
         <nav aria-label="Breadcrumb" class="mb-6">
           <ol class="flex items-center gap-2 text-sm" style="color: oklch(65% 0.04 265);">
             <li><a href="/" class="hover:text-white transition-colors">Strona główna</a></li>
-            <li aria-hidden="true">
-              <svg class="w-3.5 h-3.5 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
-              </svg>
-            </li>
+            <li aria-hidden="true"><ChevronRight class="w-3.5 h-3.5 inline" /></li>
             <li class="text-white font-medium" aria-current="page">Części</li>
           </ol>
         </nav>
@@ -173,20 +170,22 @@ const brands = [...new Set(parts.map((p) => p.brand))].sort();
           <div class="flex gap-3 shrink-0">
             <a
               href="tel:+48609845865"
-              class="px-5 py-2.5 rounded-md text-sm font-semibold text-white btn-lift"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-semibold text-white btn-lift"
               style="background: var(--color-accent);"
               onmouseover="this.style.background='var(--color-accent-hover)'"
               onmouseout="this.style.background='var(--color-accent)'"
             >
+              <Phone class="w-4 h-4 shrink-0" aria-hidden="true" />
               Zadzwoń
             </a>
             <a
               href="/kontakt"
-              class="px-5 py-2.5 rounded-md text-sm font-semibold border transition-colors"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-semibold border transition-colors"
               style="color: var(--color-navy); border-color: oklch(82% 0.05 265);"
               onmouseover="this.style.background='var(--color-surface-1)'"
               onmouseout="this.style.background=''"
             >
+              <Mail class="w-4 h-4 shrink-0" aria-hidden="true" />
               Napisz do nas
             </a>
           </div>

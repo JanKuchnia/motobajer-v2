@@ -1,4 +1,6 @@
 ---
+import { Send } from 'lucide-astro';
+
 const timeSlots: string[] = [];
 for (let h = 8; h <= 16; h++) {
   timeSlots.push(`${String(h).padStart(2, '0')}:00`);
@@ -171,12 +173,13 @@ const serviceOptions = [
 
           <button
             type="submit"
-            class="w-full py-3.5 rounded-md font-semibold text-navy btn-lift"
+            class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-md font-semibold text-navy btn-lift"
             style="background: #fff; font-family: var(--font-body); font-size: 1rem;"
             onmouseover="this.style.background='oklch(96% 0.01 265)'"
             onmouseout="this.style.background='#fff'"
           >
-            Wyślij zapytanie →
+            <Send class="w-4 h-4 shrink-0" aria-hidden="true" />
+            Wyślij zapytanie
           </button>
 
           <p class="text-xs text-center" style="color: oklch(60% 0.03 265);">

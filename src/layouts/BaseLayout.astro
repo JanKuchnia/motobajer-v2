@@ -91,10 +91,18 @@ const {
             }
           });
         },
-        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+        { threshold: 0.05, rootMargin: '0px 0px 0px 0px' }
       );
 
       document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+      // Safety net: if any reveal elements are still hidden after 2s, force them visible
+      setTimeout(() => {
+        document.querySelectorAll('.reveal:not(.visible)').forEach((el) => {
+          (el as HTMLElement).style.transition = 'none';
+          el.classList.add('visible');
+        });
+      }, 2000);
     </script>
   </body>
 </html>

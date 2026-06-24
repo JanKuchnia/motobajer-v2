@@ -1,4 +1,6 @@
 ---
+import { Phone } from 'lucide-astro';
+
 const links = [
   { href: '/#o-nas', label: 'O nas' },
   { href: '/#uslugi', label: 'Usługi' },
@@ -21,20 +23,20 @@ function isActive(href: string) {
   aria-label="Nawigacja główna"
   class="fixed top-0 left-0 right-0 z-40 bg-navy transition-all duration-300"
 >
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
     <!-- Logo -->
     <a href="/" class="flex items-center gap-3 shrink-0">
-      <div aria-hidden="true" style="width: 4px; height: 1.4rem; background: var(--color-accent); border-radius: 1px; flex-shrink: 0;"></div>
+      <div aria-hidden="true" style="width: 4px; height: 1.6rem; background: var(--color-accent); border-radius: 1px; flex-shrink: 0;"></div>
       <span
-        class="text-xl font-bold text-white"
-        style="font-family: var(--font-display); letter-spacing: 0.07em; font-size: 1.25rem;"
+        class="font-bold text-white"
+        style="font-family: var(--font-display); letter-spacing: 0.07em; font-size: 1.35rem;"
       >
         MOTOBAJER
       </span>
     </a>
 
     <!-- Desktop links -->
-    <div class="hidden md:flex items-center gap-6">
+    <div class="hidden md:flex items-center gap-7">
       {links.map((link) => (
         <a
           href={link.href}
@@ -46,11 +48,12 @@ function isActive(href: string) {
       ))}
       <a
         href="tel:+48609845865"
-        class="ml-2 px-4 py-2 rounded-md text-sm font-semibold text-white transition-all duration-150 focus-ring-white"
+        class="ml-1 inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-semibold text-white transition-all duration-150 focus-ring-white"
         style="background: var(--color-accent);"
         onmouseover="this.style.background='var(--color-accent-hover)'"
         onmouseout="this.style.background='var(--color-accent)'"
       >
+        <Phone class="w-4 h-4 shrink-0" aria-hidden="true" />
         Zadzwoń
       </a>
     </div>
@@ -86,9 +89,10 @@ function isActive(href: string) {
       ))}
       <a
         href="tel:+48609845865"
-        class="mt-2 py-3 px-3 rounded-md font-semibold text-center text-white focus-ring-white"
+        class="mt-2 inline-flex items-center justify-center gap-2 py-3 px-3 rounded-md font-semibold text-white focus-ring-white"
         style="background: var(--color-accent);"
       >
+        <Phone class="w-4 h-4 shrink-0" aria-hidden="true" />
         Zadzwoń: 609 845 865
       </a>
     </div>
@@ -105,7 +109,7 @@ function isActive(href: string) {
 
   // Scroll state
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('nav-scrolled', window.scrollY > 80);
+    nav.classList.toggle('nav-scrolled', window.scrollY > 90);
   }, { passive: true });
 
   // Hamburger toggle

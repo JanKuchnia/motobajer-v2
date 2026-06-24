@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import StickyCtaBar from '../components/StickyCtaBar.astro';
 import ContactSection from '../components/ContactSection.astro';
 import LocationsSection from '../components/LocationsSection.astro';
+import { ChevronRight } from 'lucide-astro';
 ---
 
 <BaseLayout
@@ -21,11 +22,7 @@ import LocationsSection from '../components/LocationsSection.astro';
         <nav aria-label="Breadcrumb" class="mb-6">
           <ol class="flex items-center gap-2 text-sm" style="color: oklch(65% 0.04 265);">
             <li><a href="/" class="hover:text-white transition-colors">Strona główna</a></li>
-            <li aria-hidden="true">
-              <svg class="w-3.5 h-3.5 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
-              </svg>
-            </li>
+            <li aria-hidden="true"><ChevronRight class="w-3.5 h-3.5 inline" /></li>
             <li class="text-white font-medium" aria-current="page">Kontakt</li>
           </ol>
         </nav>

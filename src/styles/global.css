@@ -234,11 +234,8 @@ body {
   padding-bottom: clamp(3rem, 8vw, 6rem);
 }
 
-/* Defer rendering of below-fold sections */
-.below-fold {
-  content-visibility: auto;
-  contain-intrinsic-size: 0 600px;
-}
+/* Marker class for below-fold sections — kept for future use */
+.below-fold {}
 
 /* Form elements on dark bg */
 .field-label {

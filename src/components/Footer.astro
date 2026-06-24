@@ -1,4 +1,5 @@
 ---
+import { Phone, Mail } from 'lucide-astro';
 const year = new Date().getFullYear();
 
 const links = [
@@ -30,9 +31,9 @@ const links = [
 
       <!-- Quick links -->
       <div>
-        <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: oklch(55% 0.06 265);">
+        <h3 class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: oklch(55% 0.06 265);">
           Nawigacja
-        </p>
+        </h3>
         <ul class="space-y-2">
           {links.map((link) => (
             <li>
@@ -50,22 +51,25 @@ const links = [
 
       <!-- Contact -->
       <div>
-        <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: oklch(55% 0.06 265);">
+        <h3 class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: oklch(55% 0.06 265);">
           Kontakt
-        </p>
+        </h3>
         <ul class="space-y-2 text-sm" style="color: oklch(68% 0.04 265);">
           <li>
-            <a href="tel:+48609845865" class="hover:text-white transition-colors">
+            <a href="tel:+48609845865" class="inline-flex items-center gap-1.5 hover:text-white transition-colors">
+              <Phone class="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
               609 845 865
             </a>
           </li>
           <li>
-            <a href="tel:+48122742306" class="hover:text-white transition-colors">
+            <a href="tel:+48122742306" class="inline-flex items-center gap-1.5 hover:text-white transition-colors">
+              <Phone class="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
               (12) 274 23 06
             </a>
           </li>
           <li>
-            <a href="mailto:motobajer@eurowarsztat.pl" class="hover:text-white transition-colors">
+            <a href="mailto:motobajer@eurowarsztat.pl" class="inline-flex items-center gap-1.5 hover:text-white transition-colors">
+              <Mail class="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
               motobajer@eurowarsztat.pl
             </a>
           </li>

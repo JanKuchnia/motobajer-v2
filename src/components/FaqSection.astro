@@ -1,5 +1,6 @@
 ---
 import type { Faq } from '../data/faqs';
+import { Phone, ArrowRight } from 'lucide-astro';
 
 interface Props {
   faqs: Faq[];
@@ -26,8 +27,9 @@ const displayed = limit ? faqs.slice(0, limit) : faqs;
         Nie znalazłeś odpowiedzi?{' '}
         <a
           href="tel:+48609845865"
-          class="font-semibold text-navy hover:text-navy-light transition-colors"
+          class="inline-flex items-center gap-1 font-semibold text-navy hover:text-navy-light transition-colors"
         >
+          <Phone class="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
           Zadzwoń do nas.
         </a>
       </p>
@@ -77,9 +79,7 @@ const displayed = limit ? faqs.slice(0, limit) : faqs;
           class="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:text-navy-light transition-colors"
         >
           Zobacz wszystkie pytania i odpowiedzi
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
-          </svg>
+          <ArrowRight class="w-4 h-4 shrink-0" aria-hidden="true" />
         </a>
       </div>
     )}

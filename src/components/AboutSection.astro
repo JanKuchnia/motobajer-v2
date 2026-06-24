@@ -1,4 +1,6 @@
 ---
+import { Wrench, Phone } from 'lucide-astro';
+
 const stats = [
   { value: '18', unit: 'lat', label: 'doświadczenia' },
   { value: '2', unit: 'punkty', label: 'obsługi w Myślenicach' },
@@ -44,17 +46,19 @@ const stats = [
         <div class="reveal mt-8 flex flex-wrap gap-3">
           <a
             href="#uslugi"
-            class="inline-flex items-center px-5 py-2.5 rounded-md text-sm font-semibold text-white bg-navy hover:bg-navy-light transition-colors"
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-semibold text-white bg-navy hover:bg-navy-light transition-colors"
           >
+            <Wrench class="w-4 h-4 shrink-0" aria-hidden="true" />
             Nasze usługi
           </a>
           <a
             href="tel:+48609845865"
-            class="inline-flex items-center px-5 py-2.5 rounded-md text-sm font-semibold border transition-colors"
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-semibold border transition-colors"
             style="color: var(--color-navy); border-color: oklch(82% 0.05 265);"
             onmouseover="this.style.background='var(--color-surface-1)'"
             onmouseout="this.style.background=''"
           >
+            <Phone class="w-4 h-4 shrink-0" aria-hidden="true" />
             Zadzwoń do nas
           </a>
         </div>
